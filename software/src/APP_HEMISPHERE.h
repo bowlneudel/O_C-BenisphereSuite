@@ -129,11 +129,11 @@ public:
       for (size_t i = 0; i < 4; ++i) {
         int val = (uint16_t(values_[HEMISPHERE_TRIGMAP]) >> (i*4)) & 0x0F;
         if (val != 0)
-          HS::trigger_mapping[i] = constrain(val - 1, 0, TRIGMAP_MAX);
+          HS::trigger_mapping[i] = constrain(val - 1, 0, ADC_CHANNEL_LAST + DAC_CHANNEL_LAST);
 
         val = (uint16_t(values_[HEMISPHERE_CVMAP]) >> (i*4)) & 0x0F;
         if (val != 0)
-          HS::cvmapping[i] = constrain(val - 1, 0, CVMAP_MAX);
+          HS::cvmapping[i] = constrain(val - 1, 0, ADC_CHANNEL_LAST + DAC_CHANNEL_LAST);
       }
     }
 
@@ -221,7 +221,6 @@ HemispherePreset *hem_active_preset = 0;
 using namespace HS;
 
 void ReceiveManagerSysEx();
-void BeatSyncProcess();
 
 class HemisphereManager : public HSApplication {
 public:
@@ -327,14 +326,9 @@ public:
         preset_id = id;
         PokePopup(PRESET_POPUP);
     }
-    void ProcessQueue() {
-      LoadFromPreset(queued_preset);
-    }
 
     // does not modify the preset, only the manager
     void SetApplet(HEM_SIDE hemisphere, int index) {
-        //if (my_applet[hemisphere]) // TODO: special case for first load?
-        HS::available_applets[my_applet[hemisphere]].instance[hemisphere]->Unload();
         next_applet[hemisphere] = my_applet[hemisphere] = index;
         HS::available_applets[index].instance[hemisphere]->BaseStart(hemisphere);
     }
@@ -373,14 +367,7 @@ public:
 
             if (message == usbMIDI.ProgramChange) {
                 int slot = device.getData1();
-                if (slot < HEM_NR_OF_PRESETS) {
-                  if (HS::clock_m.IsRunning()) {
-                    queued_preset = slot;
-                    HS::clock_m.BeatSync( &BeatSyncProcess );
-                  }
-                  else
-                    LoadFromPreset(slot);
-                }
+                if (slot < HEM_NR_OF_PRESETS) LoadFromPreset(slot);
                 continue;
             }
 
@@ -467,7 +454,7 @@ public:
           DrawPresetSelector();
           draw_applets = false;
         }
-        else if (view_state == CONFIG_MENU) {
+        else if (view_mode == CONFIG_MENU) {
           switch(config_page) {
           case LOADSAVE_POPUP:
             PokePopup(MENU_POPUP);
@@ -498,9 +485,8 @@ public:
 
         }
 #ifdef ARDUINO_TEENSY41
-        if (view_state == AUDIO_SETUP) {
-          gfxHeader("Audio DSP Setup");
-          OC::AudioDSP::DrawAudioSetup();
+        if (view_mode == AUDIO_SETUP) {
+          DrawAudioSetup();
           draw_applets = false;
         }
 #endif
@@ -515,7 +501,7 @@ public:
           }
           else if (help_hemisphere > -1) {
             int index = my_applet[help_hemisphere];
-            HS::available_applets[index].instance[help_hemisphere]->BaseView(true);
+            HS::available_applets[index].instance[help_hemisphere]->BaseView();
             draw_applets = false;
           }
         }
@@ -551,14 +537,14 @@ public:
         bool down = (event.type == UI::EVENT_BUTTON_DOWN);
         int h = (event.control == OC::CONTROL_BUTTON_L) ? LEFT_HEMISPHERE : RIGHT_HEMISPHERE;
 
-        if (view_state == CONFIG_MENU) {
+        if (view_mode == CONFIG_MENU) {
             // button release for config screen
             if (!down) ConfigButtonPush(h);
             return;
         }
 #ifdef ARDUINO_TEENSY41
-        if (view_state == AUDIO_SETUP) {
-          if (!down) OC::AudioDSP::AudioSetupButtonAction(h);
+        if (view_mode == AUDIO_SETUP) {
+          if (!down) AudioSetupButtonAction(h);
           return;
         }
 #endif
@@ -589,7 +575,8 @@ public:
         if (down) {
           // dual press for Audio Setup
           if (event.mask == (OC::CONTROL_BUTTON_UP2 | OC::CONTROL_BUTTON_DOWN2) && h != first_click) {
-              view_state = AUDIO_SETUP;
+              // TODO: Audio Setup mode and UI
+              view_mode = AUDIO_SETUP;
               OC::ui.SetButtonIgnoreMask(); // ignore button release
               return;
           }
@@ -601,10 +588,13 @@ public:
         }
 
         // --- Button Release
-        if (preset_cursor || view_state != APPLETS) {
-            // cancel config screen, etc. on select button release
+        if (preset_cursor) {
             preset_cursor = 0;
-            view_state = APPLETS;
+            return;
+        }
+        if (view_mode != APPLETS) {
+            // cancel config screen, etc. on select button release
+            view_mode = APPLETS;
             HS::popup_tick = 0;
             return;
         }
@@ -627,10 +617,13 @@ public:
         bool down = (event.type == UI::EVENT_BUTTON_DOWN);
         const int hemisphere = (event.control == OC::CONTROL_BUTTON_UP) ? LEFT_HEMISPHERE : RIGHT_HEMISPHERE;
 
-        if (!down && (preset_cursor || view_state != APPLETS)) {
-            // cancel preset select, or config screen on select button release
+        if (preset_cursor && !down) {
             preset_cursor = 0;
-            view_state = APPLETS;
+            return;
+        }
+        if (view_mode != APPLETS && !down) {
+            // cancel preset select, or config screen on select button release
+            view_mode = APPLETS;
             HS::popup_tick = 0;
             return;
         }
@@ -705,13 +698,13 @@ public:
           return;
         }
 
-        if (view_state == CONFIG_MENU) {
+        if (view_mode == CONFIG_MENU) {
           ConfigEncoderAction(h, event.value);
           return;
         }
 #ifdef ARDUINO_TEENSY41
-        if (view_state == AUDIO_SETUP) {
-          OC::AudioDSP::AudioMenuAdjust(h, event.value);
+        if (view_mode == AUDIO_SETUP) {
+          AudioMenuAdjust(h, event.value);
           return;
         }
 #endif
@@ -730,20 +723,29 @@ public:
     }
 
     void ToggleConfigMenu() {
-      if (view_state != CONFIG_MENU) {
-        view_state = CONFIG_MENU;
+      if (view_mode != CONFIG_MENU) {
+        view_mode = CONFIG_MENU;
         //SetHelpScreen(-1);
       } else {
-        view_state = APPLETS;
+        view_mode = APPLETS;
       }
     }
     void ShowPresetSelector() {
-        view_state = CONFIG_MENU;
         config_cursor = LOAD_PRESET;
         preset_cursor = preset_id + 1;
     }
 
     void SetHelpScreen(int hemisphere) {
+        if (help_hemisphere > -1) { // Turn off the previous help screen
+            int index = my_applet[help_hemisphere];
+            HS::available_applets[index].instance[help_hemisphere]->ToggleHelpScreen();
+        }
+
+        if (hemisphere > -1) { // Turn on the next hemisphere's screen
+            int index = my_applet[hemisphere];
+            HS::available_applets[index].instance[hemisphere]->ToggleHelpScreen();
+        }
+
         help_hemisphere = hemisphere;
     }
 
@@ -757,12 +759,13 @@ public:
             }
             if (HS::q_edit) {
               if (event.control == OC::CONTROL_BUTTON_UP)
-                HS::NudgeOctave(HS::qview, 1);
+                ++HS::q_octave[HS::qview];
               else if (event.control == OC::CONTROL_BUTTON_DOWN)
-                HS::NudgeOctave(HS::qview, -1);
+                --HS::q_octave[HS::qview];
               else
                 HS::q_edit = false;
 
+              CONSTRAIN(HS::q_octave[HS::qview], -5, 5);
               OC::ui.SetButtonIgnoreMask();
               break;
             }
@@ -792,7 +795,6 @@ public:
 
 private:
     int preset_id = 0;
-    int queued_preset = 0;
     int preset_cursor = 0;
     int my_applet[2]; // Indexes to available_applets
     int next_applet[2]; // queued from UI thread, handled by Controller
@@ -802,10 +804,10 @@ private:
     int config_cursor = 0;
     int config_page = 0;
     int dummy_count = 0;
+    uint8_t audio_cursor[2] = { 0, 0 };
 
     OC::menu::ScreenCursor<5> showhide_cursor;
 
-    int select_mode = -1;
     int help_hemisphere; // Which of the hemispheres (if any) is in help mode, or -1 if none
     uint32_t click_tick; // Measure time between clicks for double-click
     int first_click; // The first button pushed of a double-click set, to see if the same one is pressed
@@ -821,7 +823,7 @@ private:
       AUDIO_SETUP,
 #endif
     };
-    HEMView view_state = APPLETS;
+    HEMView view_mode = APPLETS;
 
     enum HEMConfigCursor {
         LOAD_PRESET, SAVE_PRESET,
@@ -888,13 +890,13 @@ private:
         case TRIGMAP4:
             HS::trigger_mapping[config_cursor-TRIGMAP1] = constrain(
                 HS::trigger_mapping[config_cursor-TRIGMAP1] + dir,
-                0, TRIGMAP_MAX);
+                0, ADC_CHANNEL_LAST + DAC_CHANNEL_LAST);
             break;
         case CVMAP1:
         case CVMAP2:
         case CVMAP3:
         case CVMAP4:
-            HS::cvmapping[config_cursor-CVMAP1] = constrain( HS::cvmapping[config_cursor-CVMAP1] + dir, 0, CVMAP_MAX);
+            HS::cvmapping[config_cursor-CVMAP1] = constrain( HS::cvmapping[config_cursor-CVMAP1] + dir, 0, ADC_CHANNEL_LAST + DAC_CHANNEL_LAST);
             break;
         case TRIG_LENGTH:
             HS::trig_length = (uint32_t) constrain( int(HS::trig_length + dir), 1, 127);
@@ -917,17 +919,11 @@ private:
             // Save or Load on button push
             if (config_cursor == SAVE_PRESET)
                 StoreToPreset(preset_cursor-1);
-            else {
-              if (HS::clock_m.IsRunning()) {
-                queued_preset = preset_cursor - 1;
-                HS::clock_m.BeatSync( &BeatSyncProcess );
-              }
-              else
+            else
                 LoadFromPreset(preset_cursor-1);
-            }
 
             preset_cursor = 0; // deactivate preset selection
-            view_state = APPLETS;
+            view_mode = APPLETS;
             isEditing = false;
             return;
         }
@@ -991,6 +987,34 @@ private:
         }
     }
 
+#ifdef ARDUINO_TEENSY41
+    void AudioMenuAdjust(int ch, int direction) {
+      using namespace OC::AudioDSP;
+
+      if (audio_cursor[ch]) {
+        int mod_target = AMP_LEVEL;
+        switch (mode[ch]) {
+          case VCF_MODE:
+            mod_target = FILTER_CUTOFF;
+            break;
+          case WAVEFOLDER:
+            mod_target = WAVEFOLD_MOD;
+            break;
+        }
+
+        int &targ = OC::AudioDSP::mod_map[ch][mod_target];
+        targ = constrain(targ + direction + 1, 0, ADC_CHANNEL_LAST + DAC_CHANNEL_LAST) - 1;
+      } else {
+        int newmode = mode[ch] + direction;
+        CONSTRAIN(newmode, 0, MODE_COUNT - 1);
+        SwitchMode(ch, ChannelMode(newmode));
+      }
+    }
+    void AudioSetupButtonAction(int ch) {
+      audio_cursor[ch] = 1 - audio_cursor[ch];
+    }
+#endif
+
     void DrawInputMappings() {
         gfxHeader("<  Input Mapping  >");
         gfxIcon(25, 19, TR_ICON);
@@ -1026,7 +1050,6 @@ private:
         }
 
     }
-
     void DrawQuantizerConfig() {
         gfxHeader("< Quantizer Setup >");
 
@@ -1094,6 +1117,7 @@ private:
           gfxInvert(0, y, 127, LineH - 1);
       }
     }
+
     void DrawConfigMenu() {
         // --- Config Selection
         gfxHeader("< General Settings >");
@@ -1175,6 +1199,44 @@ private:
         }
     }
 
+#ifdef ARDUINO_TEENSY41
+    void DrawAudioSetup() {
+      using namespace OC::AudioDSP;
+
+      gfxHeader("Audio DSP Setup");
+
+      ForEachChannel(ch) {
+
+        int mod_target = AMP_LEVEL;
+        switch (mode[ch]) {
+          case PASSTHRU:
+          case VCA_MODE:
+          case LPG_MODE:
+            break;
+          case VCF_MODE:
+            mod_target = FILTER_CUTOFF;
+            break;
+          case WAVEFOLDER:
+            mod_target = WAVEFOLD_MOD;
+            break;
+        }
+
+        // Channel mode
+        gfxPrint(8 + 82*ch, 15, "Mode");
+        gfxPrint(8 + 82*ch, 25, OC::AudioDSP::mode_names[OC::AudioDSP::mode[ch]]);
+
+        // Modulation assignment
+        gfxPrint(8 + 82*ch, 35, "Map");
+        gfxPrint(8 + 82*ch, 45, OC::Strings::cv_input_names_none[ OC::AudioDSP::mod_map[ch][mod_target] + 1 ] );
+
+        // cursor
+        gfxIcon(120*ch, 25 + audio_cursor[ch]*20, ch ? LEFT_ICON : RIGHT_ICON);
+      }
+
+      // Reverb params (size, damping, level?)
+      // careful, because level is also feedback...
+    }
+#endif
 };
 
 // TOTAL EEPROM SIZE: 8 presets * 32 bytes
@@ -1203,9 +1265,6 @@ HemisphereManager manager;
 void ReceiveManagerSysEx() {
     if (hem_active_preset)
         hem_active_preset->OnReceiveSysEx();
-}
-void BeatSyncProcess() {
-  manager.ProcessQueue();
 }
 
 ////////////////////////////////////////////////////////////////////////////////
