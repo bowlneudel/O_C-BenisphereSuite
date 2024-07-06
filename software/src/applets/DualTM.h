@@ -64,12 +64,7 @@ public:
         GATE1,
         GATE2,
         GATE_SUM,
-        OUTMODE_COUNT
-    };
-    static constexpr const char* const outmode_names[OUTMODE_COUNT] = {
-      "Blend", "Pitch1", "Pitch2", "Mod 1", "Mod 2",
-      "TrPtch1", "TrPtch2", "Trig 1", "Trig 2",
-      "Gate 1", "Gate 2", "Gate1+2"
+        OUTMODE_LAST
     };
 
     enum InputMode {
@@ -81,11 +76,7 @@ public:
         TRANSPOSE1,
         TRANSPOSE2,
         BLEND_XFADE, // actually crossfade blend of both pitches
-        INMODE_COUNT
-    };
-    static constexpr const char* const cvmode_names[INMODE_COUNT] = {
-      // 7 char max each
-      "Slew", "Length", "p mod", "Q mod", "Range", "Trans1", "Trans2", "Xfade"
+        INMODE_LAST
     };
 
     const char* applet_name() {
@@ -300,16 +291,16 @@ public:
             range = constrain(range + direction, 1, 32);
             break;
         case OUT_A:
-            outmode[0] = (OutputMode) constrain(outmode[0] + direction, 0, OUTMODE_COUNT-1);
+            outmode[0] = (OutputMode) constrain(outmode[0] + direction, 0, OUTMODE_LAST-1);
             break;
         case OUT_B:
-            outmode[1] = (OutputMode) constrain(outmode[1] + direction, 0, OUTMODE_COUNT-1);
+            outmode[1] = (OutputMode) constrain(outmode[1] + direction, 0, OUTMODE_LAST-1);
             break;
         case CVMODE1:
-            cvmode[0] = (InputMode) constrain(cvmode[0] + direction, 0, INMODE_COUNT-1);
+            cvmode[0] = (InputMode) constrain(cvmode[0] + direction, 0, INMODE_LAST-1);
             break;
         case CVMODE2:
-            cvmode[1] = (InputMode) constrain(cvmode[1] + direction, 0, INMODE_COUNT-1);
+            cvmode[1] = (InputMode) constrain(cvmode[1] + direction, 0, INMODE_LAST-1);
             break;
         case SLEW:
             smoothing = constrain(smoothing + direction, 0, 127);
@@ -362,18 +353,14 @@ public:
     }
 
 protected:
-  void SetHelp() {
-    //                    "-------" <-- Label size guide
-    help[HELP_DIGITAL1] = "Clock";
-    help[HELP_DIGITAL2] = "p Gate";
-    help[HELP_CV1]      = cvmode_names[cvmode[0]];
-    help[HELP_CV2]      = cvmode_names[cvmode[1]];
-    help[HELP_OUT1]     = outmode_names[outmode[0]];
-    help[HELP_OUT2]     = outmode_names[outmode[1]];
-    help[HELP_EXTRA1]  = "Encoder: Select/Edit";
-    help[HELP_EXTRA2]  = "AuxBtn: Reverse/Lock";
-    //                   "---------------------" <-- Extra text size guide
-  }
+    void SetHelp() {
+        //                               "------------------" <-- Size Guide
+        help[HEMISPHERE_HELP_DIGITALS] = "1=Clock 2=p Gate";
+        help[HEMISPHERE_HELP_CVS]      = "Assignable";
+        help[HEMISPHERE_HELP_OUTS]     = "Assignable";
+        help[HEMISPHERE_HELP_ENCODER]  = "Select/Push 2 Edit";
+        //                               "------------------" <-- Size Guide
+    }
     
 private:
     int cursor; // TM2Cursor
@@ -447,7 +434,7 @@ private:
         const int y = 35;
         const int x = 34*ch;
 
-        gfxPrint(x+1, y+1, OutputLabel(ch));
+        gfxPrint(x+1, y+1, ch ? (hemisphere ? "D" : "B") : (hemisphere ? "C" : "A") );
         gfxPrint(":");
 
         switch (outmode[ch]) {
@@ -522,7 +509,7 @@ private:
 
     void DrawSelector() {
         gfxBitmap(1, 14, 8, LOOP_ICON);
-        gfxPrint(11 + pad(10, len_mod), 15, len_mod);
+        gfxPrint(12 + pad(10, len_mod), 15, len_mod);
         gfxIcon(25, 15, rotate_right ? ROTATE_R_ICON : ROTATE_L_ICON);
 
         gfxPrint(35 + pad(100, p_mod), 15, p_mod);
@@ -562,7 +549,7 @@ private:
 
         // TODO: generalize this as a cursor LUT for all applets
         switch ((TM2Cursor)cursor) {
-            case LENGTH: gfxCursor(11, 23, 13); break;
+            case LENGTH: gfxCursor(12, 23, 13); break;
             case PROB:   gfxCursor(35, 23, 19); break;
             case QUANT_A:  gfxCursor(12, 33, 13); break;
             case QUANT_B:  gfxCursor(39, 33, 13); break;
@@ -588,8 +575,8 @@ private:
         {
             int v = (reg[0] >> b) & 0x01;
             int v2 = (reg[1] >> b) & 0x01;
-            if (v) gfxRect(60 - (2 * b), 47, 1, 7);
-            if (v2) gfxRect(60 - (2 * b), 54, 1, 7);
+            if (v) gfxRect(62 - (2 * b), 47, 1, 7);
+            if (v2) gfxRect(62 - (2 * b), 54, 1, 7);
         }
     }
 
