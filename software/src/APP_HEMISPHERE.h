@@ -221,6 +221,7 @@ HemispherePreset *hem_active_preset = 0;
 using namespace HS;
 
 void ReceiveManagerSysEx();
+void BeatSyncProcess();
 
 class HemisphereManager : public HSApplication {
 public:
@@ -326,6 +327,9 @@ public:
         preset_id = id;
         PokePopup(PRESET_POPUP);
     }
+    void ProcessQueue() {
+      LoadFromPreset(queued_preset);
+    }
 
     // does not modify the preset, only the manager
     void SetApplet(HEM_SIDE hemisphere, int index) {
@@ -367,7 +371,14 @@ public:
 
             if (message == usbMIDI.ProgramChange) {
                 int slot = device.getData1();
-                if (slot < HEM_NR_OF_PRESETS) LoadFromPreset(slot);
+                if (slot < HEM_NR_OF_PRESETS) {
+                  if (HS::clock_m.IsRunning()) {
+                    queued_preset = slot;
+                    HS::clock_m.BeatSync( &BeatSyncProcess );
+                  }
+                  else
+                    LoadFromPreset(slot);
+                }
                 continue;
             }
 
@@ -731,6 +742,7 @@ public:
       }
     }
     void ShowPresetSelector() {
+        view_mode = CONFIG_MENU;
         config_cursor = LOAD_PRESET;
         preset_cursor = preset_id + 1;
     }
@@ -759,13 +771,12 @@ public:
             }
             if (HS::q_edit) {
               if (event.control == OC::CONTROL_BUTTON_UP)
-                ++HS::q_octave[HS::qview];
+                HS::NudgeOctave(HS::qview, 1);
               else if (event.control == OC::CONTROL_BUTTON_DOWN)
-                --HS::q_octave[HS::qview];
+                HS::NudgeOctave(HS::qview, -1);
               else
                 HS::q_edit = false;
 
-              CONSTRAIN(HS::q_octave[HS::qview], -5, 5);
               OC::ui.SetButtonIgnoreMask();
               break;
             }
@@ -795,6 +806,7 @@ public:
 
 private:
     int preset_id = 0;
+    int queued_preset = 0;
     int preset_cursor = 0;
     int my_applet[2]; // Indexes to available_applets
     int next_applet[2]; // queued from UI thread, handled by Controller
@@ -919,8 +931,14 @@ private:
             // Save or Load on button push
             if (config_cursor == SAVE_PRESET)
                 StoreToPreset(preset_cursor-1);
-            else
+            else {
+              if (HS::clock_m.IsRunning()) {
+                queued_preset = preset_cursor - 1;
+                HS::clock_m.BeatSync( &BeatSyncProcess );
+              }
+              else
                 LoadFromPreset(preset_cursor-1);
+            }
 
             preset_cursor = 0; // deactivate preset selection
             view_mode = APPLETS;
@@ -1265,6 +1283,9 @@ HemisphereManager manager;
 void ReceiveManagerSysEx() {
     if (hem_active_preset)
         hem_active_preset->OnReceiveSysEx();
+}
+void BeatSyncProcess() {
+  manager.ProcessQueue();
 }
 
 ////////////////////////////////////////////////////////////////////////////////
