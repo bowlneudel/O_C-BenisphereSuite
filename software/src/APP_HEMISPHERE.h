@@ -465,7 +465,7 @@ public:
           DrawPresetSelector();
           draw_applets = false;
         }
-        else if (view_mode == CONFIG_MENU) {
+        else if (view_state == CONFIG_MENU) {
           switch(config_page) {
           case LOADSAVE_POPUP:
             PokePopup(MENU_POPUP);
@@ -496,8 +496,9 @@ public:
 
         }
 #ifdef ARDUINO_TEENSY41
-        if (view_mode == AUDIO_SETUP) {
-          DrawAudioSetup();
+        if (view_state == AUDIO_SETUP) {
+          gfxHeader("Audio DSP Setup");
+          OC::AudioDSP::DrawAudioSetup();
           draw_applets = false;
         }
 #endif
@@ -548,14 +549,14 @@ public:
         bool down = (event.type == UI::EVENT_BUTTON_DOWN);
         int h = (event.control == OC::CONTROL_BUTTON_L) ? LEFT_HEMISPHERE : RIGHT_HEMISPHERE;
 
-        if (view_mode == CONFIG_MENU) {
+        if (view_state == CONFIG_MENU) {
             // button release for config screen
             if (!down) ConfigButtonPush(h);
             return;
         }
 #ifdef ARDUINO_TEENSY41
-        if (view_mode == AUDIO_SETUP) {
-          if (!down) AudioSetupButtonAction(h);
+        if (view_state == AUDIO_SETUP) {
+          if (!down) OC::AudioDSP::AudioSetupButtonAction(h);
           return;
         }
 #endif
@@ -586,8 +587,7 @@ public:
         if (down) {
           // dual press for Audio Setup
           if (event.mask == (OC::CONTROL_BUTTON_UP2 | OC::CONTROL_BUTTON_DOWN2) && h != first_click) {
-              // TODO: Audio Setup mode and UI
-              view_mode = AUDIO_SETUP;
+              view_state = AUDIO_SETUP;
               OC::ui.SetButtonIgnoreMask(); // ignore button release
               return;
           }
@@ -599,13 +599,10 @@ public:
         }
 
         // --- Button Release
-        if (preset_cursor) {
-            preset_cursor = 0;
-            return;
-        }
-        if (view_mode != APPLETS) {
+        if (preset_cursor || view_state != APPLETS) {
             // cancel config screen, etc. on select button release
-            view_mode = APPLETS;
+            preset_cursor = 0;
+            view_state = APPLETS;
             HS::popup_tick = 0;
             return;
         }
@@ -628,13 +625,10 @@ public:
         bool down = (event.type == UI::EVENT_BUTTON_DOWN);
         const int hemisphere = (event.control == OC::CONTROL_BUTTON_UP) ? LEFT_HEMISPHERE : RIGHT_HEMISPHERE;
 
-        if (preset_cursor && !down) {
-            preset_cursor = 0;
-            return;
-        }
-        if (view_mode != APPLETS && !down) {
+        if (!down && (preset_cursor || view_state != APPLETS)) {
             // cancel preset select, or config screen on select button release
-            view_mode = APPLETS;
+            preset_cursor = 0;
+            view_state = APPLETS;
             HS::popup_tick = 0;
             return;
         }
@@ -709,13 +703,13 @@ public:
           return;
         }
 
-        if (view_mode == CONFIG_MENU) {
+        if (view_state == CONFIG_MENU) {
           ConfigEncoderAction(h, event.value);
           return;
         }
 #ifdef ARDUINO_TEENSY41
-        if (view_mode == AUDIO_SETUP) {
-          AudioMenuAdjust(h, event.value);
+        if (view_state == AUDIO_SETUP) {
+          OC::AudioDSP::AudioMenuAdjust(h, event.value);
           return;
         }
 #endif
@@ -734,15 +728,15 @@ public:
     }
 
     void ToggleConfigMenu() {
-      if (view_mode != CONFIG_MENU) {
-        view_mode = CONFIG_MENU;
+      if (view_state != CONFIG_MENU) {
+        view_state = CONFIG_MENU;
         //SetHelpScreen(-1);
       } else {
-        view_mode = APPLETS;
+        view_state = APPLETS;
       }
     }
     void ShowPresetSelector() {
-        view_mode = CONFIG_MENU;
+        view_state = CONFIG_MENU;
         config_cursor = LOAD_PRESET;
         preset_cursor = preset_id + 1;
     }
@@ -816,10 +810,10 @@ private:
     int config_cursor = 0;
     int config_page = 0;
     int dummy_count = 0;
-    uint8_t audio_cursor[2] = { 0, 0 };
 
     OC::menu::ScreenCursor<5> showhide_cursor;
 
+    int select_mode = -1;
     int help_hemisphere; // Which of the hemispheres (if any) is in help mode, or -1 if none
     uint32_t click_tick; // Measure time between clicks for double-click
     int first_click; // The first button pushed of a double-click set, to see if the same one is pressed
@@ -835,7 +829,7 @@ private:
       AUDIO_SETUP,
 #endif
     };
-    HEMView view_mode = APPLETS;
+    HEMView view_state = APPLETS;
 
     enum HEMConfigCursor {
         LOAD_PRESET, SAVE_PRESET,
@@ -941,7 +935,7 @@ private:
             }
 
             preset_cursor = 0; // deactivate preset selection
-            view_mode = APPLETS;
+            view_state = APPLETS;
             isEditing = false;
             return;
         }
@@ -1005,34 +999,6 @@ private:
         }
     }
 
-#ifdef ARDUINO_TEENSY41
-    void AudioMenuAdjust(int ch, int direction) {
-      using namespace OC::AudioDSP;
-
-      if (audio_cursor[ch]) {
-        int mod_target = AMP_LEVEL;
-        switch (mode[ch]) {
-          case VCF_MODE:
-            mod_target = FILTER_CUTOFF;
-            break;
-          case WAVEFOLDER:
-            mod_target = WAVEFOLD_MOD;
-            break;
-        }
-
-        int &targ = OC::AudioDSP::mod_map[ch][mod_target];
-        targ = constrain(targ + direction + 1, 0, ADC_CHANNEL_LAST + DAC_CHANNEL_LAST) - 1;
-      } else {
-        int newmode = mode[ch] + direction;
-        CONSTRAIN(newmode, 0, MODE_COUNT - 1);
-        SwitchMode(ch, ChannelMode(newmode));
-      }
-    }
-    void AudioSetupButtonAction(int ch) {
-      audio_cursor[ch] = 1 - audio_cursor[ch];
-    }
-#endif
-
     void DrawInputMappings() {
         gfxHeader("<  Input Mapping  >");
         gfxIcon(25, 19, TR_ICON);
@@ -1068,6 +1034,7 @@ private:
         }
 
     }
+
     void DrawQuantizerConfig() {
         gfxHeader("< Quantizer Setup >");
 
@@ -1135,7 +1102,6 @@ private:
           gfxInvert(0, y, 127, LineH - 1);
       }
     }
-
     void DrawConfigMenu() {
         // --- Config Selection
         gfxHeader("< General Settings >");
@@ -1217,44 +1183,6 @@ private:
         }
     }
 
-#ifdef ARDUINO_TEENSY41
-    void DrawAudioSetup() {
-      using namespace OC::AudioDSP;
-
-      gfxHeader("Audio DSP Setup");
-
-      ForEachChannel(ch) {
-
-        int mod_target = AMP_LEVEL;
-        switch (mode[ch]) {
-          case PASSTHRU:
-          case VCA_MODE:
-          case LPG_MODE:
-            break;
-          case VCF_MODE:
-            mod_target = FILTER_CUTOFF;
-            break;
-          case WAVEFOLDER:
-            mod_target = WAVEFOLD_MOD;
-            break;
-        }
-
-        // Channel mode
-        gfxPrint(8 + 82*ch, 15, "Mode");
-        gfxPrint(8 + 82*ch, 25, OC::AudioDSP::mode_names[OC::AudioDSP::mode[ch]]);
-
-        // Modulation assignment
-        gfxPrint(8 + 82*ch, 35, "Map");
-        gfxPrint(8 + 82*ch, 45, OC::Strings::cv_input_names_none[ OC::AudioDSP::mod_map[ch][mod_target] + 1 ] );
-
-        // cursor
-        gfxIcon(120*ch, 25 + audio_cursor[ch]*20, ch ? LEFT_ICON : RIGHT_ICON);
-      }
-
-      // Reverb params (size, damping, level?)
-      // careful, because level is also feedback...
-    }
-#endif
 };
 
 // TOTAL EEPROM SIZE: 8 presets * 32 bytes
