@@ -508,30 +508,21 @@ public:
         if (HS::q_edit)
           PokePopup(QUANTIZER_POPUP);
 
-        if (draw_applets) {
-          if (clock_setup) {
-            ClockSetup_instance.View();
-            draw_applets = false;
-          }
-          else if (help_hemisphere > -1) {
-            int index = my_applet[help_hemisphere];
-            HS::available_applets[index].instance[help_hemisphere]->BaseView();
-            draw_applets = false;
-          }
+        if (draw_applets && clock_setup) {
+          ClockSetup_instance.View();
+          draw_applets = false;
         }
 
         if (draw_applets) {
+          if (help_hemisphere > -1) {
+            int index = my_applet[help_hemisphere];
+            HS::available_applets[index].instance[help_hemisphere]->BaseView(true);
+            draw_applets = false;
+          } else {
             for (int h = 0; h < 2; h++)
             {
                 int index = my_applet[h];
                 HS::available_applets[index].instance[h]->BaseView();
-            }
-
-            if (HS::clock_m.IsRunning()) {
-                // Metronome icon
-                gfxIcon(56, 1, HS::clock_m.Cycle() ? METRO_L_ICON : METRO_R_ICON);
-            } else if (HS::clock_m.IsPaused()) {
-                gfxIcon(56, 1, PAUSE_ICON);
             }
 
             if (select_mode == LEFT_HEMISPHERE) graphics.drawFrame(0, 0, 64, 64);
@@ -539,6 +530,14 @@ public:
 
             // vertical separator
             graphics.drawLine(63, 0, 63, 63, 2);
+          }
+
+          // Clock indicator icons in header
+          if (HS::clock_m.IsRunning()) {
+              gfxIcon(56, 1, HS::clock_m.Cycle() ? METRO_L_ICON : METRO_R_ICON);
+          } else if (HS::clock_m.IsPaused()) {
+              gfxIcon(56, 1, PAUSE_ICON);
+          }
         }
 
         // Overlay popup window last
@@ -744,16 +743,6 @@ public:
     }
 
     void SetHelpScreen(int hemisphere) {
-        if (help_hemisphere > -1) { // Turn off the previous help screen
-            int index = my_applet[help_hemisphere];
-            HS::available_applets[index].instance[help_hemisphere]->ToggleHelpScreen();
-        }
-
-        if (hemisphere > -1) { // Turn on the next hemisphere's screen
-            int index = my_applet[hemisphere];
-            HS::available_applets[index].instance[hemisphere]->ToggleHelpScreen();
-        }
-
         help_hemisphere = hemisphere;
     }
 
