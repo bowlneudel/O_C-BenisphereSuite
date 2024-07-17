@@ -173,10 +173,12 @@ private:
         gfxBitmap(1, 15, 8, BEAKER_ICON);
         gfxPrint(12, 15, OP_NAMES[accoperator]);
 
-        gfxPrint(1, 26, "A:");
+        char outlabel[] = { (char)('A' + io_offset), ':', '\0' };
+        gfxPrint(1, 26, outlabel);
         gfxPrint(15, 26, a_display);
 
-        gfxPrint(32, 26, "B:");
+        ++outlabel[0];
+        gfxPrint(32, 26, outlabel);
         gfxPrint(47, 26, outmode[1]);
 
         gfxLine(0, 36, 63, 36);
