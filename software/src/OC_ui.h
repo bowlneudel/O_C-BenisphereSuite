@@ -171,8 +171,7 @@ private:
     if (button_ignore_mask_ & event.control) {
       button_ignore_mask_ &= ~event.control;
       ignore = true;
-    }
-    if (screensaver_) {
+    } else if (screensaver_) {
       screensaver_ = false;
       SetButtonIgnoreMask(); // ignore whatever button is about to be released
       ignore = true;

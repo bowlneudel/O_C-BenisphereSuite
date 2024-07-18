@@ -105,9 +105,8 @@ void FASTRUN Ui::Poll() {
     } else if (button.released()) {
       if (now - button_press_time_[i] < kLongPressTicks)
         PushEvent(UI::EVENT_BUTTON_PRESS, control_mask(i), 0, button_state);
-      //TODO:
-      //else
-        //PushEvent(UI::EVENT_BUTTON_LONG_RELEASE, control_mask(i), 0, button_state);
+      else
+        PushEvent(UI::EVENT_BUTTON_LONG_RELEASE, control_mask(i), 0, button_state);
 
       button_press_time_[i] = 0;
     } else if (button.pressed() && (now - button_press_time_[i] == kLongPressTicks)) {
@@ -162,12 +161,16 @@ UiMode Ui::DispatchEvents(const App *app) {
         break;
       case UI::EVENT_BUTTON_LONG_PRESS:
         if (OC::CONTROL_BUTTON_UP == event.control) {
-            if (!preempt_screensaver_) screensaver_ = true;
+          if (!preempt_screensaver_) screensaver_ = true;
+          SetButtonIgnoreMask(); // ignore release
         }
         else if (OC::CONTROL_BUTTON_R == event.control)
           return UI_MODE_APP_SETTINGS;
         else
           app->HandleButtonEvent(event);
+        break;
+      case UI::EVENT_BUTTON_LONG_RELEASE:
+        app->HandleButtonEvent(event);
         break;
       case UI::EVENT_ENCODER:
         app->HandleEncoderEvent(event);
