@@ -205,15 +205,19 @@ public:
     }
 
 protected:
-    void SetHelp() {
-        //                               "------------------" <-- Size Guide
-        help[HEMISPHERE_HELP_DIGITALS] = "1=Gate";
-        help[HEMISPHERE_HELP_CVS]      = "1=Pitch 2=Assign";
-        help[HEMISPHERE_HELP_OUTS]     = "";
-        help[HEMISPHERE_HELP_ENCODER]  = "Ch/Trp/Assign/Log";
-        //                               "------------------" <-- Size Guide
-    }
-    
+  void SetHelp() {
+    //                    "-------" <-- Label size guide
+    help[HELP_DIGITAL1] = "Gate";
+    help[HELP_DIGITAL2] = "";
+    help[HELP_CV1]      = "Pitch";
+    help[HELP_CV2]      = fn_name[function];
+    help[HELP_OUT1]     = "";
+    help[HELP_OUT2]     = "";
+    help[HELP_EXTRA1]  = "";
+    help[HELP_EXTRA2]  = "";
+    //                   "---------------------" <-- Extra text size guide
+  }
+
 private:
     // Settings
     int channel; // MIDI Out channel
@@ -233,7 +237,7 @@ private:
     bool legato_on; // The note handler may currently respond to legato note changes
     int last_tick; // Most recent MIDI message sent
     int adc_lag_countdown;
-    const char* fn_name[4] = {"Mod", "Aft", "Bend", "Veloc"};
+    const char* const fn_name[4] = {"Mod", "Aft", "Bend", "Veloc"};
 
     // Logging
     MIDILogEntry log[7];

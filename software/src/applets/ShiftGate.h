@@ -90,14 +90,7 @@ protected:
         help[HELP_EXTRA2] = "";
        //                   "---------------------" <-- Extra text size guide
     }
-        //                               "------------------" <-- Size Guide
-        help[HEMISPHERE_HELP_DIGITALS] = "1=Clock 2=Freeze";
-        help[HEMISPHERE_HELP_CVS]      = "1,2 Gate=Flip Bit0";
-        help[HEMISPHERE_HELP_OUTS]     = "A,B Gate/Trigger";
-        help[HEMISPHERE_HELP_ENCODER]  = "Length/Type";
-        //                               "------------------" <-- Size Guide
-    }
-    
+
 private:
     int cursor; // 0=Length, 1=Trigger/Gate
     uint16_t reg[2]; // Registers

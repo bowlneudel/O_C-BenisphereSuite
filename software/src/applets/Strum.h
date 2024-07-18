@@ -216,7 +216,7 @@ protected:
         help[HELP_DIGITAL1] = "Strm Up";
         help[HELP_DIGITAL2] = "Strm Dn";
         help[HELP_CV1]      = "Root";
-        help[HELP_CV2]      = "Spacing";
+        help[HELP_CV2]      = qmod ? "QSelect" : "Spacing";
         help[HELP_OUT1]     = "Pitch";
         help[HELP_OUT2]     = "Trig";
         help[HELP_EXTRA1] = "";

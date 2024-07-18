@@ -132,7 +132,7 @@ public:
     }
 
 protected:
-    void SetHelp()
+    void SetHelp() {
         //                    "-------" <-- Label size guide
         help[HELP_DIGITAL1] = "Clock";
         help[HELP_DIGITAL2] = "Reset";

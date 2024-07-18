@@ -171,14 +171,7 @@ protected:
         help[HELP_EXTRA2] = "";
        //                  "---------------------" <-- Extra text size guide
     }
-        //                               "------------------" <-- Size Guide
-        help[HEMISPHERE_HELP_DIGITALS] = "1=Clock  2=p Gate";
-        help[HEMISPHERE_HELP_CVS]      = "1=Length 2=p Mod";
-        help[HEMISPHERE_HELP_OUTS]     = "A=Quant5-bit B=aux";
-        help[HEMISPHERE_HELP_ENCODER]  = "Len/Prob/Scl/Range";
-        //                               "------------------" <-- Size Guide
-    }
-    
+
 private:
     int length; // Sequence length
     int cursor;  // 0 = length, 1 = p, 2 = scale

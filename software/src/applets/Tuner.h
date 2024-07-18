@@ -106,27 +106,34 @@ public:
 
 protected:
     void SetHelp() {
-        if (TUNER_ENABLED) {
+      help[HELP_CV1]      = "";
+      help[HELP_CV2]      = "";
+      help[HELP_OUT1]     = "";
+      help[HELP_OUT2]     = "";
+      if (TUNER_ENABLED) {
+        //                    "-------" <-- Label size guide
 #ifdef FLIP_180
-            help[HEMISPHERE_HELP_DIGITALS] = "1=Input";
+        help[HELP_DIGITAL1] = "Input";
+        help[HELP_DIGITAL2] = "";
 #else
-            help[HEMISPHERE_HELP_DIGITALS] = "2=Input";
+        help[HELP_DIGITAL1] = "";
+        help[HELP_DIGITAL2] = "Input";
 #endif
-            help[HEMISPHERE_HELP_CVS]      = "";
-            help[HEMISPHERE_HELP_OUTS]     = "";
-            help[HEMISPHERE_HELP_ENCODER]  = "A4 Hz P=Reset";
-        } else {
-            help[HEMISPHERE_HELP_DIGITALS] = "Due to hardware";
-            help[HEMISPHERE_HELP_CVS]      = "constraints, the";
-            help[HEMISPHERE_HELP_OUTS]     = "Tuner must run in";
+        help[HELP_EXTRA1] = "Enc: Adjust A4 Hz,";
+        help[HELP_EXTRA2] = "     Push to Reset";
+      } else {
+        help[HELP_DIGITAL1] = "";
+        help[HELP_DIGITAL2] = "";
+        help[HELP_EXTRA1] = "Tuner must run in the";
 #ifdef FLIP_180
-            help[HEMISPHERE_HELP_ENCODER]  = "left hemisphere";
+        help[HELP_EXTRA2] = "left hemisphere";
 #else
-            help[HEMISPHERE_HELP_ENCODER]  = "right hemisphere";
+        help[HELP_EXTRA2] = "right hemisphere";
 #endif
-        }
+        //                  "---------------------" <-- Extra text size guide
+      }
     }
-    
+
 private:
     // Port from References
     double freq_sum_;

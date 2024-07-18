@@ -168,9 +168,9 @@ protected:
         help[HELP_OUT2]     = "Ch 2";
         help[HELP_EXTRA1] = "";
         help[HELP_EXTRA2] = "AuxButton to Shred";
-       //                  "---------------------" <-- Extra text size guide
+        //                  "---------------------" <-- Extra text size guide
     }
-    
+
 private:
     int cursor;
 

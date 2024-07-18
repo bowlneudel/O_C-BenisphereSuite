@@ -131,15 +131,19 @@ public:
     }
 
 protected:
-    void SetHelp() {
-        //                               "------------------" <-- Size Guide
-        help[HEMISPHERE_HELP_DIGITALS] = "";
-        help[HEMISPHERE_HELP_CVS]      = "";
-        help[HEMISPHERE_HELP_OUTS]     = "Assignable";
-        help[HEMISPHERE_HELP_ENCODER]  = "MIDI Ch/Assign/Log";
-        //                               "------------------" <-- Size Guide
-    }
-    
+  void SetHelp() {
+    //                    "-------" <-- Label size guide
+    //help[HELP_DIGITAL1] = "";
+    //help[HELP_DIGITAL2] = "";
+    //help[HELP_CV1]      = "";
+    //help[HELP_CV2]      = "";
+    help[HELP_OUT1]     = midi_fn_name[frame.MIDIState.function[io_offset + 0]];
+    help[HELP_OUT2]     = midi_fn_name[frame.MIDIState.function[io_offset + 1]];
+    //help[HELP_EXTRA1]  = "";
+    //help[HELP_EXTRA2]  = "";
+    //                   "---------------------" <-- Extra text size guide
+  }
+
 private:
     // Housekeeping
     int cursor; // 0=MIDI channel, 1=A/C function, 2=B/D function
