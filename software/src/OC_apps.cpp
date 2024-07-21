@@ -367,6 +367,7 @@ void Init(bool reset_settings) {
 
   Scales::Init();
   AUTOTUNE::Init();
+  HS::Init();
   for (auto &app : available_apps)
     app.Init();
 

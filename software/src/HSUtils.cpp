@@ -14,6 +14,7 @@ namespace HS {
   uint8_t qview = 0; // which quantizer's setting is shown in popup
   bool q_edit = false; // flag to edit current quantizer
 
+  OC::SemitoneQuantizer input_quant[ADC_CHANNEL_LAST];
   braids::Quantizer quantizer[QUANT_CHANNEL_COUNT]; // global shared quantizers
   int quant_scale[QUANT_CHANNEL_COUNT];
   int8_t root_note[QUANT_CHANNEL_COUNT];
@@ -35,6 +36,15 @@ namespace HS {
 #endif
   uint8_t trig_length = 10; // in ms, multiplier for HEMISPHERE_CLOCK_TICKS
   uint8_t screensaver_mode = 3; // 0 = blank, 1 = Meters, 2 = Scope/Zaps, 3 = Zips/Stars
+
+  void Init() {
+    for (int i = 0; i < ADC_CHANNEL_LAST; ++i)
+      input_quant[i].Init();
+
+    for (int i = 0; i < QUANT_CHANNEL_COUNT; ++i)
+      quantizer[i].Init();
+  }
+
 
   void PokePopup(PopupType pop) {
     popup_type = pop;

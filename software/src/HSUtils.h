@@ -265,6 +265,8 @@ namespace HS {
   extern uint8_t qview; // which quantizer's setting is shown in popup
   extern bool q_edit;
 
+  // input quantizers, because sometimes we need hysteresis
+  extern OC::SemitoneQuantizer input_quant[ADC_CHANNEL_LAST];
   extern braids::Quantizer quantizer[QUANT_CHANNEL_COUNT]; // global shared quantizers
   extern int quant_scale[QUANT_CHANNEL_COUNT];
   extern int8_t root_note[QUANT_CHANNEL_COUNT];
@@ -280,6 +282,8 @@ namespace HS {
   extern int cvmapping[ADC_CHANNEL_LAST];
   extern uint8_t trig_length;
   extern uint8_t screensaver_mode;
+
+  void Init();
 
   // --- Quantizer helpers
   int GetLatestNoteNumber(int ch);

@@ -204,6 +204,9 @@ public:
       }
       return 0;
     }
+    int SemitoneIn(int ch) {
+      return input_quant[ch].Process(In(ch));
+    }
 
     // defined in HemisphereApplet.cpp
     bool Clock(int ch, bool physical = 0);
@@ -269,8 +272,10 @@ public:
     // Standard bi-polar CV modulation scenario
     template <typename T>
     void Modulate(T &param, const int ch, const int min = 0, const int max = 255) {
-        int cv = DetentedIn(ch);
-        param = constrain(param + Proportion(cv, HEMISPHERE_MAX_INPUT_CV, max), min, max);
+        // small ranges use Semitone quantizer for hysteresis
+        int increment = (max < 70) ? SemitoneIn(ch) :
+          Proportion(DetentedIn(ch), HEMISPHERE_MAX_INPUT_CV, max);
+        param = constrain(param + increment, min, max);
     }
 
     inline bool EditMode() {
