@@ -56,7 +56,7 @@ public:
         {
             // CV modulation of modulo value
             pigeons[ch].mod_v = pigeons[ch].mod;
-            Modulate(pigeons[ch].mod_v, ch, 1, 64);
+            Modulate(pigeons[ch].mod_v, ch, 2, 64);
 
             if (loop_linker->TrigPop(ch) || Clock(ch)) {
                 int signal = HS::QuantizerLookup(qselect[ch], pigeons[ch].Bump() + 64);
@@ -84,11 +84,11 @@ public:
         const struct { uint8_t &p; int min, max; } params[] = {
             { pigeons[0].val[0], 0, 63 }, // CHAN1_V1
             { pigeons[0].val[1], 0, 63 }, // CHAN1_V2
-            { pigeons[0].mod, 1, 64 }, // CHAN1_MOD
+            { pigeons[0].mod, 2, 64 }, // CHAN1_MOD
             { qselect[0], 0, QUANT_CHANNEL_COUNT - 1 }, // QUANT_A
             { pigeons[1].val[0], 0, 63 }, // CHAN2_V1
             { pigeons[1].val[1], 0, 63 }, // CHAN2_V2
-            { pigeons[1].mod, 1, 64 }, // CHAN2_MOD
+            { pigeons[1].mod, 2, 64 }, // CHAN2_MOD
             { qselect[1], 0, QUANT_CHANNEL_COUNT - 1 }, // QUANT_B
         };
 
@@ -156,6 +156,7 @@ private:
 
         uint8_t Get() { return val[index]; }
         uint8_t Bump() {
+            if (0 == (val[0] + val[1])) ++val[index]; // revival
             val[index] = (val[0] + val[1]) % mod_v;
             index = !index;
             return val[index];
