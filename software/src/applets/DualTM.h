@@ -97,10 +97,6 @@ public:
         reg[1] = random(0xFFFFFFFF);
         qselect[0] = io_offset;
         qselect[1] = io_offset + 1;
-
-        ForEachChannel(ch) {
-          input_quant[ch].Init();
-        }
     }
 
     void Controller() {
@@ -142,7 +138,7 @@ public:
 
             case Q_MOD: {
                 // select Quantizer with semitones at the input
-                const int cv = input_quant[ch].Process(In(ch));
+                const int cv = SemitoneIn(ch);
                 qselect_mod[ch] = constrain(qselect_mod[ch] + cv, 0, QUANT_CHANNEL_COUNT - 1);
                 break;
             }
@@ -389,9 +385,6 @@ private:
     // most recent output values
     int Output[2] = {0, 0};
     int trigpulse[2] = {0, 0}; // tick timer for Trig output modes
-
-    // input quantizers, just because we need hysteresis
-    OC::SemitoneQuantizer input_quant[2];
 
     // Settings and modulated copies
     int qselect[2];

@@ -24,7 +24,6 @@ public:
 
   void Start() { 
     qselect = io_offset;
-    input_quant.Init();
   }
 
   void Controller() {
@@ -54,7 +53,7 @@ public:
     qselect_mod = qselect;
     if (qmod) {
       // select quantizer with semitones on CV2
-      int cv = input_quant.Process(In(1));
+      int cv = SemitoneIn(1);
       qselect_mod = constrain(qselect_mod + cv, 0, QUANT_CHANNEL_COUNT - 1);
     }
     else
@@ -241,7 +240,6 @@ private:
   int countdown = 0;
   int show_encoder = 0;
 
-  OC::SemitoneQuantizer input_quant;
   int8_t qselect = 0;
   int8_t qselect_mod = 0;
   bool qmod = 0; // switch CV between spacing and qselect
