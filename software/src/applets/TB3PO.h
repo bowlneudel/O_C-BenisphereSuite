@@ -658,7 +658,7 @@ private:
       gfxPrint(8, 37, "-"); // Print minus sign this way to right-align the number
     }
     gfxPrint(14, 37, dens_display);
-    if (density_auto_enabled) gfxFrame(8, 35, 16, 11);
+    if (density_auto_enabled) gfxFrame(8, 35, 16, 11, true);
 
     // Scale and root note select
     gfxPrint(38, 26, OC::scale_names_short[GetScale(0)]);
@@ -732,13 +732,13 @@ private:
       gfxCursor(25 + 6 * (cursor - 1), 23, 7);
       break;
     case DENSITY:
-      gfxCursor(9, 45, 14); // density
+      gfxSpicyCursor(9, 45, 14); // density
       break;
     case SCALE:
-      gfxCursor(38, 34, 25); // scale
+      gfxSpicyCursor(38, 34, 25); // scale
       break;
     case ROOT:
-      gfxCursor(38, 44, 24); // root note
+      gfxSpicyCursor(38, 44, 24); // root note
       break;
     case LENGTH:
       gfxCursor(20, 54, 12, 8); // step

@@ -197,8 +197,10 @@ private:
             gfxLine(4, y, 60, y); // ---------------------------------- //
         }
 
-        // i'm proud of this one:
-        gfxCursor( cur[cursor].x, cur[cursor].y, cur[cursor].w );
+        if (QUANT_A == cursor || QUANT_B == cursor)
+          gfxSpicyCursor( cur[cursor].x, cur[cursor].y, cur[cursor].w );
+        else
+          gfxCursor( cur[cursor].x, cur[cursor].y, cur[cursor].w );
     }
 
 };

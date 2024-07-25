@@ -304,7 +304,13 @@ void gfxPixel(int x, int y) {
     graphics.setPixel(x, y);
 }
 
-void gfxFrame(int x, int y, int w, int h) {
+void gfxFrame(int x, int y, int w, int h, bool dotted) {
+  if (dotted) {
+    gfxDottedLine(x, y, x + w - 1, y); // top
+    gfxDottedLine(x, y + 1, x, y + h - 1); // vert left
+    gfxDottedLine(x + w - 1, y + 1, x + w - 1, y + h - 1); // vert right
+    gfxDottedLine(x, y + h - 1, x + w - 1, y + h - 1); // bottom
+  } else
     graphics.drawFrame(x, y, w, h);
 }
 

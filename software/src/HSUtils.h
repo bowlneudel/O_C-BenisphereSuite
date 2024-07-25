@@ -33,7 +33,7 @@ typedef int32_t simfloat;
 #define HEMISPHERE_MAX_INPUT_CV 9216 // 6V
 #define HEMISPHERE_CENTER_DETENT 80
 #define HEMISPHERE_CLOCK_TICKS 17 // one millisecond
-#define HEMISPHERE_CURSOR_TICKS 12000
+#define HEMISPHERE_CURSOR_TICKS 5000
 #define HEMISPHERE_ADC_LAG 33
 #define HEMISPHERE_CHANGE_THRESHOLD 32
 
@@ -218,7 +218,7 @@ void gfxPrint(int num);
 void gfxPrint(int x_adv, int num);
 void gfxPrintVoltage(int cv);
 void gfxPixel(int x, int y);
-void gfxFrame(int x, int y, int w, int h);
+void gfxFrame(int x, int y, int w, int h, bool dotted = false);
 void gfxRect(int x, int y, int w, int h);
 void gfxInvert(int x, int y, int w, int h);
 void gfxLine(int x, int y, int x2, int y2);

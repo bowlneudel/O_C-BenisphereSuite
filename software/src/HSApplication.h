@@ -38,7 +38,7 @@ typedef int32_t simfloat;
 #include "HemisphereApplet.h"
 #include "HSUtils.h"
 
-#define HSAPPLICATION_CURSOR_TICKS 12000
+#define HSAPPLICATION_CURSOR_TICKS 4000
 #define HSAPPLICATION_5V 7680
 #define HSAPPLICATION_3V 4608
 #define HSAPPLICATION_CHANGE_THRESHOLD 32
@@ -53,6 +53,8 @@ using namespace HS;
 
 class HSApplication {
 public:
+    bool isEditing = false;
+
     virtual void Start() = 0;
     virtual void Controller() = 0;
     virtual void View() = 0;
@@ -214,8 +216,25 @@ public:
     void StartADCLag(int ch) {frame.adc_lag_countdown[ch] = 96;}
     bool EndOfADCLag(int ch) {return (--frame.adc_lag_countdown[ch] == 0);}
 
-    void gfxCursor(int x, int y, int w) {
-        if (CursorBlink()) gfxLine(x, y, x + w - 1, y);
+    void gfxCursor(int x, int y, int w, int h = 9) {
+      if (isEditing) {
+        gfxInvert(x, y - h, w, h);
+      } else if (CursorBlink()) {
+        gfxLine(x, y, x + w - 1, y);
+        gfxPixel(x, y-1);
+        gfxPixel(x + w - 1, y-1);
+      }
+    }
+    void gfxSpicyCursor(int x, int y, int w, int h = 9) {
+      if (isEditing) {
+        if (CursorBlink())
+          gfxFrame(x, y - h, w, h, true);
+        gfxInvert(x, y - h, w, h);
+      } else {
+        gfxDottedLine(x - CursorBlink(), y, x + w - 1, y);
+        gfxPixel(x, y-1);
+        gfxPixel(x + w - 1, y-1);
+      }
     }
 
 protected:

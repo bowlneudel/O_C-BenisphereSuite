@@ -87,7 +87,7 @@ public:
     gfxPrint(15, 15, OC::scale_names_short[HS::GetScale(qselect_mod)]);
     gfxPrint(45, 15, OC::Strings::note_names_unpadded[HS::GetRootNote(qselect_mod)]);
     if (cursor == QUANT)
-      gfxCursor(1, 23, 13);
+      gfxSpicyCursor(1, 23, 13);
 
     if (show_encoder) {
       gfxPrint(8 + pad(100, spacing), 25, spacing);
@@ -98,7 +98,7 @@ public:
     }
     gfxPrint(28, 25, "ms");
     if (cursor == SPACING)
-      gfxCursor(1, 33, 27);
+      gfxSpicyCursor(1, 33, 27);
 
     gfxIcon(56, qmod? 15 : 25, LEFT_ICON);
 

@@ -541,7 +541,7 @@ public:
         }
 
         // Overlay popup window last
-        if (OC::CORE::ticks - HS::popup_tick < HEMISPHERE_CURSOR_TICKS) {
+        if (OC::CORE::ticks - HS::popup_tick < HEMISPHERE_CURSOR_TICKS * 2) {
           HS::DrawPopup(config_cursor, preset_id, CursorBlink());
         }
     }
@@ -797,7 +797,6 @@ private:
     int next_applet[2]; // queued from UI thread, handled by Controller
     uint64_t clock_data, global_data, applet_data[2]; // cache of applet data
     bool clock_setup;
-    bool isEditing = false;
     int config_cursor = 0;
     int config_page = 0;
     int dummy_count = 0;
@@ -1012,15 +1011,13 @@ private:
         case TRIGMAP2:
         case TRIGMAP3:
         case TRIGMAP4:
-          if (isEditing) gfxInvert(3 + 32*(config_cursor-TRIGMAP1), 24, 20, 9);
-          else gfxCursor(4 + 32*(config_cursor - TRIGMAP1), 33, 19);
+          gfxCursor(4 + 32*(config_cursor - TRIGMAP1), 33, 19);
           break;
         case CVMAP1:
         case CVMAP2:
         case CVMAP3:
         case CVMAP4:
-          if (isEditing) gfxInvert(3 + 32*(config_cursor-CVMAP1), 44, 20, 9);
-          else gfxCursor(4 + 32*(config_cursor - CVMAP1), 53, 19);
+          gfxCursor(4 + 32*(config_cursor - CVMAP1), 53, 19);
           break;
         }
 
@@ -1123,13 +1120,11 @@ private:
         case CVMAP2:
         case CVMAP3:
         case CVMAP4:
-          if (isEditing) gfxInvert(32*(config_cursor-CVMAP1), 54, 20, 9);
-          else gfxCursor(1 + 32*(config_cursor - CVMAP1), 63, 19);
+          gfxCursor(1 + 32*(config_cursor - CVMAP1), 63, 19);
           break;
 
         case TRIG_LENGTH:
-            if (isEditing) gfxInvert(79, 14, 25, 9);
-            else gfxCursor(80, 23, 24);
+            gfxCursor(80, 23, 24);
             break;
         case SCREENSAVER_MODE:
             gfxIcon(73, 25, RIGHT_ICON);

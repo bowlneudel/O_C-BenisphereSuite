@@ -292,12 +292,24 @@ public:
     //////////////// Offset graphics methods
     ////////////////////////////////////////////////////////////////////////////////
     void gfxCursor(int x, int y, int w, int h = 9) { // assumes standard text height for highlighting
-        if (isEditing) gfxInvert(x, y - h, w, h);
-        else if (CursorBlink()) {
-            gfxLine(x, y, x + w - 1, y);
-            gfxPixel(x, y-1);
-            gfxPixel(x + w - 1, y-1);
-        }
+      if (isEditing) {
+        gfxInvert(x, y - h, w, h);
+      } else if (CursorBlink()) {
+        gfxLine(x, y, x + w - 1, y);
+        gfxPixel(x, y-1);
+        gfxPixel(x + w - 1, y-1);
+      }
+    }
+    void gfxSpicyCursor(int x, int y, int w, int h = 9) {
+      if (isEditing) {
+        if (CursorBlink())
+          gfxFrame(x, y - h, w, h, true);
+        gfxInvert(x, y - h, w, h);
+      } else {
+        gfxLine(x - CursorBlink(), y, x + w - 1, y, 2);
+        gfxPixel(x, y-1);
+        gfxPixel(x + w - 1, y-1);
+      }
     }
 
     void gfxPos(int x, int y) {
@@ -334,7 +346,13 @@ public:
         graphics.setPixel(x + gfx_offset, y);
     }
 
-    void gfxFrame(int x, int y, int w, int h) {
+    void gfxFrame(int x, int y, int w, int h, bool dotted = false) {
+      if (dotted) {
+        gfxLine(x, y, x + w - 1, y, 2); // top
+        gfxLine(x, y + 1, x, y + h - 1, 2); // vert left
+        gfxLine(x + w - 1, y + 1, x + w - 1, y + h - 1, 2); // vert rigth
+        gfxLine(x, y + h - 1, x + w - 1, y + h - 1, 2); // bottom
+      } else
         graphics.drawFrame(x + gfx_offset, y, w, h);
     }
 

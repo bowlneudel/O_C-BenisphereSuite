@@ -198,7 +198,7 @@ private:
         if (bipolar[0]) {
           gfxPrint(13, 18, "-");
         }
-        if (cursor == 0) gfxCursor(13, 23, 12);
+        if (cursor == 0) gfxSpicyCursor(13, 23, 12);
 
         // Channel 2 voltage
         ++outlabel[0];
@@ -207,7 +207,7 @@ private:
         if (bipolar[1]) {
           gfxPrint(44, 18, "-");
         }
-        if (cursor == 1) gfxCursor(44, 23, 12);
+        if (cursor == 1) gfxSpicyCursor(44, 23, 12);
 
         // quantize channel selection
         gfxIcon(32, 25, SCALE_ICON);

@@ -280,7 +280,7 @@ private:
           if (edit_ticker == 0 && trans_mod != transpose) gfxIcon(44, 8, CV_ICON);
 
           if (cursor == TRANSPOSE)
-            gfxCursor(45, 21, 19);
+            gfxSpicyCursor(45, 21, 19);
           else
             gfxCursor(1 + (cursor-QUANT_SCALE)*30, 21, (1-(cursor-QUANT_SCALE))*12 + 13);
           break;
@@ -308,7 +308,7 @@ private:
           if (cursor == WRITE_MODE)
             gfxFrame(48, 12, 10, 10);
           else
-            gfxCursor(6 + (cursor-PATTERN)*27, 21, 13);
+            gfxSpicyCursor(6 + (cursor-PATTERN)*27, 21, 13);
 
           if (write_mode)
             gfxInvert(48, 12, 10, 10);

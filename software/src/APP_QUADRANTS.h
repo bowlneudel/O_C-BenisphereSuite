@@ -504,7 +504,7 @@ public:
         }
 
         // Overlay popup window last
-        if (OC::CORE::ticks - HS::popup_tick < HEMISPHERE_CURSOR_TICKS) {
+        if (OC::CORE::ticks - HS::popup_tick < HEMISPHERE_CURSOR_TICKS * 2) {
           HS::DrawPopup(config_cursor, preset_id, CursorBlink());
         }
     }
@@ -785,7 +785,6 @@ private:
     int next_applet_index[4]; // queued from UI thread, handled by Controller
     uint64_t clock_data, global_data, applet_data[4]; // cache of applet data
     bool view_slot[2] = {0, 0}; // Two applets on each side, only one visible at a time
-    bool isEditing = false;
     int config_cursor = 0;
 
     int select_mode = -1;
@@ -997,10 +996,7 @@ private:
         const int cur_x = (config_cursor-TRIGMAP1) % 4;
         const int cur_y = (config_cursor-TRIGMAP1) / 4;
 
-        if (isEditing)
-          gfxInvert(4 + 32*cur_x, 14 + 13*cur_y, 19, 9);
-        else
-          gfxCursor(4 + 32*cur_x, 23 + 13*cur_y, 19);
+        gfxCursor(4 + 32*cur_x, 23 + 13*cur_y, 19);
 
     }
     void DrawQuantizerConfig() {
@@ -1077,8 +1073,7 @@ private:
         
         switch (config_cursor) {
         case TRIG_LENGTH:
-            if (isEditing) gfxInvert(79, 14, 25, 9);
-            else gfxCursor(80, 23, 24);
+            gfxCursor(80, 23, 24);
             break;
         case SCREENSAVER_MODE:
             gfxIcon(73, 25, RIGHT_ICON);
