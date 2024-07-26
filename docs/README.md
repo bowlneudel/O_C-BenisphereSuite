@@ -4,7 +4,7 @@
 > 
 > Want to roll your own mix of Apps? You can request a **Custom Build** for Teensy 3.2 with a simple bot command on [this discussion post](https://github.com/djphazer/O_C-Phazerville/discussions/38).
 > 
-> Read a bit about my [[Development Philosophy]] to understand my motives behind this project.
+> Read a bit about my [Development Philosophy](Development-Philosophy) to understand my motives behind this project.
 > 
 > &mdash; _[DJ Phazer](https://ko-fi.com/djphazer)_
 
@@ -35,31 +35,31 @@ You can find links to documentation for (almost) every single O_C function on th
 
 #### Installation
 * [Firmware update procedure](https://ornament-and-cri.me/firmware/)
-* [Build choices]
-* [Saving state]
-* [Troubleshooting]
+* [Build choices](Build-choices)
+* [Saving state](Saving-state)
+* [Troubleshooting](Troubleshooting)
 
 #### Hemisphere docs:
 
-* [[Gestures / Button combos|Hemisphere-Gestures]]
-* [[Clock Setup]]
-* [[Config Menu|Hemisphere-Config]]
-    * [[Save\/Load Presets|Hemisphere-Presets]]
-    * [[General Settings|Hemisphere-General-Settings]]
-    * [[Quantizer Set-Up|Hemisphere-Quantizer-Setup]]
-    * [[Input Mapping|Hemisphere-Input-Mapping]]
-    * [[Applet Filtering|Hemisphere-Applet-Filtering]]
+* [Gestures / Button combos](Hemisphere-Gestures)
+* [Clock Setup)
+* [Config Menu](Hemisphere-Config)
+    * [Save / Load Presets](Hemisphere-Presets)
+    * [General Settings](Hemisphere-General-Settings)
+    * [Quantizer Set-Up](Hemisphere-Quantizer-Setup)
+    * [Input Mapping](Hemisphere-Input-Mapping)
+    * [Applet Filtering](Hemisphere-Applet-Filtering)
 
 ***
 
 ## New to Ornament and Crime?
 
-**_Ornament and Crime_** is a Polymorphic CV Generator — a swiss army knife of modular control voltage. It can perform as an _excellent_ sequencer, envelope generator, quantizer, MIDI-to-CV and/or CV-to-MIDI interface, and [[much more|App-and-Applet-Index#apps-and-applets-by-function]] via its many apps and applets.
+**_Ornament and Crime_** is a Polymorphic CV Generator — a swiss army knife of modular control voltage. It can perform as an _excellent_ sequencer, envelope generator, quantizer, MIDI-to-CV and/or CV-to-MIDI interface, and [much more](App-and-Applet-Index#apps-and-applets-by-function) via its many apps and applets.
 
-**_o_C_** is a **collaborative open-source project** originated by [Patrick Dowling, mxmxmx, and Tim Churches](https://ornament-and-cri.me/), and extended by many contributors (special thanks to [Chysn](https://github.com/Chysn/O_C-Hemisphere) for the original Hemisphere Suite). The **_Phazerville_** firmware optimizes the code base so that more apps can fit on the original hardware (which come in many flavours, for Eurorack and otherwise — _See [[Build Choices]]_), and paves the way for the next generation of hardware on the Teensy 4.1 platform.
+**_o_C_** is a **collaborative open-source project** originated by [Patrick Dowling, mxmxmx, and Tim Churches](https://ornament-and-cri.me/), and extended by many contributors (special thanks to [Chysn](https://github.com/Chysn/O_C-Hemisphere) for the original Hemisphere Suite). The **_Phazerville_** firmware optimizes the code base so that more apps can fit on the original hardware (which come in many flavours, for Eurorack and otherwise — _See [Build Choices)_), and paves the way for the next generation of hardware on the Teensy 4.1 platform.
 
-Each of the [[full screen apps|App-and-Applet-Index#full-screen-apps]] takes advantage of all inputs and outputs in their own way, which is usually configurable. _**Hemisphere**_ splits the screen into two halves: each side available to load any one of [[a long list of applets|App-and-Applet-Index]]. On o_C hardware with inputs and outputs arranged in 3 rows of 4 columns (i.e. most 8hp units), the I/O corresponding to an applet should be in line with that half of the display. If you're coming from any of the other Hemisphere forks, note that many of the applets have been upgraded for additional flexibility and functionality, and several are brand new.
+Each of the [full screen apps](App-and-Applet-Index#full-screen-apps) takes advantage of all inputs and outputs in their own way, which is usually configurable. _**Hemisphere**_ splits the screen into two halves: each side available to load any one of [a long list of applets](App-and-Applet-Index). On o_C hardware with inputs and outputs arranged in 3 rows of 4 columns (i.e. most 8hp units), the I/O corresponding to an applet should be in line with that half of the display. If you're coming from any of the other Hemisphere forks, note that many of the applets have been upgraded for additional flexibility and functionality, and several are brand new.
 
 ***
 
-_Note: Some apps, Hemisphere applets, and parameter editing contexts use special behaviour for the various encoders, buttons, and encoder buttons, which **should** be noted somewhere in these docs. If your encoders don't rotate the way you expect, you can flip the behaviour of one, the other, or both as part of the [[Setup / About|Setup About]] calibration routine. See [[Hemisphere Gestures]] for all button combos within Hemisphere._
+_Note: Some apps, Hemisphere applets, and parameter editing contexts use special behaviour for the various encoders, buttons, and encoder buttons, which **should** be noted somewhere in these docs. If your encoders don't rotate the way you expect, you can flip the behaviour of one, the other, or both as part of the [Setup / About](Setup-About) calibration routine. See [Hemisphere Gestures](Hemisphere-Gestures) for all button combos within Hemisphere._
