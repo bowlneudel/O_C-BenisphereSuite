@@ -10,11 +10,11 @@
 
 ## Key Features:
 * More apps now fit on the same hardware (you can even [choose your own selection](https://github.com/djphazer/O_C-Phazerville/discussions/38))
-* Many new and improved [[Hemisphere applets|App-and-Applet-Index#hemisphere-applets]]
-* New full screen apps: [[Scenes]], [[Calibr8or]], and [Passencore](https://llllllll.co/t/passencore-chord-ornament-music-theory-crime/45925)
+* Many new and improved [Hemisphere applets](App-and-Applet-Index.md#hemisphere-applets)
+* New full screen apps: [Scenes](Scenes.md), [Calibr8or](Calibr8or.md), and [Passencore](https://llllllll.co/t/passencore-chord-ornament-music-theory-crime/45925)
 * New UI features, codebase optimizations, and QoL improvements
-    * [[Hemisphere Presets]] — with auto save and loading via MIDI program changes
-    * [[Trigger and CV Input re-mapping|Hemisphere-Input-Mapping]] (including internal routing)
+    * [Hemisphere Presets](Hemisphere Presets) — with auto save and loading via MIDI program changes
+    * [Trigger and CV Input re-mapping](Hemisphere-Input-Mapping) (including internal routing)
     * [[Internal clock improvements|Clock-Setup]]: swing, per-channel multiplication / division, manual performance triggers
     * [[Global per-channel quantization|Hemisphere-Quantizer-Setup]] (with pop-up editor and performance transposition)
     * Intuitive USB MIDI In clock sync
