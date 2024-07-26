@@ -5,7 +5,7 @@ Full screen apps in Phazerville are mostly from the original Ornament and Crime 
 
 Not all the apps can fit at once on Teensy 3.2 hardware, but you can use the [default set](https://github.com/djphazer/O_C-Phazerville/releases) or [choose your own selection](https://github.com/djphazer/O_C-Phazerville/discussions/38) with a custom build.
 
-* Hemisphere - 2 [Applets](#applets) at a time
+* Hemisphere - 2 [Applets](#hemisphere-applets) at a time
 * [Calibr8or](Calibr8or) - Quad performance quantizer with pitch tracking calibration
 * [Scenes](Scenes) - Macro CV switch / crossfader
 * [Captain MIDI](Captain-MIDI) - Configurable CV-to-MIDI and MIDI-to-CV interface
@@ -103,7 +103,7 @@ If you're coming from any of the other Hemisphere forks, note that many of the a
 * [Strum](Strum) - the ultimate arpeggiator (pairs well with Rings)
 * [Switch](Switch) - CV switch & toggle
 * [SwitchSeq](Switch-Seq) - multiple Seq32 patterns running in parallel
-* [TB-3PO) - a brilliant 303-style sequencer
+* [TB-3PO](TB-3PO) - a brilliant 303-style sequencer
 * [TL Neuron](Threshold-Logic-Neuron) - clever logic gate
 * [Trending](Trending) - rising / falling / moving / steady / state change / value change
 * [TrigSeq](Trigger-Sequencer) - two 8-step trigger sequences
@@ -136,7 +136,7 @@ If you're coming from any of the other Hemisphere forks, note that many of the a
 | **Mixer**                    | [MixerBal](Mixer-Balance)                                                                                                                                                          |                                                                                          |
 | **Modulation Source**        | [GameOfLife](GameOfLife), [Stairs](Stairs), [VectorMod](VectorMod), [VectorMorph](VectorMorph)                                                                                                                          | [Low-rents](https://ornament-and-cri.me/user-manual-v1_3/#anchor-low-rents), [Pong](Pong)                                                                                   |
 | **Performance Utility**      | [Button2](Button2)                                                                                                                                                           |  [Scenes](Scenes)                                                                                        |
-| **Pitch Sequencer**          | [Carpeggio](Carpeggio), [DualTM](DualTM), [EnigmaJr](Enigma-Jr.), [Pigeons](Pigeons), [ProbMeloD](ProbMeloD), [Seq32](Seq32), [SequenceX](SequenceX), [Shredder](Shredder), [Strum](Strum), [SwitchSeq](Switch-Seq), [TB-3PO) | [Enigma](Enigma), [The Darkest Timeline](https://github.com/Chysn/O_C-HemisphereSuite/wiki/The-Darkest-Timeline-2.0), [Automatonnetz](https://ornament-and-cri.me/user-manual-v1_3/#anchor-automatonnetz), [Sequins](https://ornament-and-cri.me/user-manual-v1_3/#anchor-sequins), [Acid Curds](https://ornament-and-cri.me/user-manual-v1_3/#anchor-acid-curds), [Passencore](https://llllllll.co/t/passencore-chord-ornament-music-theory-crime/45925) | 
+| **Pitch Sequencer**          | [Carpeggio](Carpeggio), [DualTM](DualTM), [EnigmaJr](Enigma-Jr.), [Pigeons](Pigeons), [ProbMeloD](ProbMeloD), [Seq32](Seq32), [SequenceX](SequenceX), [Shredder](Shredder), [Strum](Strum), [SwitchSeq](Switch-Seq), [TB-3PO](TB-3PO) | [Enigma](Enigma), [The Darkest Timeline](https://github.com/Chysn/O_C-HemisphereSuite/wiki/The-Darkest-Timeline-2.0), [Automatonnetz](https://ornament-and-cri.me/user-manual-v1_3/#anchor-automatonnetz), [Sequins](https://ornament-and-cri.me/user-manual-v1_3/#anchor-sequins), [Acid Curds](https://ornament-and-cri.me/user-manual-v1_3/#anchor-acid-curds), [Passencore](https://llllllll.co/t/passencore-chord-ornament-music-theory-crime/45925) | 
 | **Quantizer**               | [Calibr8](Calibr8), [Chordinate](Chordinate), [DualQuant](Dual-Quantizer), [MultiScale](MultiScale), [ScaleDuet](Scale-Duet-Quantizer), [Squanch](Squanch)                                                                      | [Calibr8or](Calibr8or), [Harrington 1200](https://ornament-and-cri.me/user-manual-v1_3/#anchor-harrington-1200), [Quantermain](https://ornament-and-cri.me/user-manual-v1_3/#anchor-quantermain), [Meta-Q](https://ornament-and-cri.me/user-manual-v1_3/#anchor-meta-q)                                  |
 | **Random / Chaos**           | [Brancher](Brancher), [LowerRenz](LowerRenz), [ProbDiv](ProbDiv), [ProbMeloD](ProbMeloD), [RndWalk](Random-Walk), [Shredder](Shredder)                                                        | [Low-rents](https://ornament-and-cri.me/user-manual-v1_3/#anchor-low-rents)                                                                              |
 | **Shift Register**           | [ASR](ASR), [DualTM](DualTM), [EnigmaJr](Enigma-Jr.), [RunglBook](RunglBook), [ShiftGate](ShiftGate)                                                                                               | [Enigma](Enigma), [CopierMaschine](https://ornament-and-cri.me/user-manual-v1_3/#anchor-copiermaschine)                                                               |
