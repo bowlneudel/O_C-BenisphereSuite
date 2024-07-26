@@ -10,15 +10,15 @@
 
 ## Key Features:
 * More apps now fit on the same hardware (you can even [choose your own selection](https://github.com/djphazer/O_C-Phazerville/discussions/38))
-* Many new and improved [Hemisphere applets](App-and-Applet-Index.md#hemisphere-applets)
-* New full screen apps: [Scenes](Scenes.md), [Calibr8or](Calibr8or.md), and [Passencore](https://llllllll.co/t/passencore-chord-ornament-music-theory-crime/45925)
+* Many new and improved [Hemisphere applets](App-and-Applet-Index#hemisphere-applets)
+* New full screen apps: [Scenes](Scenes), [Calibr8or](Calibr8or), and [Passencore](https://llllllll.co/t/passencore-chord-ornament-music-theory-crime/45925)
 * New UI features, codebase optimizations, and QoL improvements
-    * [Hemisphere Presets](Hemisphere Presets) — with auto save and loading via MIDI program changes
+    * [Hemisphere Presets](Hemisphere-Presets) — with auto save and loading via MIDI program changes
     * [Trigger and CV Input re-mapping](Hemisphere-Input-Mapping) (including internal routing)
-    * [[Internal clock improvements|Clock-Setup]]: swing, per-channel multiplication / division, manual performance triggers
-    * [[Global per-channel quantization|Hemisphere-Quantizer-Setup]] (with pop-up editor and performance transposition)
+    * [Internal clock improvements](Clock-Setup): swing, per-channel multiplication / division, manual performance triggers
+    * [Global per-channel quantization](Hemisphere-Quantizer-Setup) (with pop-up editor and performance transposition)
     * Intuitive USB MIDI In clock sync
-    * Experimental [[automatic USB MIDI Out|Hemisphere-General-Settings#auto-midi-output]]
+    * Experimental [automatic USB MIDI Out](Hemisphere-General-Settings#auto-midi-output)
 * And [someday very soon](https://ko-fi.com/djphazer): Next-gen hardware running Teensy 4.1
 
 ***
@@ -31,13 +31,13 @@ You can find links to documentation for (almost) every single O_C function on th
 
 ↯ [Download a **Release**](https://github.com/djphazer/O_C-Phazerville/releases) or ᛃ [Request a **Custom Build**](https://github.com/djphazer/O_C-Phazerville/discussions/38).
 
-⧉ **[[Index of all Apps and Applets|App-and-Applet-Index]]**
+⧉ **[Index of all Apps and Applets](App-and-Applet-Index)**
 
 #### Installation
 * [Firmware update procedure](https://ornament-and-cri.me/firmware/)
-* [[Build choices]]
-* [[Saving state]]
-* [[Troubleshooting]]
+* [Build choices]
+* [Saving state]
+* [Troubleshooting]
 
 #### Hemisphere docs:
 
