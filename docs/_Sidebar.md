@@ -1,4 +1,4 @@
-# [[Home]]
+# [[Home|index]]
 * [[Development Philosophy]]
 * [Quick Links](home#quick-links)
     * [Download a Release](https://github.com/djphazer/O_C-Phazerville/releases)
