@@ -1,0 +1,9 @@
+title: Phazerville Suite for O_C
+description: Phazerville Suite is a firmware project for the Ornament & Crime Eurorack module
+show_downloads: true
+theme: jekyll-theme-minimal
+plugins:
+  - jekyll-relative-links
+relative_links:
+  enabled: true
+  collections: true
