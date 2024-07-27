@@ -23,8 +23,8 @@
 
 ## Apps and Applets
  **[Full Screen Apps](App-and-Applet-Index#full-screen-apps)**
- <details><summary>List of Apps</summary>
-
+ 
+ <details markdown="block"><summary>List of Apps</summary>
  * [Calibr8or](Calibr8or)
  * [Scenes](Scenes)
  * [Captain MIDI](Captain-MIDI)
@@ -53,8 +53,8 @@
  </details>
 
  **[Hemisphere Applets](App-and-Applet-Index#hemisphere-applets)**
- <details><summary>List of Applets</summary>
 
+ <details markdown="block"><summary>List of Applets</summary>
  * [ADSR](ADSR-EG)
  * [AD EG](AD-EG)
  * [ASR](ASR)
