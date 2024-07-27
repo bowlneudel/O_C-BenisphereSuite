@@ -4,7 +4,7 @@
 
 The CV inputs can be used to toggle **XOR** mode per channel - a positive voltage switches from the default logical **OR** operation to **XOR**. This means two simultaneous pulses from the selected clock dividers will cancel each other out, leading to more curious polyrhythmic patterns.
 
-See it in action: https://www.youtube.com/watch?v=J1OH-oomvMA&t=305s
+[See it in action!](https://www.youtube.com/watch?v=J1OH-oomvMA&t=305s)
 
 ### I/O
 

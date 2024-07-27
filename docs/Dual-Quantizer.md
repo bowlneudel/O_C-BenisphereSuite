@@ -2,7 +2,7 @@
 
 **Dual Quantizer** converts 2 independent CV inputs to pitches of specific musical scales. Clocked (sample & hold) operation is available for each channel.
 
-See it in action: https://youtu.be/GkV-rB4ntho
+[See it in action!](https://youtu.be/GkV-rB4ntho)
 
 ### I/O
 

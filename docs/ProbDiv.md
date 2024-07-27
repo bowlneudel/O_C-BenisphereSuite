@@ -4,7 +4,7 @@
 
 At the heart of ProbDiv is a clock divider. There are four clock divisions that can be given probability of being selected, `/1`, `/2`, `/4`, and `/8`. On the first clock input received at Digital 1, a new division is selected based on the probability settings for each division. Once that division is reached, a trigger is sent to Output A/C, another division is selected, and the process starts over. If all divisions have a probability of 0, nothing will be selected and no clocks will be output.
 
-See it in action: https://www.youtube.com/watch?v=uR8pLUVNDjI
+[See it in action!](https://www.youtube.com/watch?v=uR8pLUVNDjI)
 
 ### I/O
 

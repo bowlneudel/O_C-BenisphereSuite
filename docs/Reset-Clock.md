@@ -2,7 +2,7 @@
 
 **ResetClk** is a tool to assist with sequencers that can only advance forward (like the DFAM). It keeps track of the current step position and emulates a "reset" by quickly sending trigger pulses to loop back to the desired step. The first CV input modulates the position offset, and the applet keeps the actual sequencer position synchronized.
 
-See it in action: https://youtu.be/i1xU6-oPwfA
+[See it in action!](https://youtu.be/i1xU6-oPwfA)
 
 ### I/O
 

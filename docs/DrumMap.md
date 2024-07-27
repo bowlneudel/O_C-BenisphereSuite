@@ -4,11 +4,11 @@
 
 DrumMap expects a 32nd note clock (8ppqn) to operate normally, but can use other clock speeds to advance the sequencer at slower or faster rates.
 
-If you are unfamiliar with the premise of Grids, watch this video for an excellent explanation: https://www.youtube.com/watch?v=l5yN0N6aTws
+If you are unfamiliar with the premise of Grids, [watch this video for an excellent explanation](https://www.youtube.com/watch?v=l5yN0N6aTws).
 
 Thanks to Émilie Gillet for making the code for Mutable Instruments modules open source!
 
-See it in action: https://youtu.be/yLr3vQJm3wM
+[See it in action!](https://youtu.be/yLr3vQJm3wM)
 
 ### I/O
 
