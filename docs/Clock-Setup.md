@@ -23,4 +23,4 @@ The **Clocks/Triggers** screen, fka Clock Setup, is accessed by dual-pressing bo
 ### Notes
 * Outgoing MIDI messages for Start, Stop, & Clock (at 24ppqn) are sent via USB automatically. An option to disable this is planned.
 * Incoming MIDI Start/Stop/Clock messages intuitively start the internal clock and feed it sync pulses at 2ppqn. The clock speed can then be reinterpreted differently with the `Sync=` parameter.
-* The internal Clock is available in **Hemisphere** as well as the **[[Calibr8or]]** app. However, Clock settings are only stored in the active Preset in Hemisphere.
+* The internal Clock is available in **Hemisphere** as well as the **[Calibr8or](Calibr8or)** app. However, Clock settings are only stored in the active Preset in Hemisphere.
