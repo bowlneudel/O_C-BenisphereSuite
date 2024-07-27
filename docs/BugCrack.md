@@ -1,8 +1,8 @@
 ![Screenshot 2024-06-13 14-24-10](https://github.com/djphazer/O_C-Phazerville/assets/109086194/3a8c3cfd-ecf0-4fa4-9cea-74413443f407)
 
-**Bug Crack** is a hi-fi replacement for [[BootsNCat]]. It has a nice and boomy kick, as well as a versatile snare/percussion channel. The snare is inspired by the FM drum voice in [Peaks](https://mutable-instruments.net/modules/peaks/), by Mutable Instruments, and can blend between a sine wave oscillator and noise source.
+**Bug Crack** is a hi-fi replacement for [BootsNCat](BootsNCat). It has a nice and boomy kick, as well as a versatile snare/percussion channel. The snare is inspired by the FM drum voice in [Peaks](https://mutable-instruments.net/modules/peaks/), by Mutable Instruments, and can blend between a sine wave oscillator and noise source.
 
-Hear it in action: https://youtu.be/ToZaxJ_7NpM
+[Hear it in action](https://youtu.be/ToZaxJ_7NpM)
 
 ### I/O
 

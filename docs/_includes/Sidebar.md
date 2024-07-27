@@ -1,9 +1,9 @@
-# [Home](README.md)
+# [Home](index)
 * [Development Philosophy](Development-Philosophy)
-* [Quick Links](README.md#quick-links)
+* [Quick Links](index#quick-links)
     * [Download a Release](https://github.com/djphazer/O_C-Phazerville/releases)
     * [Request a custom build](https://github.com/djphazer/O_C-Phazerville/discussions/38)
-* [New to o_C?](README.md#new-to-ornament-and-crime)
+* [New to o_C?](index#new-to-ornament-and-crime)
 
 ## Installation
 * [Firmware update procedure](https://ornament-and-cri.me/firmware/)

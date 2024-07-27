@@ -1,6 +1,6 @@
 ![Screenshot 2024-06-13 15-48-15](https://github.com/djphazer/O_C-Phazerville/assets/109086194/e34a515b-1855-4d6f-8021-12e0ed2ffc5a)
 
-**TrigSeq16** is a 16-step trigger sequencer. It's visually and functionally similar to [[Trigger Sequencer]], except it's 1x16 instead of 2x8. Solid steps send triggers on Out A/C; empty steps send triggers on Out B/D.
+**TrigSeq16** is a 16-step trigger sequencer. It's visually and functionally similar to [Trigger Sequencer](Trigger-Sequencer), except it's 1x16 instead of 2x8. Solid steps send triggers on Out A/C; empty steps send triggers on Out B/D.
 
 ## I/O
 
