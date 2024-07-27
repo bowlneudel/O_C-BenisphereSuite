@@ -1,6 +1,6 @@
 ## Floating menu: Presets
 
-The first three options in the [[config menu|Hemisphere-Config]] are **Load**, **Save**, and **(auto)**
+The first three options in the [config menu](Hemisphere-Config) are **Load**, **Save**, and **(auto)**
 
 Rotate either encoder to select, push to enter. Press UP or DOWN buttons to cancel. Both applets (plus Clock Setup) with their state are recalled, along with the rest of the Config options on this page.
 
@@ -30,4 +30,4 @@ If enabled, settings are automatically stored in the last loaded Preset when the
 
 ![Screenshot 2024-06-13 14-11-00](https://github.com/djphazer/O_C-Phazerville/assets/109086194/a80339d8-373c-41e2-bcd6-7f4782c05262)
 
-As of v1.6.999, when storing a Preset, settings are immediately written to EEPROM - no need to manually do an [[EEPROM Save]], unless you need to save changes to global patterns, etc. Combined with Auto-save, this can result in frequent EEPROM writes... (only 100,000 write cycles are guaranteed, so use at your own risk!)
+As of v1.6.999, when storing a Preset, settings are immediately written to EEPROM - no need to manually do an [EEPROM Save](EEPROM-Save), unless you need to save changes to global patterns, etc. Combined with Auto-save, this can result in frequent EEPROM writes... (only 100,000 write cycles are guaranteed, so use at your own risk!)

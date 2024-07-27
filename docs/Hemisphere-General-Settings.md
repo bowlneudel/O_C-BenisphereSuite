@@ -1,6 +1,6 @@
 ## Page 1: General Settings
 
-The first full-screen page in the [[config menu|Hemisphere config]] (after the floating [[presets menu|hemisphere presets]]) is for General Settings
+The first full-screen page in the [config menu](Hemisphere-Config) (after the floating [presets menu](Hemisphere-Presets)) is for General Settings
 
 ![Screenshot 2024-06-13 14-11-32](https://github.com/djphazer/O_C-Phazerville/assets/109086194/34eed3aa-3307-4734-90d4-a6e65442d4af)
 
@@ -30,4 +30,4 @@ Setting the cursor to simply **"modal"** will prevent looped scrolling, terminat
 ***
 
 ### Auto MIDI Output
-(Experimental) When enabled, MIDI messages are sent automatically based on applet outputs. By default, the Left Hemisphere outputs on Channel 1, and the Right Hemisphere on Channel 2 (configurable with the [[MIDI-Out]] applet). Outputs A/C are interpreted as Note values, and B/D as gates for NoteOn/NoteOff.
+(Experimental) When enabled, MIDI messages are sent automatically based on applet outputs. By default, the Left Hemisphere outputs on Channel 1, and the Right Hemisphere on Channel 2 (configurable with the [MIDI Out](MIDI-Out) applet). Outputs A/C are interpreted as Note values, and B/D as gates for NoteOn/NoteOff.

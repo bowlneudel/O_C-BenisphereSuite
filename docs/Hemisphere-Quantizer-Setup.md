@@ -7,4 +7,4 @@ The second full-screen page in the [config menu](https://github.com/djphazer/O_C
 
 There are 8 global quantizer engines, each with a **Scale**, **Root Note**, and **Octave** setting. An encoder push will open the popup editor. Use LEFT encoder to change Scale, RIGHT encoder for Root Note, and UP/DOWN select buttons to jump octaves. Push either encoder again to exit. These gestures are the same when editing quantization settings in-applet.
 
-Currently, settings for the first 4 quantizers can be reliably saved with [[Calibr8or]]. Some applets may also save/restore quantizer settings, but this may change.
+Currently, settings for the first 4 quantizers can be reliably saved with [Calibr8or](Calibr8or). Some applets may also save/restore quantizer settings, but this may change.
