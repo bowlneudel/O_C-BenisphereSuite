@@ -28,6 +28,6 @@ There are two **Pigeons** (channels), independently triggered. They are each con
 
 Each Pigeon has a certain number of holes they can visit (the _modulus_). The pair of notes represents the coordinates of the current hole; your Pigeon is guaranteed to revisit the same holes eventually.
 
-Pigeons are easily triggered - by the physical trigger inputs, internal clock pulses, or neighboring trigger sequencer applets (like [[ProbDiv]], or [[DivSeq]]).
+Pigeons are easily triggered - by the physical trigger inputs, internal clock pulses, or neighboring trigger sequencer applets (like [ProbDiv](ProbDiv), or [DivSeq](DivSeq)).
 
 The **CV inputs** change the _modulus_ value for each channel, affecting the range of the generated melodic sequence. It is possible to cause both note values to drop to 0 (the root note), and your Pigeon will take a nap there. If that happens, you'll have to nudge it with the encoder, or maybe load a Preset with a MIDI PC message...

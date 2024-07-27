@@ -4,7 +4,7 @@ The **Seq32** applet reinterprets the 8 pattern storage slots from the original 
 
 Each step has a bipolar range of -32 to +31 (scale degrees) and can be Muted or Accented. Accent currently means a longer gate + glide. Mute means no gate is sent and the Pitch output doesn't change.
 
-_**Important:**_ In addition to storing applet settings in a Preset, a manual [[EEPROM Save]] is necessary to save changes to the global patterns!
+_**Important:**_ In addition to storing applet settings in a Preset, a manual [EEPROM Save](EEPROM-Save) is necessary to save changes to the global patterns!
 
 ### I/O
 

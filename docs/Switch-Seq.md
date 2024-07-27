@@ -1,6 +1,6 @@
 ![Screenshot 2024-06-13 15-44-08](https://github.com/djphazer/O_C-Phazerville/assets/109086194/3d4d16b0-e5dd-4e19-93da-a0e34b8129ea)
 
-**SwitchSeq** is a flexible player for [[Seq32]] patterns, providing various ways to switch between four sequences running in parallel. The global quantizers Q1-Q4 are used for outputs A-D, respectively. (Use [[Hemisphere Config]] to adjust Quantizer Scale settings)
+**SwitchSeq** is a flexible player for [Seq32](Seq32) patterns, providing various ways to switch between four sequences running in parallel. The global quantizers Q1-Q4 are used for outputs A-D, respectively. (Use [Hemisphere Config](Hemisphere-Config) to adjust Quantizer Scale settings)
 
 ## I/O
 
@@ -12,7 +12,7 @@
 
 
 ## Usage
-4 sequences are played in parallel. The patterns themselves can be edited with [[Seq32]], and can have various lengths. Currently, _Accent_ and _Mute_ have no effect in SwitchSeq.
+4 sequences are played in parallel. The patterns themselves can be edited with [Seq32](Seq32), and can have various lengths. Currently, _Accent_ and _Mute_ have no effect in SwitchSeq.
 
 The CV inputs can manipulate the sequences in a variety of ways.
 

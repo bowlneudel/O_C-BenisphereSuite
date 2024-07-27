@@ -1,10 +1,10 @@
 ![Screenshot 2024-06-13 15-19-37](https://github.com/djphazer/O_C-Phazerville/assets/109086194/8deab434-e06f-4b83-8ca6-730358004a5a)
 
-**ProbMeloD** is a stochastic melody generator inspired by the [Melodicer](https://www.modulargrid.net/e/vermona-melodicer) and [Stochastic Inspiration Generator](https://www.modulargrid.net/e/stochastic-instruments-stochastic-inspiration-generator). It allows you to assign probability to each note in a chromatic scale, as well as set the range of octaves to pick notes from. It can be used by itself or with [[ProbDiv]], which it will automatically link to.
+**ProbMeloD** is a stochastic melody generator inspired by the [Melodicer](https://www.modulargrid.net/e/vermona-melodicer) and [Stochastic Inspiration Generator](https://www.modulargrid.net/e/stochastic-instruments-stochastic-inspiration-generator). It allows you to assign probability to each note in a chromatic scale, as well as set the range of octaves to pick notes from. It can be used by itself or with [ProbDiv](ProbDiv), which it will automatically link to.
 
 ProbMeloD has 2 channels, which can output independently clocked pitch values based on the same note ranges and probabilities. 
 
-See it in action: https://www.youtube.com/watch?v=uR8pLUVNDjI
+[See it in action](https://www.youtube.com/watch?v=uR8pLUVNDjI)
 
 ### I/O
 
@@ -29,7 +29,7 @@ ProbMeloD has a range of 5 octaves. Lower and upper range are displays in an _oc
 
 ## Pairing with ProbDiv and Looping
 
-ProbMeloD does not have any looping functionality on its own, but can loop when paired with [[ProbDiv]]. Like ProbDiv, a new loop is generated in both applets when any parameter in ProbDiv or ProbMeloD are changed. If ProbDiv and ProbMeloD are loaded in each hemisphere, they will automatically link. Clock division outputs from ProbDiv will automatically trigger ProbMeloD, and ProbMeloD will capture a loop when ProbDiv is looping as well. When used together they can be treated as a whole probabilistic sequencer!
+ProbMeloD does not have any looping functionality on its own, but can loop when paired with [ProbDiv](ProbDiv). Like ProbDiv, a new loop is generated in both applets when any parameter in ProbDiv or ProbMeloD are changed. If ProbDiv and ProbMeloD are loaded in each hemisphere, they will automatically link. Clock division outputs from ProbDiv will automatically trigger ProbMeloD, and ProbMeloD will capture a loop when ProbDiv is looping as well. When used together they can be treated as a whole probabilistic sequencer!
 
 ### Credits
 Copied/Adapted from [ProbMeloD](https://github.com/benirose/O_C-BenisphereSuite/wiki/ProbMeloD) by benirose
