@@ -4,7 +4,7 @@
 
 ProbMeloD has 2 channels, which can output independently clocked pitch values based on the same note ranges and probabilities. 
 
-[See it in action](https://www.youtube.com/watch?v=uR8pLUVNDjI)
+[See it in action!](https://www.youtube.com/watch?v=uR8pLUVNDjI)
 
 ### I/O
 

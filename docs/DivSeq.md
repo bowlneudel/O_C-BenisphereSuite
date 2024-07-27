@@ -6,7 +6,7 @@ Via the CV inputs, each channel may also be in inverted mode (skip 1, trigger n-
 
 Performance mutes may be manually toggled for each divider step. Each step may be set to a divider of 0 (off) up to 63.
 
-See it in action: https://youtu.be/J1OH-oomvMA?si=Z97wJ3HXe0HocaBa&t=357
+[See it in action!](https://youtu.be/J1OH-oomvMA?si=Z97wJ3HXe0HocaBa&t=357)
 
 
 ### I/O
