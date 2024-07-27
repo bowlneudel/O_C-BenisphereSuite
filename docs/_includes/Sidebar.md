@@ -1,35 +1,35 @@
-# [[Home|index]]
-* [[Development Philosophy]]
-* [Quick Links](home#quick-links)
+# [Home](README.md)
+* [Development Philosophy](Development-Philosophy)
+* [Quick Links](README.md#quick-links)
     * [Download a Release](https://github.com/djphazer/O_C-Phazerville/releases)
     * [Request a custom build](https://github.com/djphazer/O_C-Phazerville/discussions/38)
-* [New to o_C?](home#new-to-ornament-and-crime)
+* [New to o_C?](README.md#new-to-ornament-and-crime)
 
 ## Installation
 * [Firmware update procedure](https://ornament-and-cri.me/firmware/)
-* [[Build choices]]
-* [[Saving state]]
-* [[Troubleshooting]]
+* [Build choices](Build-Choices)
+* [Saving state](Saving-State)
+* [Troubleshooting](Troubleshooting)
 
 ## Hemisphere
-* [[Gestures / Button Combos|Hemisphere-Gestures]]
-* [[Clock Setup]]
-* [[Configuration Menu|Hemisphere-Config]]
-    * [[Save / Load Presets|Hemisphere-Presets]]
-    * [[General Settings|Hemisphere-General-Settings]]
-    * [[Quantizer Set-Up|Hemisphere-Quantizer-Setup]]
-    * [[Input Mapping|Hemisphere-Input-Mapping]]
-    * [[Applet Filtering|Hemisphere-Applet-Filtering]]
+* [Gestures / Button Combos](Hemisphere-Gestures)
+* [Clock Setup](Clock-Setup)
+* [Configuration Menu](Hemisphere-Config)
+    * [Save / Load Presets](Hemisphere-Presets)
+    * [General Settings](Hemisphere-General-Settings)
+    * [Quantizer Set-Up](Hemisphere-Quantizer-Setup)
+    * [Input Mapping](Hemisphere-Input-Mapping)
+    * [Applet Filtering](Hemisphere-Applet-Filtering)
 
 ## Apps and Applets
- **[[Full Screen Apps|App-and-Applet-Index#full-screen-apps]]**
+ **[Full Screen Apps](App-and-Applet-Index#full-screen-apps)**
  <details><summary>List of Apps</summary>
 
- * [[Calibr8or|Calibr8or]]
- * [[Scenes|Scenes]]
- * [[Captain MIDI]]
- * [[Pong]]
- * [[Enigma]]
+ * [Calibr8or](Calibr8or)
+ * [Scenes](Scenes)
+ * [Captain MIDI](Captain-MIDI)
+ * [Pong](Pong)
+ * [Enigma](Enigma)
  * [The Darkest Timeline](https://github.com/Chysn/O_C-HemisphereSuite/wiki/The-Darkest-Timeline-2.0)
  * [Neural Net](https://github.com/Chysn/O_C-HemisphereSuite/wiki/Neural-Net)
  * [Scale Editor](https://github.com/Chysn/O_C-HemisphereSuite/wiki/Scale-Editor)
@@ -49,83 +49,83 @@
  * [References](https://ornament-and-cri.me/user-manual-v1_3/#anchor-references)
  * [Passencore](https://llllllll.co/t/passencore-chord-ornament-music-theory-crime/45925)
  * [Backup / Restore](https://github.com/Chysn/O_C-HemisphereSuite/wiki/Backup-and-Restore)
- * [[Setup / About|Setup-About]]
+ * [Setup / About](Setup-About)
  </details>
 
- **[[Hemisphere Applets|App-and-Applet-Index#hemisphere-applets]]**
+ **[Hemisphere Applets](App-and-Applet-Index#hemisphere-applets)**
  <details><summary>List of Applets</summary>
 
- * [[ADSR|ADSR-EG]]
- * [[AD EG|AD-EG]]
- * [[ASR]]
- * [[AttenOff]]
- * [[Binary Counter|Binary-Counter]]
- * [[BootsNCat]]
- * [[Brancher]]
- * [[BugCrack]]
- * [[Burst]]
- * [[Button2]]
- * [[Calculate]]
- * [[Calibr8]]
- * [[Carpeggio]]
- * [[Chordinate]]
- * [[ClockDivider]]
- * [[ClockSkip|Clock-Skipper]]
- * [[Compare]]
- * [[Cumulus]]
- * [[CVRec|CV-Recorder]]
- * [[DivSeq]]
- * [[DrumMap]]
- * [[DualQuant|Dual-Quantizer]]
- * [[DualTM]]
- * [[Ebb & LFO|Ebb-&-LFO]]
- * [[EnigmaJr|Enigma-Jr.]]
- * [[EnvFollow|Envelope-Follower]]
- * [[EuclidX]]
- * [[GameOfLife]]
- * [[GateDelay|Gate-Delay]]
- * [[GatedVCA|Gated-VCA]]
- * [[Dr. LoFi|Dr.-LoFi]]
- * [[Logic]]
- * [[LowerRenz]]
- * [[Metronome]]
- * [[MIDI In|MIDI-Input]]
- * [[MIDI Out|MIDI-Out]]
- * [[MixerBal|Mixer-Balance]]
- * [[MultiScale]]
- * [[Palimpsest|Palimpsest-Accent-Sequencer]]
- * [[Pigeons]]
- * [[PolyDiv]]
- * [[ProbDiv]]
- * [[ProbMeloD]]
- * [[ResetClk|Reset-Clock]]
- * [[RndWalk|Random-Walk]]
- * [[RunglBook]]
- * [[ScaleDuet|Scale-Duet-Quantizer]]
- * [[Schmitt|Schmitt-Trigger]]
- * [[Scope]]
- * [[Seq32]]
- * [[SequenceX]]
- * [[ShiftGate]]
- * [[Shredder]]
- * [[Shuffle]]
- * [[Slew]]
- * [[Squanch]]
- * [[Stairs]]
- * [[Strum]]
- * [[Switch]]
- * [[SwitchSeq|Switch-Seq]]
- * [[TB-3PO]]
- * [[TL Neuron|Threshold-Logic-Neuron]]
- * [[Trending]]
- * [[TrigSeq|Trigger-Sequencer]]
- * [[TrigSeq16|Trigger-Sequencer-16]]
- * [[Tuner]]
- * [[VectorEG]]
- * [[VectorLFO]]
- * [[VectorMod]]
- * [[VectorMorph]]
- * [[Voltage]]
+ * [ADSR](ADSR-EG)
+ * [AD EG](AD-EG)
+ * [ASR](ASR)
+ * [AttenOff](AttenOff)
+ * [Binary Counter](Binary-Counter)
+ * [BootsNCat](BootsNCat)
+ * [Brancher](Brancher)
+ * [BugCrack](BugCrack)
+ * [Burst](Burst)
+ * [Button2](Button2)
+ * [Calculate](Calculate)
+ * [Calibr8](Calibr8)
+ * [Carpeggio](Carpeggio)
+ * [Chordinate](Chordinate)
+ * [ClockDivider](ClockDivider)
+ * [ClockSkip](Clock-Skipper)
+ * [Compare](Compare)
+ * [Cumulus](Cumulus)
+ * [CVRec](CV-Recorder)
+ * [DivSeq](DivSeq)
+ * [DrumMap](DrumMap)
+ * [DualQuant](Dual-Quantizer)
+ * [DualTM](DualTM)
+ * [Ebb & LFO](Ebb-&-LFO)
+ * [EnigmaJr](Enigma-Jr.)
+ * [EnvFollow](Envelope-Follower)
+ * [EuclidX](EuclidX)
+ * [GameOfLife](GameOfLife)
+ * [GateDelay](Gate-Delay)
+ * [GatedVCA](Gated-VCA)
+ * [Dr. LoFi](Dr.-LoFi)
+ * [Logic](Logic)
+ * [LowerRenz](LowerRenz)
+ * [Metronome](Metronome)
+ * [MIDI In](MIDI-Input)
+ * [MIDI Out](MIDI-Out)
+ * [MixerBal](Mixer-Balance)
+ * [MultiScale](MultiScale)
+ * [Palimpsest](Palimpsest-Accent-Sequencer)
+ * [Pigeons](Pigeons)
+ * [PolyDiv](PolyDiv)
+ * [ProbDiv](ProbDiv)
+ * [ProbMeloD](ProbMeloD)
+ * [ResetClk](Reset-Clock)
+ * [RndWalk](Random-Walk)
+ * [RunglBook](RunglBook)
+ * [ScaleDuet](Scale-Duet-Quantizer)
+ * [Schmitt](Schmitt-Trigger)
+ * [Scope](Scope)
+ * [Seq32](Seq32)
+ * [SequenceX](SequenceX)
+ * [ShiftGate](ShiftGate)
+ * [Shredder](Shredder)
+ * [Shuffle](Shuffle)
+ * [Slew](Slew)
+ * [Squanch](Squanch)
+ * [Stairs](Stairs)
+ * [Strum](Strum)
+ * [Switch](Switch)
+ * [SwitchSeq](Switch-Seq)
+ * [TB-3PO](TB-3PO)
+ * [TL Neuron](Threshold-Logic-Neuron)
+ * [Trending](Trending)
+ * [TrigSeq](Trigger-Sequencer)
+ * [TrigSeq16](Trigger-Sequencer-16)
+ * [Tuner](Tuner)
+ * [VectorEG](VectorEG)
+ * [VectorLFO](VectorLFO)
+ * [VectorMod](VectorMod)
+ * [VectorMorph](VectorMorph)
+ * [Voltage](Voltage)
  </details>
 
- **[[Apps and Applets by Function|App-and-Applet-Index#apps-and-applets-by-function]]**
+ **[Apps and Applets by Function](App-and-Applet-Index#apps-and-applets-by-function)**
