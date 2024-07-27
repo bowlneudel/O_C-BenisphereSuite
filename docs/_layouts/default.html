@@ -47,11 +47,13 @@
       </section>
 
       <section>
-    {% include Sidebar.md %}
+        {% capture sidebar_include %}{% include Sidebar.md %}{% endcapture %}
+        {{ sidebar_include | markdownify }}
       </section>
 
       <section>
-    {% include Footer.md %}
+        {% capture footer_include %}{% include Footer.md %}{% endcapture %}
+        {{ footer_include | markdownify }}
       </section>
 
     </div>
