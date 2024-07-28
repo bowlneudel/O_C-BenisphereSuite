@@ -51,7 +51,7 @@ public:
       }
 
     } divider[4] = {
-        { 4, 0 }, { 3, 0 }, { 0, 0 }, { 0, 0 }
+        { 4, 0 }, { 3, 0 }, { 2, 0 }, { 1, 0 }
     };
 
     const char* applet_name() {
@@ -179,7 +179,7 @@ private:
     int cursor; // PolyDivCursor 
 
     int pulse_animation[4] = {0,0,0,0};
-    uint8_t div_enabled; // bitmask for enabling dividers per output
+    uint8_t div_enabled = 0b00100001; // bitmask for enabling dividers per output
                          // bits 0-3 for A, bits 4-7 for B
 
     ProbLoopLinker *loop_linker = loop_linker->get();
