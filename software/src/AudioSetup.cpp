@@ -18,8 +18,8 @@ AudioEffectWaveFolder    wavefolder2;    //xy=859.8889083862305,425.222222328186
 AudioEffectWaveFolder    wavefolder1;    //xy=874.7777633666992,155.22220993041992
 AudioMixer4              mixer4;         //xy=1130.2223625183105,375.33338928222656
 AudioMixer4              mixer3;         //xy=1132.3332710266113,80.22221755981445
-AudioEffectFreeverb      freeverb2;      //xy=1132.5553283691406,255.11116409301758
-AudioEffectFreeverb      freeverb1;      //xy=1135.6664810180664,188.5555362701416
+//AudioEffectFreeverb      freeverb2;      //xy=1132.5553283691406,255.11116409301758
+//AudioEffectFreeverb      freeverb1;      //xy=1135.6664810180664,188.5555362701416
 AudioOutputI2S2          i2s2;           //xy=1434.77783203125,232.5555591583252
 
 AudioConnection          patchCord1(i2s1, 0, amp1, 0);
@@ -41,13 +41,13 @@ AudioConnection          patchCord16(dc2, 0, wavefolder2, 1);
 AudioConnection          patchCord17(wavefolder2, 0, mixer4, 3);
 AudioConnection          patchCord18(wavefolder1, 0, mixer3, 3);
 AudioConnection          patchCord19(mixer4, 0, i2s2, 1);
-AudioConnection          patchCord20(mixer4, freeverb2);
 AudioConnection          patchCord21(mixer3, 0, i2s2, 0);
-AudioConnection          patchCord22(mixer3, freeverb1);
-AudioConnection          patchCord23(freeverb2, 0, mixer4, 1);
-AudioConnection          patchCord24(freeverb2, 0, mixer3, 2);
-AudioConnection          patchCord25(freeverb1, 0, mixer3, 1);
-AudioConnection          patchCord26(freeverb1, 0, mixer4, 2);
+//AudioConnection          patchCord20(mixer4, freeverb2);
+//AudioConnection          patchCord22(mixer3, freeverb1);
+//AudioConnection          patchCord23(freeverb2, 0, mixer4, 1);
+//AudioConnection          patchCord24(freeverb2, 0, mixer3, 2);
+//AudioConnection          patchCord25(freeverb1, 0, mixer3, 1);
+//AudioConnection          patchCord26(freeverb1, 0, mixer4, 2);
 // GUItool: end automatically generated code
 
 // Notes:
@@ -162,11 +162,11 @@ namespace OC {
       if (ch == 0) {
         dc1.amplitude(foldamt[ch]);
         mixer3.gain(0, amplevel[ch] * (1.0 - abs(foldamt[ch])));
-        mixer3.gain(3, foldamt[ch]);
+        mixer3.gain(3, foldamt[ch] * 0.9);
       } else {
         dc2.amplitude(foldamt[ch]);
         mixer4.gain(0, amplevel[ch] * (1.0 - abs(foldamt[ch])));
-        mixer4.gain(3, foldamt[ch]);
+        mixer4.gain(3, foldamt[ch] * 0.9);
       }
     }
 
@@ -191,7 +191,7 @@ namespace OC {
       BypassFilter(1);
 
       svfilter1.resonance(1.05);
-      ladder1.resonance(0.6);
+      ladder1.resonance(0.65);
 
       // --Wavefolders
       dc1.amplitude(0.00);
@@ -200,6 +200,7 @@ namespace OC {
       mixer4.gain(3, 0.9);
 
       // --Reverbs
+      /*
       freeverb1.roomsize(0.7);
       freeverb1.damping(0.5);
       mixer3.gain(1, 0.08); // verb1
@@ -209,6 +210,7 @@ namespace OC {
       freeverb2.damping(0.6);
       mixer4.gain(1, 0.08); // verb2
       mixer4.gain(2, 0.05); // verb1
+      */
       
     }
 
@@ -229,15 +231,16 @@ namespace OC {
             AmpLevel(i, values[mod_map[i][AMP_LEVEL]]);
             break;
 
+          case WAVEFOLDER:
+            if (mod_map[i][WAVEFOLD_MOD] < 0) continue;
+            Wavefold(i, values[mod_map[i][WAVEFOLD_MOD]]);
+            //break;
+            // wavefolder + filter
           case VCF_MODE:
             if (mod_map[i][FILTER_CUTOFF] < 0) continue;
             ModFilter(i, values[mod_map[i][FILTER_CUTOFF]]);
             break;
 
-          case WAVEFOLDER:
-            if (mod_map[i][WAVEFOLD_MOD] < 0) continue;
-            Wavefold(i, values[mod_map[i][WAVEFOLD_MOD]]);
-            break;
         }
 
         // other modulation happens regardless of mode
@@ -263,7 +266,7 @@ namespace OC {
             break;
 
           case WAVEFOLDER:
-            AmpLevel(ch, 0);
+            AmpLevel(ch, MAX_CV);
             BypassFilter(ch);
             break;
       }
