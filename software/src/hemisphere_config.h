@@ -62,7 +62,7 @@ class_name class_name ## _instance[2]
 #include "applets/DualTM.h"
 #include "applets/EbbAndLfo.h"
 #include "applets/EnigmaJr.h"
-#include "applets/EnsOscKey.h"
+//#include "applets/EnsOscKey.h"
 #include "applets/EnvFollow.h"
 #include "applets/EuclidX.h"
 #include "applets/GameOfLife.h"
@@ -149,7 +149,7 @@ CREATE_APPLET(Compare);
 CREATE_APPLET(CVRecV2);
 CREATE_APPLET(DualQuant);
 CREATE_APPLET(EnigmaJr);
-CREATE_APPLET(EnsOscKey);
+//CREATE_APPLET(EnsOscKey);
 CREATE_APPLET(EnvFollow);
 CREATE_APPLET(GameOfLife);
 CREATE_APPLET(GateDelay);
@@ -218,7 +218,6 @@ CREATE_APPLET(VectorMorph);
     DECLARE_APPLET( 18, 0x02, DualTM), \
     DECLARE_APPLET(  7, 0x01, EbbAndLfo), \
     DECLARE_APPLET( 45, 0x02, EnigmaJr), \
-    DECLARE_APPLET( 35, 0x08, EnsOscKey), \
     DECLARE_APPLET( 42, 0x11, EnvFollow), \
     DECLARE_APPLET( 15, 0x02, EuclidX), \
     DECLARE_APPLET( 22, 0x01, GameOfLife), \
@@ -268,6 +267,7 @@ CREATE_APPLET(VectorMorph);
     DECLARE_APPLET( 43, 0x10, Voltage), \
 }
 /*
+    DECLARE_APPLET( 35, 0x08, EnsOscKey), \
     DECLARE_APPLET(127, 0x80, DIAGNOSTIC), \
 */
 

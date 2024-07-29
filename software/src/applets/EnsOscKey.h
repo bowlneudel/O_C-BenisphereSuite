@@ -46,6 +46,8 @@ public:
     }
 
     int determineInterval(int scale, int rootNote, int currentNote) {
+      // TODO: Teensy 3.2 chokes on all these floats when loaded on both sides!
+
         int one_volt = HSAPPLICATION_5V / 5;
         double maj_temp = (voltage_maj / 2.0 - 0.25) * one_volt;
         int maj_out = static_cast<int>(maj_temp);
