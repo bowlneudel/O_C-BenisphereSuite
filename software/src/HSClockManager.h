@@ -60,6 +60,7 @@ class ClockManager {
     bool midi_out_enabled = 1;
 
     bool tickno = 0;
+    bool extsync = false; // locked into an external clock; will stop after timeout
     uint32_t clock_tick[2] = {0,0}; // previous ticks when a physical clock was received on DIGITAL 1
     uint32_t beat_tick = 0; // The tick to count from
     bool tock[NR_OF_CLOCKS] = {0,0,0,0,0,0,0,0,0}; // The current tock value
@@ -239,12 +240,18 @@ public:
                 if (abs(tick_offset) < ticks_per_clock / 2 && abs(tick_offset) > 4)
                     Nudge(tick_offset); // nudge the beat towards us
 
+                extsync = true;
             }
         }
         // clock has been physically ticked
         if (clocked) {
             tickno = 1 - tickno;
             clock_tick[tickno] = now;
+        }
+        else if (extsync && clock_ppqn && now - clock_tick[tickno] > ticks_per_beat * 2 / clock_ppqn) {
+          // auto-stop
+          Stop();
+          Start(true); // re-arm
         }
     }
 
@@ -266,6 +273,7 @@ public:
     void Stop() {
         running = 0;
         paused = 0;
+        extsync = false;
         if (midi_out_enabled) {
             usbMIDI.sendRealTime(usbMIDI.Stop);
 #if defined(__IMXRT1062__)
