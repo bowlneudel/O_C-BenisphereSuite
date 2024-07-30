@@ -231,7 +231,7 @@ public:
         help_hemisphere = -1;
         clock_setup = 0;
 
-        showhide_cursor.Init(0, 64);
+        showhide_cursor.Init(0, HEMISPHERE_AVAILABLE_APPLETS - 1);
         showhide_cursor.Scroll(0);
 
         for (int i = 0; i < 4; ++i) {
@@ -982,7 +982,10 @@ private:
 
         case SHOWHIDELIST:
             if (h == 0) // left encoder inverts selection
-              HS::hidden_applets = ~HS::hidden_applets;
+            {
+              HS::hidden_applets[0] = ~HS::hidden_applets[0];
+              HS::hidden_applets[1] = ~HS::hidden_applets[1];
+            }
             else // right encoder toggles current
               HS::showhide_applet(showhide_cursor.cursor_pos());
             break;
