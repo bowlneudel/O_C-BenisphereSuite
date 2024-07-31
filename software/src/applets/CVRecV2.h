@@ -207,7 +207,7 @@ private:
         }
 
         // Step indicator
-        segment.PrintWhole(hemisphere * 64, 50, step + 1, 100);
+        segment.PrintWhole(gfx_offset, 50, step + 1, 100);
 
         // CV Indicators
         ForEachChannel(ch)
