@@ -2,23 +2,23 @@ TODO
 ===
 
 * Fully merge "abandoned/refactoring" branch from pld
-* Auto-tuner floor/ceiling detection (fail gracefully)
-* Move calibration routines to a proper App
-* Runtime filtering/hiding of Applets
-* Flexible input remapping for Hemisphere
-  - generalize applet params for assignment
-* global quantizer settings in Hemisphere Config
-* Update Boilerplates
-* Automatic stop for internal Clock?
+* Auto-tuner with floor/ceiling detection (fail gracefully)
+* generalize applet params for flexible assignment, extra virtual I/O
+* Update Boilerplates - I just assume this needs attention
 * Polyphonic MIDI input tracking
 * MIDI output for all apps?
 
 [APP IDEAS]
-* QUADRANTS
-* Two Spheres
+* Two Spheres (two applets in series on each side)
 * Snake Game
 
 [DONE]
+* Runtime filtering/hiding of Applets
+* QUADRANTS
+* Automatic stop for internal Clock
+* global quantizer settings in Hemisphere Config
+* Flexible input remapping for Hemisphere
+* Move calibration routines to a proper App
 * add swing/shuffle to internal clock
 * applet with modal interchange - MultiScale or ScaleDuet
 * Add auto-tuner to Calibr8or
