@@ -137,8 +137,8 @@ public:
                 break;
 
             case Q_MOD: {
-                // select Quantizer with semitones at the input
-                const int cv = SemitoneIn(ch);
+                // select Quantizer with 3-semitone steps at the input
+                const int cv = SemitoneIn(ch) / 3;
                 qselect_mod[ch] = constrain(qselect_mod[ch] + cv, 0, QUANT_CHANNEL_COUNT - 1);
                 break;
             }

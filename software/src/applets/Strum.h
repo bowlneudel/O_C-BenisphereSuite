@@ -52,8 +52,8 @@ public:
     spacing_mod = spacing;
     qselect_mod = qselect;
     if (qmod) {
-      // select quantizer with semitones on CV2
-      int cv = SemitoneIn(1);
+      // select quantizer every 3-semitones on CV2
+      int cv = SemitoneIn(1) / 3;
       qselect_mod = constrain(qselect_mod + cv, 0, QUANT_CHANNEL_COUNT - 1);
     }
     else
