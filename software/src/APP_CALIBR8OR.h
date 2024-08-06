@@ -74,24 +74,28 @@ enum Cal8Settings {
     CAL8_OFFSET_A, // 8 bits
     CAL8_TRANSPOSE_A, // 8 bits
     CAL8_ROOTKEY_AND_CLOCKMODE_A, // 4 + 2 bits
+    CAL8_SCALEMASK_A, // 16 bits
 
     CAL8_SCALE_B,
     CAL8_SCALEFACTOR_B,
     CAL8_OFFSET_B,
     CAL8_TRANSPOSE_B,
     CAL8_ROOTKEY_AND_CLOCKMODE_B,
+    CAL8_SCALEMASK_B,
 
     CAL8_SCALE_C,
     CAL8_SCALEFACTOR_C,
     CAL8_OFFSET_C,
     CAL8_TRANSPOSE_C,
     CAL8_ROOTKEY_AND_CLOCKMODE_C,
+    CAL8_SCALEMASK_C,
 
     CAL8_SCALE_D,
     CAL8_SCALEFACTOR_D,
     CAL8_OFFSET_D,
     CAL8_TRANSPOSE_D,
     CAL8_ROOTKEY_AND_CLOCKMODE_D,
+    CAL8_SCALEMASK_D,
 
 #ifdef ARDUINO_TEENSY41
     CAL8_SCALE_E,
@@ -99,24 +103,28 @@ enum Cal8Settings {
     CAL8_OFFSET_E,
     CAL8_TRANSPOSE_E,
     CAL8_ROOTKEY_AND_CLOCKMODE_E,
+    CAL8_SCALEMASK_E,
 
     CAL8_SCALE_F,
     CAL8_SCALEFACTOR_F,
     CAL8_OFFSET_F,
     CAL8_TRANSPOSE_F,
     CAL8_ROOTKEY_AND_CLOCKMODE_F,
+    CAL8_SCALEMASK_F,
 
     CAL8_SCALE_G,
     CAL8_SCALEFACTOR_G,
     CAL8_OFFSET_G,
     CAL8_TRANSPOSE_G,
     CAL8_ROOTKEY_AND_CLOCKMODE_G,
+    CAL8_SCALEMASK_G,
 
     CAL8_SCALE_H,
     CAL8_SCALEFACTOR_H,
     CAL8_OFFSET_H,
     CAL8_TRANSPOSE_H,
     CAL8_ROOTKEY_AND_CLOCKMODE_H,
+    CAL8_SCALEMASK_H,
 #endif
 
     CAL8_SETTING_LAST
@@ -164,6 +172,8 @@ public:
             uint32_t root_and_mode = uint32_t(values_[ix++]);
             channel[ch].clocked_mode = ((root_and_mode >> 4) & 0x03) % NR_OF_CLOCKMODES;
             HS::SetRootNote(ch, int(root_and_mode & 0x0f) );
+
+            HS::q_mask[ch] = values_[ix++];
         }
 
         return true;
@@ -180,6 +190,7 @@ public:
             values_[ix++] = channel[ch].offset + 63;
             values_[ix++] = channel[ch].transpose + HS::q_octave[ch] * SCALE_SIZE(scale) + CAL8_MAX_TRANSPOSE;
             values_[ix++] = ((channel[ch].clocked_mode & 0x03) << 4) | (HS::GetRootNote(ch) & 0x0f);
+            values_[ix++] = HS::q_mask[ch];
         }
     }
 
@@ -706,24 +717,28 @@ SETTINGS_DECLARE(Calibr8orPreset, CAL8_SETTING_LAST) {
     {0, 0, 255, "Offset Bias A", NULL, settings::STORAGE_TYPE_U8},
     {0, 0, 255, "Transpose A", NULL, settings::STORAGE_TYPE_U8},
     {0, 0, 255, "Root Key + Mode A", NULL, settings::STORAGE_TYPE_U8},
+    {0, 0, 0xffff, "Scale Mask A", NULL, settings::STORAGE_TYPE_U16},
 
     {0, 0, 65535, "Scale B", NULL, settings::STORAGE_TYPE_U16},
     {0, 0, 65535, "CV Scaling Factor B", NULL, settings::STORAGE_TYPE_U16},
     {0, 0, 255, "Offset Bias B", NULL, settings::STORAGE_TYPE_U8},
     {0, 0, 255, "Transpose B", NULL, settings::STORAGE_TYPE_U8},
     {0, 0, 255, "Root Key + Mode B", NULL, settings::STORAGE_TYPE_U8},
+    {0, 0, 0xffff, "Scale Mask B", NULL, settings::STORAGE_TYPE_U16},
 
     {0, 0, 65535, "Scale C", NULL, settings::STORAGE_TYPE_U16},
     {0, 0, 65535, "CV Scaling Factor C", NULL, settings::STORAGE_TYPE_U16},
     {0, 0, 255, "Offset Bias C", NULL, settings::STORAGE_TYPE_U8},
     {0, 0, 255, "Transpose C", NULL, settings::STORAGE_TYPE_U8},
     {0, 0, 255, "Root Key + Mode C", NULL, settings::STORAGE_TYPE_U8},
+    {0, 0, 0xffff, "Scale Mask C", NULL, settings::STORAGE_TYPE_U16},
 
     {0, 0, 65535, "Scale D", NULL, settings::STORAGE_TYPE_U16},
     {0, 0, 65535, "CV Scaling Factor D", NULL, settings::STORAGE_TYPE_U16},
     {0, 0, 255, "Offset Bias D", NULL, settings::STORAGE_TYPE_U8},
     {0, 0, 255, "Transpose D", NULL, settings::STORAGE_TYPE_U8},
     {0, 0, 255, "Root Key + Mode D", NULL, settings::STORAGE_TYPE_U8},
+    {0, 0, 0xffff, "Scale Mask D", NULL, settings::STORAGE_TYPE_U16},
 
 #ifdef ARDUINO_TEENSY41
     {0, 0, 65535, "Scale E", NULL, settings::STORAGE_TYPE_U16},
@@ -731,24 +746,28 @@ SETTINGS_DECLARE(Calibr8orPreset, CAL8_SETTING_LAST) {
     {0, 0, 255, "Offset Bias E", NULL, settings::STORAGE_TYPE_U8},
     {0, 0, 255, "Transpose E", NULL, settings::STORAGE_TYPE_U8},
     {0, 0, 255, "Root Key + Mode E", NULL, settings::STORAGE_TYPE_U8},
+    {0, 0, 0xffff, "Scale Mask E", NULL, settings::STORAGE_TYPE_U16},
 
     {0, 0, 65535, "Scale F", NULL, settings::STORAGE_TYPE_U16},
     {0, 0, 65535, "CV Scaling Factor F", NULL, settings::STORAGE_TYPE_U16},
     {0, 0, 255, "Offset Bias F", NULL, settings::STORAGE_TYPE_U8},
     {0, 0, 255, "Transpose F", NULL, settings::STORAGE_TYPE_U8},
     {0, 0, 255, "Root Key + Mode F", NULL, settings::STORAGE_TYPE_U8},
+    {0, 0, 0xffff, "Scale Mask F", NULL, settings::STORAGE_TYPE_U16},
 
     {0, 0, 65535, "Scale G", NULL, settings::STORAGE_TYPE_U16},
     {0, 0, 65535, "CV Scaling Factor G", NULL, settings::STORAGE_TYPE_U16},
     {0, 0, 255, "Offset Bias G", NULL, settings::STORAGE_TYPE_U8},
     {0, 0, 255, "Transpose G", NULL, settings::STORAGE_TYPE_U8},
     {0, 0, 255, "Root Key + Mode G", NULL, settings::STORAGE_TYPE_U8},
+    {0, 0, 0xffff, "Scale Mask G", NULL, settings::STORAGE_TYPE_U16},
 
     {0, 0, 65535, "Scale H", NULL, settings::STORAGE_TYPE_U16},
     {0, 0, 65535, "CV Scaling Factor H", NULL, settings::STORAGE_TYPE_U16},
     {0, 0, 255, "Offset Bias H", NULL, settings::STORAGE_TYPE_U8},
     {0, 0, 255, "Transpose H", NULL, settings::STORAGE_TYPE_U8},
     {0, 0, 255, "Root Key + Mode H", NULL, settings::STORAGE_TYPE_U8},
+    {0, 0, 0xffff, "Scale Mask H", NULL, settings::STORAGE_TYPE_U16},
 #endif
 };
 
