@@ -27,6 +27,8 @@
 // Contributions:
 // Thanks to Github/Muffwiggler user Qiemem for adding reseed(), to break the small cycle of available seed values that was occurring in practice
 
+// This copy has been extensively modified by djphazer
+
 #define ACID_HALF_STEPS 16
 #define ACID_MAX_STEPS 32
 
@@ -88,7 +90,7 @@ class TB_3PO: public HemisphereApplet {
 
     transpose_cv = 0;
     if (DetentedIn(0)) {
-      transpose_cv = HS::Quantize(qselect, In(0), 0, 0); // Use root == 0 to start at c
+      transpose_cv = SemitoneIn(0) << 7;
     }
 
     if (EditMode() && cursor == 5) density_auto[step] = density_encoder;
@@ -360,9 +362,6 @@ private:
   int get_pitch_for_step(int step_num) {
     int quant_note = 64 + int(notes[step_num]);
 
-    // transpose in scale degrees, proportioned from semitones
-    quant_note += (MIDIQuantizer::NoteNumber(transpose_cv) - 60) * scale_size / 12;
-
     // Transpose by one octave up or down if flagged to (note this is one full span of whatever scale is active to give doubling octave behavior)
     if (step_is_oct_up(step_num)) {
       quant_note += scale_size;
@@ -372,8 +371,10 @@ private:
 
     quant_note = constrain(quant_note, 0, 127);
 
-    // root note is the semitone offset after quantization
-    return HS::QuantizerLookup(qselect, quant_note);
+    // Apply semitone transpose after scale lookup - effectively a root note transpose
+    // I previously thought to apply transpose in scale degrees,
+    // but some vocal users prefer it this way. -NJM
+    return HS::QuantizerLookup(qselect, quant_note) + transpose_cv;
     //return QuantizerLookup(0, 64 );  // Test: note 64 is definitely 0v=c4 if output directly, on ALL scales
   }
 
