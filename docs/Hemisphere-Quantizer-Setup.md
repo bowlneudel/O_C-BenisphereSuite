@@ -1,7 +1,7 @@
 ## Page 2: Quantizer Setup
 
 _(Updated in v1.8)_
-The second full-screen page in the [config menu](https://github.com/djphazer/O_C-Phazerville/wiki/Hemisphere-Config) is for configuring 8 separate quantizer engines, which may be quickly selected & edited in any applet that uses quantization.
+The second full-screen page in the [config menu](Hemisphere-Config) is for configuring 8 separate quantizer engines, which may be quickly selected & edited in any applet that uses quantization.
 
 ![New-Q-editor](https://github.com/user-attachments/assets/793711ff-08f8-4910-a1ea-8b1369c244ab)
 
