@@ -1,6 +1,6 @@
 # Phazerville Suite
 #### _Note from the Mayor:_
-> Thanks for checking out my firmware. I've basically tried to hoard all the notable Apps and Applets in one repo! All the full-screen apps from [Hemisphere](https://github.com/Chysn/O_C-HemisphereSuite/wiki) are here, plus all of the [stock O&C firmware](https://ornament-and-cri.me/user-manual-v1_3/) apps and a few new ones, albeit in limited combinations depending on which .hex file you grabbed from the [Release page](https://github.com/djphazer/O_C-Phazerville/releases) (now version 1.7.1).
+> Thanks for checking out my firmware. I've basically tried to hoard all the notable Apps and Applets in one repo! All the full-screen apps from [Hemisphere](https://github.com/Chysn/O_C-HemisphereSuite/wiki) are here, plus all of the [stock O&C firmware](https://ornament-and-cri.me/user-manual-v1_3/) apps and a few new ones, albeit in limited combinations depending on which .hex file you grabbed from the [Release page](https://github.com/djphazer/O_C-Phazerville/releases) (now version 1.8).
 > 
 > Want to roll your own mix of Apps? You can request a **Custom Build** for Teensy 3.2 with a simple bot command on [this discussion post](https://github.com/djphazer/O_C-Phazerville/discussions/38).
 > 
@@ -19,7 +19,7 @@
     * [Global per-channel quantization](Hemisphere-Quantizer-Setup) (with pop-up editor and performance transposition)
     * Intuitive USB MIDI In clock sync
     * Experimental [automatic USB MIDI Out](Hemisphere-General-Settings#auto-midi-output)
-* And [someday very soon](https://ko-fi.com/djphazer): Next-gen hardware running Teensy 4.1
+* And [someday very soon](https://ko-fi.com/djphazer): Next-gen hardware powered by Teensy 4.1
 
 ***
 
