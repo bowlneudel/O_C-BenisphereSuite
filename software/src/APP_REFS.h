@@ -552,7 +552,7 @@ void REFS_screensaver() {
       const int f = int(floor(bpm_ * 100));
       const int value = f / 100;
       const int cents = f % 100;
-      graphics.printf("%5d.%02d bpm %2.0fppqn", value, cents, references_app.get_ppqn());
+      graphics.printf("%5d.%02d bpm %2dppqn", value, cents, static_cast<int>(references_app.get_ppqn()));
     } else if(frequency_ >= c0_freq_) {
       const int f = int(floor(freq_decicents_residual_));
       const int value = f / 10;
