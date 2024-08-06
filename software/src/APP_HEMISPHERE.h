@@ -211,7 +211,7 @@ public:
 
 // HemispherePreset hem_config; // special place for Clock data and Config data, 64 bits each
 
-HemispherePreset hem_presets[HEM_NR_OF_PRESETS];
+HemispherePreset hem_presets[HEM_NR_OF_PRESETS + 1];
 HemispherePreset *hem_active_preset = 0;
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -1211,12 +1211,16 @@ void HEMISPHERE_init() {
 }
 
 static constexpr size_t HEMISPHERE_storageSize() {
-    return HemispherePreset::storageSize() * HEM_NR_OF_PRESETS;
+    return HemispherePreset::storageSize() * (HEM_NR_OF_PRESETS + 1);
 }
 
 static size_t HEMISPHERE_save(void *storage) {
+    // store hidden applet mask in secret preset
+    hem_presets[HEM_NR_OF_PRESETS].SetData(HEM_SIDE(0), HS::hidden_applets[0]);
+    hem_presets[HEM_NR_OF_PRESETS].SetData(HEM_SIDE(1), HS::hidden_applets[1]);
+
     size_t used = 0;
-    for (int i = 0; i < HEM_NR_OF_PRESETS; ++i) {
+    for (int i = 0; i <= HEM_NR_OF_PRESETS; ++i) {
         used += hem_presets[i].Save(static_cast<char*>(storage) + used);
     }
     return used;
@@ -1224,9 +1228,12 @@ static size_t HEMISPHERE_save(void *storage) {
 
 static size_t HEMISPHERE_restore(const void *storage) {
     size_t used = 0;
-    for (int i = 0; i < HEM_NR_OF_PRESETS; ++i) {
+    for (int i = 0; i <= HEM_NR_OF_PRESETS; ++i) {
         used += hem_presets[i].Restore(static_cast<const char*>(storage) + used);
     }
+
+    HS::hidden_applets[0] = hem_presets[HEM_NR_OF_PRESETS].GetData(HEM_SIDE(0));
+    HS::hidden_applets[1] = hem_presets[HEM_NR_OF_PRESETS].GetData(HEM_SIDE(1));
     return used;
 }
 
