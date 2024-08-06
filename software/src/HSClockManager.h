@@ -64,7 +64,7 @@ class ClockManager {
     uint32_t clock_tick[2] = {0,0}; // previous ticks when a physical clock was received on DIGITAL 1
     uint32_t beat_tick = 0; // The tick to count from
     bool tock[NR_OF_CLOCKS] = {0,0,0,0,0,0,0,0,0}; // The current tock value
-    int16_t tocks_per_beat[NR_OF_CLOCKS] = {4,0, 8,0, 0,0, 0,0, MIDI_OUT_PPQN}; // Multiplier
+    int16_t tocks_per_beat[NR_OF_CLOCKS] = {0,0, 0,0, 0,0, 0,0, MIDI_OUT_PPQN}; // Multiplier
     int count[NR_OF_CLOCKS] = {0,0,0,0, 0,0,0,0, 0}; // Multiple counter, 0 is a special case when first starting the clock
     int8_t shuffle = 0; // 0 to 100
 
