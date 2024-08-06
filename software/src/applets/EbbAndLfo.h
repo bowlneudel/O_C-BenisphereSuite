@@ -282,9 +282,9 @@ public:
 
 protected:
   void SetHelp() {
-    //                    "-------" <-- Label size guide
-    help[HELP_DIGITAL1] = "Clock";
-    help[HELP_DIGITAL2] = "Reset";
+    //                               "-------" <-- Label size guide
+    help[HELP_DIGITAL1] = freqlock ? "(-X-)" : "Clock";
+    help[HELP_DIGITAL2] = oneshot_mode? "Retrig" : "Reset";
     help[HELP_CV1]      = cv_labels[cv_type(0)];
     help[HELP_CV2]      = cv_labels[cv_type(1)];
     help[HELP_OUT1]     = out_labels[output(0)];
