@@ -414,6 +414,9 @@ public:
             DrawInterface();
         }
 
+        if (HS::q_edit)
+          PokePopup(QUANTIZER_POPUP);
+
         // Overlay popup window last
         if (OC::CORE::ticks - HS::popup_tick < HEMISPHERE_CURSOR_TICKS) {
           HS::DrawPopup();
@@ -470,7 +473,8 @@ public:
         }
 
         // Scale selection
-        scale_edit = !scale_edit;
+        HS::qview = sel_chan;
+        HS::q_edit = 1;
     }
 
     void OnButtonDown(const UI::Event &event) {
@@ -530,7 +534,7 @@ public:
         }
 
         preset_modified = 1;
-        if (scale_edit) {
+        if (HS::q_edit) {
             // Scale Select
             HS::NudgeScale(sel_chan, direction);
             HS::quantizer[sel_chan].Requantize();
@@ -560,7 +564,7 @@ public:
         }
 
         preset_modified = 1;
-        if (scale_edit) {
+        if (HS::q_edit) {
             // Root Note
             HS::SetRootNote(sel_chan, HS::GetRootNote(sel_chan) + direction);
             HS::quantizer[sel_chan].Requantize();
@@ -591,7 +595,6 @@ public:
 
     int sel_chan = 0;
     bool edit_mode = 0;
-    bool scale_edit = 0;
     int preset_select = 0; // both a flag and an index
     bool preset_modified = 0;
 
@@ -674,7 +677,7 @@ public:
         // Scale
         gfxIcon(89, y, SCALE_ICON);
         gfxPrint(99, y, OC::scale_names_short[HS::GetScale(sel_chan)]);
-        if (scale_edit) {
+        if (HS::q_edit) {
             gfxInvert(98, y-1, 29, 9);
             gfxIcon(100, y+10, RIGHT_ICON);
         }
@@ -703,7 +706,7 @@ public:
           gfxIcon(100, y, MIDI_ICON);
 
         // mode indicator
-        if (!scale_edit)
+        if (!HS::q_edit)
             gfxIcon(0, 32 + edit_mode*22, RIGHT_ICON);
     }
 };
@@ -841,6 +844,20 @@ void Calibr8or_handleButtonEvent(const UI::Event &event) {
     // For down button, handle press and long press
     switch (event.type) {
     case UI::EVENT_BUTTON_DOWN:
+        // Quantizer popup editor intercepts everything on-press
+        if (HS::q_edit) {
+          if (event.control == OC::CONTROL_BUTTON_UP)
+            HS::NudgeOctave(HS::qview, 1);
+          else if (event.control == OC::CONTROL_BUTTON_DOWN)
+            HS::NudgeOctave(HS::qview, -1);
+          else {
+            HS::q_edit = false;
+          }
+
+          OC::ui.SetButtonIgnoreMask();
+          break;
+        }
+
         if (event.control == OC::CONTROL_BUTTON_M) {
             HS::ToggleClockRun();
             OC::ui.SetButtonIgnoreMask(); // ignore release and long-press
@@ -882,6 +899,12 @@ void Calibr8or_handleEncoderEvent(const UI::Event &event) {
     Calibr8or_instance.autotuner.HandleEncoderEvent(event);
     return;
   }
+
+    // Q-editor popup takes precedence
+    if (HS::q_edit) {
+      HS::QEditEncoderMove(event.control == OC::CONTROL_ENCODER_R, event.value);
+      return;
+    }
 
     // Left encoder turned
     if (event.control == OC::CONTROL_ENCODER_L) Calibr8or_instance.OnLeftEncoderMove(event.value);
