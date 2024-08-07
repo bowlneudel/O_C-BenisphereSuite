@@ -26,37 +26,37 @@
 ## Apps and Applets
  **[Full Screen Apps](App-and-Applet-Index#full-screen-apps)**
  
- <details markdown="block"><summary>List of Apps</summary>
+ <details markdown="block"><summary>▶ List of Apps</summary>
  * [Calibr8or](Calibr8or)
  * [Scenes](Scenes)
  * [Captain MIDI](Captain-MIDI)
  * [Pong](Pong)
  * [Enigma](Enigma)
- * [The Darkest Timeline](https://github.com/Chysn/O_C-HemisphereSuite/wiki/The-Darkest-Timeline-2.0)
- * [Neural Net](https://github.com/Chysn/O_C-HemisphereSuite/wiki/Neural-Net)
- * [Scale Editor](https://github.com/Chysn/O_C-HemisphereSuite/wiki/Scale-Editor)
- * [Waveform Editor](https://github.com/Chysn/O_C-HemisphereSuite/wiki/Waveform-Editor)
- * [CopierMaschine](https://ornament-and-cri.me/user-manual-v1_3/#anchor-copiermaschine)
- * [Harrington 1200](https://ornament-and-cri.me/user-manual-v1_3/#anchor-harrington-1200)
- * [Automatonnetz](https://ornament-and-cri.me/user-manual-v1_3/#anchor-automatonnetz)
- * [Quantermain](https://ornament-and-cri.me/user-manual-v1_3/#anchor-quantermain)
- * [Meta-Q](https://ornament-and-cri.me/user-manual-v1_3/#anchor-meta-q)
- * [Quadraturia](https://ornament-and-cri.me/user-manual-v1_3/#anchor-quadraturia)
- * [Low-rents](https://ornament-and-cri.me/user-manual-v1_3/#anchor-low-rents)
- * [Piqued](https://ornament-and-cri.me/user-manual-v1_3/#anchor-piqued)
- * [Sequins](https://ornament-and-cri.me/user-manual-v1_3/#anchor-sequins)
- * [Dialectic Ping Pong](https://ornament-and-cri.me/user-manual-v1_3/#anchor-dialectic-ping-pong)
- * [Viznutcracker, sweet!](https://ornament-and-cri.me/user-manual-v1_3/#anchor-viznutcracker-sweet)
- * [Acid Curds](https://ornament-and-cri.me/user-manual-v1_3/#anchor-acid-curds)
- * [References](https://ornament-and-cri.me/user-manual-v1_3/#anchor-references)
- * [Passencore](https://llllllll.co/t/passencore-chord-ornament-music-theory-crime/45925)
- * [Backup / Restore](https://github.com/Chysn/O_C-HemisphereSuite/wiki/Backup-and-Restore)
+ * [The Darkest Timeline](The-Darkest-Timeline-2.0)
+ * [Neural Net](Neural-Net)
+ * [Scale Editor](Scale-Editor)
+ * [Waveform Editor](Waveform-Editor)
+ * [CopierMaschine](CopierMaschine)
+ * [Harrington 1200](Harrington-1200)
+ * [Automatonnetz](Automatonnetz)
+ * [Quantermain](Quantermain)
+ * [Meta-Q](Meta-Q)
+ * [Quadraturia](Quadraturia)
+ * [Low-rents](Low-rents)
+ * [Piqued](Piqued)
+ * [Sequins](Sequins)
+ * [Dialectic Ping Pong](Dialectic-Ping-Pong)
+ * [Viznutcracker, sweet!](Viznutcracker-sweet)
+ * [Acid Curds](Acid-curds)
+ * [References](References)
+ * [Passencore](Passencore)
+ * [Backup / Restore](Backup-and-Restore)
  * [Setup / About](Setup-About)
  </details>
 
  **[Hemisphere Applets](App-and-Applet-Index#hemisphere-applets)**
 
- <details markdown="block"><summary>List of Applets</summary>
+ <details markdown="block"><summary>▶ List of Applets</summary>
  * [ADSR](ADSR-EG)
  * [AD EG](AD-EG)
  * [ASR](ASR)
@@ -107,6 +107,7 @@
  * [Schmitt](Schmitt-Trigger)
  * [Scope](Scope)
  * [Seq32](Seq32)
+ * [SeqPlay7](SeqPlay7)
  * [SequenceX](SequenceX)
  * [ShiftGate](ShiftGate)
  * [Shredder](Shredder)
