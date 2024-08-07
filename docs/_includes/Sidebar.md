@@ -25,38 +25,33 @@
 
 ## Apps and Applets
  **[Full Screen Apps](App-and-Applet-Index#full-screen-apps)**
- 
- <details markdown="block"><summary>▶ List of Apps</summary>
- * [Calibr8or](Calibr8or)
- * [Scenes](Scenes)
- * [Captain MIDI](Captain-MIDI)
- * [Pong](Pong)
- * [Enigma](Enigma)
- * [The Darkest Timeline](The-Darkest-Timeline)
- * [Neural Net](Neural-Net)
- * [Scale Editor](Scale-Editor)
- * [Waveform Editor](Waveform-Editor)
- * [CopierMaschine](CopierMaschine)
- * [Harrington 1200](Harrington-1200)
- * [Automatonnetz](Automatonnetz)
- * [Quantermain](Quantermain)
- * [Meta-Q](Meta-Q)
- * [Quadraturia](Quadraturia)
- * [Low-rents](Low-rents)
- * [Piqued](Piqued)
- * [Sequins](Sequins)
- * [Dialectic Ping Pong](Dialectic-Ping-Pong)
- * [Viznutcracker, sweet!](Viznutcracker-sweet)
  * [Acid Curds](Acid-Curds)
+ * [Automatonnetz](Automatonnetz)
+ * [Calibr8or](Calibr8or)
+ * [Captain MIDI](Captain-MIDI)
+ * [CopierMaschine](CopierMaschine)
+ * [The Darkest Timeline](The-Darkest-Timeline)
+ * [Dialectic Ping Pong](Dialectic-Ping-Pong)
+ * [Enigma](Enigma)
+ * [Harrington 1200](Harrington-1200)
+ * [Low-rents](Low-rents)
+ * [Meta-Q](Meta-Q)
+ * [Neural Net](Neural-Net)
+ * [Quadraturia](Quadraturia)
+ * [Quantermain](Quantermain)
  * [References](References)
+ * [Scenes](Scenes)
  * [Passencore](Passencore)
+ * [Piqued](Piqued)
+ * [Pong](Pong)
+ * [Scale Editor](Scale-Editor)
+ * [Sequins](Sequins)
+ * [Waveform Editor](Waveform-Editor)
+ * [Viznutcracker, sweet!](Viznutcracker-sweet)
  * [Backup / Restore](Backup-and-Restore)
  * [Setup / About](Setup-About)
- </details>
 
  **[Hemisphere Applets](App-and-Applet-Index#hemisphere-applets)**
-
- <details markdown="block"><summary>▶ List of Applets</summary>
  * [ADSR](ADSR-EG)
  * [AD EG](AD-EG)
  * [ASR](ASR)
@@ -129,6 +124,5 @@
  * [VectorMod](VectorMod)
  * [VectorMorph](VectorMorph)
  * [Voltage](Voltage)
- </details>
 
  **[Apps and Applets by Function](App-and-Applet-Index#apps-and-applets-by-function)**
