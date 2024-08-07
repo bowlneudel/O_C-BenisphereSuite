@@ -8,7 +8,7 @@
 * [New to o_C?](index#new-to-ornament-and-crime)
 
 ## Installation
-* [Firmware update procedure](https://ornament-and-cri.me/firmware/)
+* [Firmware update procedure](Installation)
 * [Build choices](Build-Choices)
 * [Saving state](Saving-State)
 * [Troubleshooting](Troubleshooting)
@@ -32,7 +32,7 @@
  * [Captain MIDI](Captain-MIDI)
  * [Pong](Pong)
  * [Enigma](Enigma)
- * [The Darkest Timeline](The-Darkest-Timeline-2.0)
+ * [The Darkest Timeline](The-Darkest-Timeline)
  * [Neural Net](Neural-Net)
  * [Scale Editor](Scale-Editor)
  * [Waveform Editor](Waveform-Editor)
@@ -47,7 +47,7 @@
  * [Sequins](Sequins)
  * [Dialectic Ping Pong](Dialectic-Ping-Pong)
  * [Viznutcracker, sweet!](Viznutcracker-sweet)
- * [Acid Curds](Acid-curds)
+ * [Acid Curds](Acid-Curds)
  * [References](References)
  * [Passencore](Passencore)
  * [Backup / Restore](Backup-and-Restore)

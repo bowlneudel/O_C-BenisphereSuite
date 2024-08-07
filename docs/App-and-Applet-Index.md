@@ -11,7 +11,7 @@ Not all the apps can fit at once on Teensy 3.2 hardware, but you can use the [de
 * [Captain MIDI](Captain-MIDI) - Configurable CV-to-MIDI and MIDI-to-CV interface
 * [Pong](Pong) - It's Pong!
 * [Enigma](Enigma) – Sequencer of shift registers (Turing Machines)
-* [The Darkest Timeline](The-Darkest-Timeline-2.0) - Parallel universe sequencer
+* [The Darkest Timeline](The-Darkest-Timeline) - Parallel universe sequencer
 * [Neural Net](Neural-Net) - 6 Neuron logic processor
 * [Scale Editor](Scale-Editor) - Edit and save microtonal scales
 * [Waveform Editor](Waveform-Editor) - Edit and save vector waveforms (for [LFOs](VectorLFO), [envelopes](VectorEG), [one-shots](VectorMod), and [phase scrubbing](VectorMorph))
@@ -26,7 +26,7 @@ Not all the apps can fit at once on Teensy 3.2 hardware, but you can use the [de
 * [Sequins](Sequins) - Basic dual-channel sequancer
 * [Dialectic Ping Pong](Dialectic-ping-pong) - Quad bouncing ball envelopes
 * [Viznutcracker, sweet!](Viznutcracker-sweet) - Quad Bytebeat generator
-* [Acid Curds](Acid-curds) - Quad 8-step chord progression sequencer
+* [Acid Curds](Acid-Curds) - Quad 8-step chord progression sequencer
 * [References](References) - Tuning utility
 * [Passencore](Passencore) - Generate a chord progression from LFOs (from sixolet)
 * [Backup / Restore](Backup-and-Restore) - Transfer app and calibration data as SysEx
@@ -137,7 +137,7 @@ If you're coming from any of the other Hemisphere forks, note that many of the a
 | **Mixer**                    | [MixerBal](Mixer-Balance)                                                                                                                                                          |                                                                                          |
 | **Modulation Source**        | [GameOfLife](GameOfLife), [Stairs](Stairs), [VectorMod](VectorMod), [VectorMorph](VectorMorph)                                                                                                                          | [Low-rents](Low-rents), [Pong](Pong)                                                                                   |
 | **Performance Utility**      | [Button2](Button2)                                                                                                                                                           |  [Scenes](Scenes)                                                                                        |
-| **Pitch Sequencer**          | [Carpeggio](Carpeggio), [DualTM](DualTM), [EnigmaJr](Enigma-Jr.), [Pigeons](Pigeons), [ProbMeloD](ProbMeloD), [Seq32](Seq32), [SecPlay7](SeqPlay7), [SequenceX](SequenceX), [Shredder](Shredder), [Strum](Strum), [SwitchSeq](Switch-Seq), [TB-3PO](TB-3PO) | [Enigma](Enigma), [The Darkest Timeline](The-Darkest-Timeline-2.0), [Automatonnetz](Automatonnetz), [Sequins](Sequins), [Acid Curds](Acid-curds), [Passencore](Passencore) | 
+| **Pitch Sequencer**          | [Carpeggio](Carpeggio), [DualTM](DualTM), [EnigmaJr](Enigma-Jr.), [Pigeons](Pigeons), [ProbMeloD](ProbMeloD), [Seq32](Seq32), [SecPlay7](SeqPlay7), [SequenceX](SequenceX), [Shredder](Shredder), [Strum](Strum), [SwitchSeq](Switch-Seq), [TB-3PO](TB-3PO) | [Enigma](Enigma), [The Darkest Timeline](The-Darkest-Timeline), [Automatonnetz](Automatonnetz), [Sequins](Sequins), [Acid Curds](Acid-Curds), [Passencore](Passencore) | 
 | **Quantizer**               | [Calibr8](Calibr8), [Chordinate](Chordinate), [DualQuant](Dual-Quantizer), [MultiScale](MultiScale), [ScaleDuet](Scale-Duet-Quantizer), [Squanch](Squanch)                                                                      | [Calibr8or](Calibr8or), [Harrington 1200](Harrington-1200), [Quantermain](Quantermain), [Meta-Q](Meta-q)                                  |
 | **Random / Chaos**           | [Brancher](Brancher), [LowerRenz](LowerRenz), [ProbDiv](ProbDiv), [ProbMeloD](ProbMeloD), [RndWalk](Random-Walk), [Shredder](Shredder)                                                        | [Low-rents](Low-rents)                                                                              |
 | **Shift Register**           | [ASR](ASR), [DualTM](DualTM), [EnigmaJr](Enigma-Jr.), [RunglBook](RunglBook), [ShiftGate](ShiftGate)                                                                                               | [Enigma](Enigma), [CopierMaschine](Copiermaschine)                                                               |
