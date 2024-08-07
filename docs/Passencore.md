@@ -21,10 +21,6 @@ Ornament & Crime, Teensy bootloader, uUSB cable, willingness to try something ne
 
 ### [](https://llllllll.co/t/passencore-chord-ornament-music-theory-crime/45925#documentation-3)Documentation
 
-#### [](https://llllllll.co/t/passencore-chord-ornament-music-theory-crime/45925#installation-4)Installation
-
-Follow the [Ornament & Crime firmware installation instructions 21](https://ornament-and-cri.me/firmware/) with the firmware linked below.
-
 #### [](https://llllllll.co/t/passencore-chord-ornament-music-theory-crime/45925#basic-use-5)Basic use
 
 Patch a slow 0to5v LFO of some kind to CV1. This is “tension”.
