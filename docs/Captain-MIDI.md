@@ -52,6 +52,7 @@ Note: When Note or Leg. (Legato) is assigned to an input, the digital input and 
 * **Hold: **Voltage over around 2.5 volts at the assigned input will cause a MIDI Hold "on" (127) controller message to be sent. When the assigned input goes to 0 volts, a MIDI Hold "off" (0) message is sent.
 Expr, Pan, Brth, yAxis: Similar to Mod, but with different controller numbers (Expression: #11, Pan: #10, Breath: #2, Y-Axis: #74).
 
+
 ## MIDI Channel Setup Screen
 This screen sets the MIDI channel for each assignment. For the MIDI-to-CV ("MIDI > ?") assignments, this determines which channel Captain MIDI is listening on. For the CV-to-MIDI ("? > MIDI") assignments, this determines which channel Captain MIDI is transmitting on.
 
