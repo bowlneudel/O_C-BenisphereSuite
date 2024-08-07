@@ -5,32 +5,33 @@ Full screen apps in Phazerville are mostly from the original Ornament and Crime 
 
 Not all the apps can fit at once on Teensy 3.2 hardware, but you can use the [default set](https://github.com/djphazer/O_C-Phazerville/releases) or [choose your own selection](https://github.com/djphazer/O_C-Phazerville/discussions/38) with a custom build.
 
-* Hemisphere - 2 [Applets](#hemisphere-applets) at a time
-* [Calibr8or](Calibr8or) - Quad performance quantizer with pitch tracking calibration
-* [Scenes](Scenes) - Macro CV switch / crossfader
-* [Captain MIDI](Captain-MIDI) - Configurable CV-to-MIDI and MIDI-to-CV interface
-* [Pong](Pong) - It's Pong!
-* [Enigma](Enigma) – Sequencer of shift registers (Turing Machines)
-* [The Darkest Timeline](The-Darkest-Timeline) - Parallel universe sequencer
-* [Neural Net](Neural-Net) - 6 Neuron logic processor
-* [Scale Editor](Scale-Editor) - Edit and save microtonal scales
-* [Waveform Editor](Waveform-Editor) - Edit and save vector waveforms (for [LFOs](VectorLFO), [envelopes](VectorEG), [one-shots](VectorMod), and [phase scrubbing](VectorMorph))
-* [CopierMaschine](Copiermaschine) - Quantizing Analogue Shift Register
-* [Harrington 1200](Harrington-1200) - Neo-Riemannian transformations for triad chord progressions
-* [Automatonnetz](Automatonnetz) - Neo-Riemannian transformations on a 5x5 matrix sequence!
-* [Quantermain](Quantermain) - Quad quantizer
-* [Meta-Q](Meta-q) - Dual sequenced quantizer
-* [Quadraturia](Quadraturia) - Quadrature wavetable LFO
-* [Low-rents](Low-rents) - Lorenz attractor
-* [Piqued](Piqued) - Quad envelope generator
-* [Sequins](Sequins) - Basic dual-channel sequancer
-* [Dialectic Ping Pong](Dialectic-ping-pong) - Quad bouncing ball envelopes
-* [Viznutcracker, sweet!](Viznutcracker-sweet) - Quad Bytebeat generator
-* [Acid Curds](Acid-Curds) - Quad 8-step chord progression sequencer
-* [References](References) - Tuning utility
-* [Passencore](Passencore) - Generate a chord progression from LFOs (from sixolet)
-* [Backup / Restore](Backup-and-Restore) - Transfer app and calibration data as SysEx
-* [Setup / About](Setup-About) - Check your version, change encoder directions, adjust display/DAC/ADC, screen off time
+ * [Acid Curds](Acid-Curds) - Quad 8-step chord progression sequencer
+ * [Automatonnetz](Automatonnetz) - Neo-Riemannian transformations on a 5x5 matrix sequence!
+ * [Calibr8or](Calibr8or) - Quad performance quantizer with pitch tracking calibration
+ * [Captain MIDI](Captain-MIDI) - Configurable CV-to-MIDI and MIDI-to-CV interface
+ * [CopierMaschine](CopierMaschine) - Quantizing Analogue Shift Register
+ * [The Darkest Timeline](The-Darkest-Timeline) - Parallel universe sequencer
+ * [Dialectic Ping Pong](Dialectic-Ping-Pong)
+ * [Enigma](Enigma) – Sequencer of shift registers (Turing Machines)
+ * [Harrington 1200](Harrington-1200) - Neo-Riemannian transformations for triad chord progressions
+ * Hemisphere - 2 [Applets](#hemisphere-applets) at a time
+ * [Low-rents](Low-rents) - Lorenz attractor
+ * [Meta-Q](Meta-Q) - Dual sequenced quantizer
+ * [Neural Net](Neural-Net) - 6 Neuron logic processor
+ * [Quadraturia](Quadraturia) - Quadrature wavetable LFO
+ * [Quantermain](Quantermain) - Quad quantizer
+ * [References](References) - Tuning utility
+ * [Scenes](Scenes) - Macro CV switch / crossfader
+ * [Passencore](Passencore) - Generate a chord progression from LFOs (from sixolet)
+ * [Piqued](Piqued) - Quad envelope generator
+ * [Pong](Pong) - It's Pong!
+ * [Scale Editor](Scale-Editor) - Edit and save microtonal scales
+ * [Sequins](Sequins) - Basic dual-channel sequancer
+ * [Waveform Editor](Waveform-Editor) - Edit and save vector waveforms (for [LFOs](VectorLFO), [envelopes](VectorEG), [one-shots](VectorMod), and [phase scrubbing](VectorMorph))
+ * [Viznutcracker, sweet!](Viznutcracker-sweet) - Quad Bytebeat generator
+ * [Backup / Restore](Backup-and-Restore) - Transfer app and calibration data as SysEx
+ * [Setup / About](Setup-About) - Check your version, change encoder directions, adjust display/DAC/ADC, screen off time
+
 
 ***
 
