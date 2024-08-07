@@ -1,5 +1,3 @@
-#chordGenerator #sampleAndHold #quantizer #rootNote #sequencer 
-
 _Acid Curds_ is a basic chord sequencer.
 
 The app provides **four 8-step chord progressions** (in total), and CV-control over various parameters, including chord type, progression length, direction, voicing, inversion, etc. The four chord progressions can be **chained** in various ways, providing progressions from **1 to up to 32 chords**. The chords/sequence data is stored along with the other settings (whenever settings are saved).
@@ -8,11 +6,15 @@ _Acid Curds_ can be used as either a basic quantizer / sample-and-hold type thin
 
 ### Controls
 
+#### Encoders
+
 |       | LEFT Encoder   | RIGHT Encoder                                                                                                    |
 | ----- | -------------- | ---------------------------------------------------------------------------------------------------------------- |
 | TURN  | select scale   | Navigation mode: move up and down through the menu items. Edit mode: increase or decrease the value being edited |
 | PRESS | activate scale | Toggle between menu navigation (selection) mode and value editing mode                                           |
 | LONG  |                | App Selection Menu                                                                                               |
+
+#### Buttons
 
 |            | UP Button                    | DOWN Button      |
 | ---------- | ---------------------------- | ---------------- |
@@ -25,12 +27,13 @@ Here is the basic i/o mapping; the CV inputs are freely assignable:
 
 |     | 1                      | 2                                                        | 3                                                                      | 4                 |
 | --- | ---------------------- | -------------------------------------------------------- | ---------------------------------------------------------------------- | ----------------- |
-| TR  | main clock / S+H input | chord advance trigger (if selected via `chords trg src`) | playmode trigger `TR3+1 - TR3+3`, CV-address trigger (`S+H#1 - S+H#4`) | progression reset |
+| TR  | main clock / S+H input | chord advance trigger (if selected via chords trg src) | playmode trigger TR3+1 - TR3+3, CV-address trigger (S+H#1 - S+H#4) | progression reset |
 | CV  | assignable             | assignable                                               | assignable                                                             | assignable        |
 | OUT | base note OUT          | chord OUT                                                | chord OUT                                                              | chord OUT         |
+
 ### Description
 
-- the **chords editor** works much like the scale and sequence editors in [[CopierMaschine]], [[Sequins]], etc:
+- the **chords editor** works much like the scale and sequence editors in [CopierMaschine](CopierMaschine), [Sequins](Sequins), etc:
     - in the main menu, select which progression (#1-#4) to edit by adjusting the `progression` parameter.
     - then right-click on the item `chords -->` to **open the chords-editor**:
         - adjust the progression **length** by pointing the cursor to the far right (using the LEFT Encoder), then turn the RIGHT Encoder.
