@@ -60,5 +60,3 @@ For your convenience, sysex files for about 3000 scales from the Scala Scale Arc
 [http://beigemaze.com/downloads/HS_Scala_Archive.zip](http://beigemaze.com/downloads/HS_Scala_Archive.zip)
 
 These scales are distributed with the kind permission of Manuel Op de Coul
-
-*This documentation has been reformatted and republished from the [original Ornament and Crime manual](https://ornament-and-cri.me/user-manual-v1_3/), with permission from the copyright holders* 
