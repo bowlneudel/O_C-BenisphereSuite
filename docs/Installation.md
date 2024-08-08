@@ -5,9 +5,9 @@ _NB/FAQ: just updating the firmware (on a calibrated module) doesn’t require r
 
 There are a few ways of getting the firmware onto your module:
 
-* [Method A](#Method-A): upload a pre-compiled HEX file. this is easy and quick!
-* [Method B](#Method-B): install the Arduino IDE and the Teensyduino add-on and compile the code yourself.
-* [Method C](#Method-C): install PlatformIO and compile the code yourself.
+* [Method A](#method-a): upload a pre-compiled HEX file. this is easy and quick!
+* [Method B](#method-b): install the Arduino IDE and the Teensyduino add-on and compile the code yourself.
+* [Method C](#method-c): install PlatformIO and compile the code yourself.
 * Either way, you’ll need: a micro-usb cable (make sure this isn’t for charging only, but data transfer).
 * NB: the following steps assume that you have cut the usb trace. see here.
 
@@ -61,7 +61,7 @@ Compiling the firmware with PlatformIO
 
 ### step 3): compile
 - Navigate to the `software/` directory in the source code. From there, you can use PlatformIO to Build the desired configuration and Upload via USB to your module.
-- In the terminal, I type:
+- For example, in the terminal, I type:
 ```
 pio run -e pewpewpew -t upload
 ```

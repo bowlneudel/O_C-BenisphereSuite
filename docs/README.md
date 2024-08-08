@@ -34,7 +34,7 @@ You can find links to documentation for (almost) every single O_C function on th
 ⧉ **[Index of all Apps and Applets](App-and-Applet-Index)**
 
 #### Installation
-* [Firmware update procedure](https://ornament-and-cri.me/firmware/)
+* [Firmware update procedure](Installation)
 * [Build choices](Build-Choices)
 * [Saving state](Saving-State)
 * [Troubleshooting](Troubleshooting)
