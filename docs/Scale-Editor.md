@@ -1,14 +1,13 @@
-https://www.youtube.com/watch?v=UKX79rkSdIQ
-
-*Scale Editor* is a standalone application for editing and managing user-defined microtonal scales, and importing scales from the internal scale library, or via system exclusive. A web-based Scala-to-Hemisphere Suite converter [is available](http://www.beigemaze.com/scala), which can generate system exclusive files from Scala documents.
+*Scale Editor* is a standalone application for editing and managing user-defined microtonal scales, and importing scales from the internal scale library, or via system exclusive. A web-based Scala-to-Hemisphere Suite converter [is available](http://www.beigemaze.com/scala), which can generate system exclusive files from Scala documents. [Video demo](https://www.youtube.com/watch?v=UKX79rkSdIQ)
 
 ### I/O
 
 |        |                                                         1                                                         |                                      2                                      | 3   | 4   |
-| ------ | :---------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------: | --- | --- |
+| ------ | :--------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------- | --- | --- |
 | TR     |                                                                                                                   |                                                                             |     |     |
 | CV INs |                                      CV 1 is input for unquantized pitch CV.                                      |                                                                             |     |     |
 | OUTs   | The quantized pitch appears at Output A, using the currently-selected user scale. Pitch is quantized in real time | Quantized pitch for the currently-selected user scale and the selected note |     |     |
+
 ### Basic Controls and Navigation
 
 |       | Left Encoder                                                                              | Right Encoder           |

@@ -1,8 +1,4 @@
-#logic
-
-https://github.com/Chysn/O_C-HemisphereSuite/wiki/Neural-Net
-
-Neural Net is a highly-configurable logic processor with six Neurons, each of which can contain one of [11 different logic gates](https://github.com/Chysn/O_C-HemisphereSuite/wiki/Neural-Net#logic-gate-reference), including a *Threshold Logic Neuron*. Sources for each logic gate can be any of the eight inputs, any of the six Neurons, or a consistent ON/OFF value.
+Neural Net is a highly-configurable logic processor with six Neurons, each of which can contain one of [11 different logic gates](#logic-gate-reference), including a *Threshold Logic Neuron*. Sources for each logic gate can be any of the eight inputs, any of the six Neurons, or a consistent ON/OFF value.
 
 Four Setups can be saved for later use, and Setups can be saved and loaded via MIDI system exclusive.
 
@@ -25,7 +21,7 @@ Four Setups can be saved for later use, and Setups can be saved and loaded via M
 | PRESS      | Selects which Setup (from 1-4) is active | Selects which Setup (from 1-4) is active    |
 | LONG PRESS |                                          | Active Setup cab be copied to another Setup |
 
-Neural Net has two basic setup screens, the [Selection Screen](fullApplets/Neural-Net#selection-screen) (which shows all six Neurons), and the [Edit Screen](fullApplets/Neural-Net#edit-screen) (which allows editing and monitoring of a single Neuron). The controls work exactly the same way on both screens, but some changes are only visible from the [Edit Screen](fullApplets/Neural-Net#edit-screen).
+Neural Net has two basic setup screens, the [Selection Screen](selection-screen) (which shows all six Neurons), and the [Edit Screen](#edit-screen) (which allows editing and monitoring of a single Neuron). The controls work exactly the same way on both screens, but some changes are only visible from the [Edit Screen](#edit-screen).
 
 ## selection-screen
 The *Selection Screen* shows an overview of all six Neurons, all inputs, and all outputs. Use the left encoder to choose a different Neuron, or the outputs.
@@ -51,7 +47,7 @@ Press the right encoder button to advance the cursor, and turn the right encoder
 
 ### Edit Screen Parameter Names
 
-The meanings of the parameters you'll see on the Edit Screen are below. See [Logic Gate Reference](https://github.com/Chysn/O_C-HemisphereSuite/wiki/Neural-Net#logic-gate-reference) for details about what the settings actually do.
+The meanings of the parameters you'll see on the Edit Screen are below. See [Logic Gate Reference](#logic-gate-reference) for details about what the settings actually do.
 
 - **Opd**: Source of an operand of a logical operation (NOT, AND, OR, XOR, etc.). All operands in a logical gate are "commutative," meaning that the resulting state will be the same regardless of the order of the operands.
 - **Data**: Source of the Data input for the Data Flip-Flop.
@@ -77,7 +73,7 @@ When the outputs are selected, the Edit Screen shows Outputs A-D, with a Neuron 
 - **D-FF** is a _Data Flip-Flop_. When its Clock input goes high, its state becomes the value of its Data input.
 - **T-FF** is a _Toggle Flip-Flop_. When its Clock input goes high, its state flips if the value of its Toggle input is ON.
 - **Latch** is a _Set-Reset NOR Latch_. When its Set input goes ON, its state becomes ON. When its Reset input goes ON, its state becomes OFF.
-- **TL Neuron** is a Threshold Logic Neuron, a ternary (triple-input) gate whose state is ON if and only if the sum of the weights of ON inputs (dendrites) exceeds its specified threshold. [See here](https://github.com/Chysn/O_C-HemisphereSuite/wiki/Threshold-Logic-Neuron) for more information about Threshold Logic Neurons.
+- **TL Neuron** is a Threshold Logic Neuron, a ternary (triple-input) gate whose state is ON if and only if the sum of the weights of ON inputs (dendrites) exceeds its specified threshold. [See here](Threshold-Logic-Neuron) for more information about Threshold Logic Neurons.
 
 ## Setups
 

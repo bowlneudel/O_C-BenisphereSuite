@@ -1,5 +1,3 @@
-#audioGenerator #LFO #independentChannels 
-
 This is an experimental implementation of several byte beats signal generators. "Byte beats" are equations, expressed usually as a single line of programme code, typically involving various bit-level operators, which when evaluated with an incrementing phase value at audio rates produce all manner of harsh digital noises, some of which sound musical, or at least, interesting; "Byte beats" were first [described](http://countercomplex.blogspot.com/2011/10/algorithmic-symphonies-from-one-line-of.html) in 2011 by viznut (aka Ville-Matias Heikkilä).
 
 The _Viznutcracker, sweet!_ app allows to run a generator on each of the 4 channels, allowing to choose from 8 different byte beat equations; the equation, speed/frequency and three equation parameter values (p0, p1 and p2) can be set via the menus and/or voltage-controlled for each generator via mappable CV inputs.

@@ -6,15 +6,12 @@ _Acid Curds_ can be used as either a basic quantizer / sample-and-hold type thin
 
 ### Controls
 
-#### Encoders
-
 |       | LEFT Encoder   | RIGHT Encoder                                                                                                    |
 | ----- | -------------- | ---------------------------------------------------------------------------------------------------------------- |
 | TURN  | select scale   | Navigation mode: move up and down through the menu items. Edit mode: increase or decrease the value being edited |
 | PRESS | activate scale | Toggle between menu navigation (selection) mode and value editing mode                                           |
 | LONG  |                | App Selection Menu                                                                                               |
 
-#### Buttons
 
 |            | UP Button                    | DOWN Button      |
 | ---------- | ---------------------------- | ---------------- |
@@ -53,19 +50,19 @@ Here is the basic i/o mapping; the CV inputs are freely assignable:
 
 ### Available settings
 
-|Setting|Meaning|
-|---|---|
-|`--> scale`|edit current scale|
-|`root`|scale root|
-|`progression`|select progression `#1 - #4`|
-|`chords -->`|edit progression/chords|
-|`playmode`|chain sequences (`SEQ+x`), advance by TR3 (`TR3+x`), or CV-address|
-|`direction`|forward, reverse, pendulum1, pendulum2 (repeat first/last), random, brownian|
-|`transpose`|transpose (in scale-degrees)|
-|`octave`|transpose in octaves|
-|`CV source`|CV source (`CV1`, `CV2`, `CV3` or `CV4`|
-|`chords trg src`|chords-trigger: `TR1` or `TR2`|
-|`TR1 delay`|TR1 trigger-to-processing latency - see the discussion of the `Trigger delay` setting in the _quantermain_ app for more details|
+| Setting          | Meaning                                                                                                                         |
+| ---------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| `--> scale`      | edit current scale                                                                                                              |
+| `root`           | scale root                                                                                                                      |
+| `progression`    | select progression `#1 - #4`                                                                                                    |
+| `chords -->`     | edit progression/chords                                                                                                         |
+| `playmode`       | chain sequences (`SEQ+x`), advance by TR3 (`TR3+x`), or CV-address                                                              |
+| `direction`      | forward, reverse, pendulum1, pendulum2 (repeat first/last), random, brownian                                                    |
+| `transpose`      | transpose (in scale-degrees)                                                                                                    |
+| `octave`         | transpose in octaves                                                                                                            |
+| `CV source`      | CV source (`CV1`, `CV2`, `CV3` or `CV4`                                                                                         |
+| `chords trg src` | chords-trigger: `TR1` or `TR2`                                                                                                  |
+| `TR1 delay`      | TR1 trigger-to-processing latency - see the discussion of the `Trigger delay` setting in the _quantermain_ app for more details |
 
 ### CV menu
 

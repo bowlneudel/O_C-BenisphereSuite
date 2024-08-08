@@ -1,6 +1,7 @@
 Low-rents is a port of the [Lorenz attractor](https://en.wikipedia.org/wiki/Lorenz_system) modulation generator from the "Easter egg" in the Mutable Instruments [Streams](http://mutable-instruments.net/modules/streams) module, to which [Rössler attractors](https://en.wikipedia.org/wiki/Rössler_attractor) have been added. 
 
 Two independent function generators are provided (referred to here as Generator 1 and Generator 2), with each generator calculating *both* the Lorenz and Rössler functions simultaneously, using the same phase accumulator, but with the rate/speed of each generator independently settable. Both the Lorenz and the Rössler functions output three values (_x_, _y_ & _z_), and various combinations of these can be mapped to the four output channels. The chaotic strange attractors work best as slow modulation functions.
+
 ### Controls 
 
 |       | Left Encoder                                                            | Right Encoder                                                                                                     |
@@ -26,16 +27,17 @@ Note that the output voltage range of the O+C module is asymmetrical (about -3V 
 
 ### Settings
 
-|Setting | Meaning |
-| --- | --- |
-|`Freq 1` | Frequency/speed of generator 1, range is 0-255|
-|`Freq 2` | Frequency/speed of generator 2, range is 0-255|
-|`Rho/c 1`| Rho (for Lorenz attractor) or c (for the Rössler attractor) parameters for generator 1|
-|`Rho/c 2`| Rho (for Lorenz attractor) or c (for the Rössler attractor) parameters for generator 2|
-|`out A` | output mapping for output A. Available choices shown in the table below. |
-|`out B` | output mapping for output B. Available choices shown in the table below. |
-|`out C` | output mapping for output C. Available choices shown in the table below. |
-|`out D` | output mapping for output D. Available choices shown in the table below. |
+| Setting   | Meaning                                                                                |
+| --------- | -------------------------------------------------------------------------------------- |
+| `Freq 1`  | Frequency/speed of generator 1, range is 0-255                                         |
+| `Freq 2`  | Frequency/speed of generator 2, range is 0-255                                         |
+| `Rho/c 1` | Rho (for Lorenz attractor) or c (for the Rössler attractor) parameters for generator 1 |
+| `Rho/c 2` | Rho (for Lorenz attractor) or c (for the Rössler attractor) parameters for generator 2 |
+| `out A`   | output mapping for output A. Available choices shown in the table below.               |
+| `out B`   | output mapping for output B. Available choices shown in the table below.               |
+| `out C`   | output mapping for output C. Available choices shown in the table below.               |
+| `out D`   | output mapping for output D. Available choices shown in the table below.               |
+
 
 | Output mapping value | Meaning                                                                                            |
 | -------------------- | -------------------------------------------------------------------------------------------------- |

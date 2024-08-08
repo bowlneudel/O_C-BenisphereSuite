@@ -1,5 +1,3 @@
-#sequencer #CVgenerator 
-
 _Sequins_ is a basic, **dual-channel sequencer**.
 
 The app provides four 16-step sequences per channel and CV-control over various channel parameters, including scale mask, octave, pulsewidth, clock multiplication and division. The four sequences can be **chained** in various ways, providing sequences from **4 to up to 64 notes**. The sequence data is stored along with the other settings (whenever settings are saved).
