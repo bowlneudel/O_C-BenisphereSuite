@@ -1,6 +1,5 @@
-#chordGenerator  #quantizer #rootNote  
-
 This is a relatively straight-forward implementation of neo-Riemannian transformations for generating triad (three note chord) progressions (see the [_Credits, thanks, acknowledgements, and sources of inspiration_](#credits,-thanks,-acknowledgements,-and-sources-of-inspiration) section for more details on neo-Riemannian music theory).
+
 ### Controls
 
 |       | Left Encoder                                                                                                                                                                  | Right Encoder                                                                                                     |
@@ -50,13 +49,14 @@ Internally, the triad is stored in a neutral form (basically just offsets), thus
 A brief video illustrating the operational principles of the _Harrington 1200_ app is [available on YouTube](https://www.youtube.com/watch?v=sbaN6Xytl7o).
  
 ### Settings
-|Setting|Meaning|
-|---|---|
-|`Transpose`|Shift root/triad in semitones (can be offset by CV1)|
-|`Root mode`|Mode of root triad, either `maj` or `min`|
-|`Inversion`|Chord inversion (can be offset by CV4)|
-|`Priority`|Order in which transforms are applied if multiple triggers on TR@, TR3 and TR4 are received simultaneously|
-|`Output mode`|Output mode, with the default being `chord`, or use `tune` to output the quantised root on all four output channels|
+
+| Setting       | Meaning                                                                                                             |
+| ------------- | ------------------------------------------------------------------------------------------------------------------- |
+| `Transpose`   | Shift root/triad in semitones (can be offset by CV1)                                                                |
+| `Root mode`   | Mode of root triad, either `maj` or `min`                                                                           |
+| `Inversion`   | Chord inversion (can be offset by CV4)                                                                              |
+| `Priority`    | Order in which transforms are applied if multiple triggers on TR@, TR3 and TR4 are received simultaneously          |
+| `Output mode` | Output mode, with the default being `chord`, or use `tune` to output the quantised root on all four output channels |
 
 ### Screensaver display
 

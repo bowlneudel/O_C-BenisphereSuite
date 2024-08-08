@@ -1,6 +1,5 @@
-#sampleAndHold #quantizer #rootNote #sequencer 
+Works much the same as the original o_C / quantising **ASR** firmware. Except, the mode now incorporates some of the new/improved quantiser features, including a larger selection of **(editable) preset scales** as well as advanced user-scale-edit options (for details, see [Quantermain](Quantermain). 
 
-Works much the same as the original o_C / quantising **ASR** firmware. Except, the mode now incorporates some of the new/improved quantiser features, including a larger selection of **(editable) preset scales** as well as advanced user-scale-edit options (for details, see the [[Quantermain]] "app" below). 
 ### Controls
 
 |       | Left Encoder                                                    | Right Encoder                                                                                                                                          |
@@ -21,6 +20,7 @@ Works much the same as the original o_C / quantising **ASR** firmware. Except, t
 | TR  | Clock input | Hold (freeze ring buffer)            | Transpose: Octave up, when high | Transpose: Octave down, when high (overridden by TR3) |
 | CV  | Sample in   | Index: ring buffer index (= "delay") | Mask: rotate scale mask         | Transpose: octave up/down (-4/+4)                     |
 | OUT | ASR output  | ASR output                           | ASR output                      | ASR output                                            |
+
 ### Description
 
 In essence, then, ASR mode works as a cascaded, four-stage sample-and-hold module (see [here](http://www.cyndustries.com/synapse/synapse.cfm?pc=35&folder=sept1976&pic=19) for a classic exposition). Feed a pulse into the left-most digital input (**TR1**), and some CV signal (LFO, ADSR, etc) into the leftmost CV input (**CV1**): on receiving a/the clock, the DAC outputs will be updated, **ASR-style**: the sampled value will be present at output A, the previous sample values shifted down the remaining outputs B, C, and D. 
@@ -43,19 +43,19 @@ Please see the discussion of the `Trigger delay` menu selection in the _Quanterm
 A brief video demonstration of the _CopierMaschine_ in action, with live audio, is [available on YouTube](https://www.youtube.com/watch?v=9YAf5QNBeoI).
 
 ### Available settings (per-channel)
-|Setting | Meaning |
-|---|---|
-|`scale`|Current scale|
-|`Root`|Root note for scale|
-|`Active notes` | "scale mask" / active note pattern in the selected scale |
-|`Index`| ring buffer index (= "delay") amount |
-|`Mult/att`| CV "gain", multiplies incoming CV sample value by selected value (range: 0.1 - 2.0) |
-|`Trigger delay`| sets the delay between receiving a trigger (for details see QQ below)
 
+| Setting         | Meaning                                                                             |
+| --------------- | ----------------------------------------------------------------------------------- |
+| `scale`         | Current scale                                                                       |
+| `Root`          | Root note for scale                                                                 |
+| `Active notes`  | "scale mask" / active note pattern in the selected scale                            |
+| `Index`         | ring buffer index (= "delay") amount                                                | 
+| `Mult/att`      | CV "gain", multiplies incoming CV sample value by selected value (range: 0.1 - 2.0) |
+| `Trigger delay` | sets the delay between receiving a trigger (for details see QQ below)               |
 
 ### Scale edit: 
 
-see [here](fullApplets/originalApps/Quantermain#Active note (scale mask) and scale editing) (user-scales are shared across apps).
+see [here](Quantermain#Active) for note (scale mask) and scale editing) (user-scales are shared across apps).
 
 ### Screensaver display
 

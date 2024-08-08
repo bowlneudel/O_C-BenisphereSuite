@@ -1,5 +1,3 @@
-#envelopeGenerator  #LFO #triggerable 
-
 _Dialectic Ping Pong_ is a port of the bouncing ball envelope generators from the *Mutable Instruments Peaks* module source code (these are not exposed in the official firmware, but are available through [Dead Man's Catch](https://github.com/timchurches/Mutated-Mutables/releases) alternative firmware). These generators implement a simple but effective simulation of the physics of a ball that is thrown into the air with a certain velocity, from a certain height, and which then returns to Earth (or a planet of your choice) under the influence of (configurable) gravity, and then bounces (with a settable "bounce loss" simulating how hard the ball is pumped up, if it is a basketball), before being pulled back to Earth and bouncing again, and so on.
 
 ### Controls
@@ -23,6 +21,7 @@ _Dialectic Ping Pong_ is a port of the bouncing ball envelope generators from th
 | TR  | (mappable) | (mappable) | (mappable) | (mappable) |
 | CV  | (mappable) | (mappable) | (mappable) | (mappable) |
 | OUT | output     | output     | output     | output     |
+
 ### Available settings (per-channel)
 
 | Setting         | Meaning                                                                                                                                                                                                                                         |
