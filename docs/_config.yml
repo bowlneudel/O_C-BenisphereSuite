@@ -15,3 +15,19 @@ nav_external_links:
   - title: Custom Firmware Builds
     url: https://github.com/djphazer/O_C-Phazerville/discussions/38
     opens_in_new_tab: true
+
+collections:
+  apps:
+    permalink: "/:path"
+    output: true
+  applets:
+    output: true
+
+just_the_docs:
+  collections:
+    apps:
+      name: Apps
+      nav_fold: true
+    applets:
+      name: Applets
+      nav_fold: true

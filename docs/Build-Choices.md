@@ -1,3 +1,8 @@
+---
+title: Build Choices
+nav_order: 3
+---
+
 # Build Choices
 
 By default, all [release builds](https://github.com/djphazer/O_C-Phazerville/releases) include **Hemisphere** + all applets, plus **Calibr8or, Scenes, Pong, Piqued, Quadraturia, Passencore, Viznutcracker, Dialectic Ping Pong** (check the release notes to be sure)
