@@ -1,3 +1,7 @@
+---
+layout: default
+nav_order: 4
+---
 # Hemisphere Gestures
 
 Operating Hemispheres makes use of button combinations to perform various actions. See below for a complete list.

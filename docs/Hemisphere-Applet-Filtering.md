@@ -1,3 +1,8 @@
+---
+layout: default
+parent: Hemisphere Config
+nav_order: 5
+---
 # Applet Filtering
 
 ## Page 4: Applet Filtering

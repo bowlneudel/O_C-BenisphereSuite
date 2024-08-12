@@ -1,3 +1,9 @@
+---
+layout: default
+title: Hemisphere Config
+nav_order: 7
+has_children: true
+---
 # Hemisphere Config
 
 Long-press DOWN button to enter the Hemisphere Configuration menu. Short-press UP or DOWN button to exit.

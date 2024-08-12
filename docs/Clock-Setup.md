@@ -1,3 +1,8 @@
+---
+layout: default
+parent: Hemisphere Config
+nav_order: 6
+---
 # Clock Setup
 
 ![Screenshot 2024-06-13 14-09-05](https://github.com/djphazer/O_C-Phazerville/assets/109086194/62d559a1-c09f-46b2-b137-f6e1529e8988)
