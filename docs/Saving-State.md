@@ -1,3 +1,8 @@
+---
+title: Saving State
+nav_order: 4
+---
+
 # Saving State
 
 Your App / applet state will not be remembered between power cycles unless you:

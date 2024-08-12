@@ -1,3 +1,8 @@
+---
+title: App & Applet Index
+nav_order: 6
+---
+
 # App and Applet Index
 
 Jump to the lists of [Full Screen Apps](App-and-Applet-Index#full-screen-apps) or [Hemisphere Applets](App-and-Applet-Index#hemisphere-applets), also organized [by function](App-and-Applet-Index#apps-and-applets-by-function)
