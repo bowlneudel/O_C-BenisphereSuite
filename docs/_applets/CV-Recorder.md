@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # CV Recorder
 
 ![Screenshot 2024-06-13 14-38-41](https://github.com/djphazer/O_C-Phazerville/assets/109086194/289cb265-795b-45a3-b77c-d433ec2a2627)

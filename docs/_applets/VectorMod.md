@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # VectorMod
 
 ![Screenshot 2024-06-13 15-52-20](https://github.com/djphazer/O_C-Phazerville/assets/109086194/507d8a1c-8acc-4d71-9a38-0f155cf3e623)

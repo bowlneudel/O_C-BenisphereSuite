@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # EnsOscKey
 
 (disabled in v1.8, pending bugfixes)

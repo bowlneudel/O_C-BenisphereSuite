@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # ProbDiv
 
 ![Screenshot 2024-06-13 15-18-59](https://github.com/djphazer/O_C-Phazerville/assets/109086194/40d4e48a-fd31-47c3-8ffa-f5a900c72f99)

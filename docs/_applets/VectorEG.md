@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # Vector EG
 
 ![Screenshot 2024-06-13 15-50-29](https://github.com/djphazer/O_C-Phazerville/assets/109086194/01083c00-7c85-415a-9985-1e885b516b88)

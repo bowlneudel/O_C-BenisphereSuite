@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # MIDI Input
 
 ## Video

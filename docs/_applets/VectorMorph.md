@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # VectorMorph
 
 ![Screenshot 2024-06-13 15-53-40](https://github.com/djphazer/O_C-Phazerville/assets/109086194/386a8e5d-a1e4-4d7b-8be0-71c20f30259c)

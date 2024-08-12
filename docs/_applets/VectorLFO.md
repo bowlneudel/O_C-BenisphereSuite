@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # Vector LFO
 
 ![Screenshot 2024-06-13 15-51-26](https://github.com/djphazer/O_C-Phazerville/assets/109086194/8def472b-f8ad-49aa-8f8b-0ffb61a42096)

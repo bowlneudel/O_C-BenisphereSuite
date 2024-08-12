@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # DualTM
 
 ![Screenshot 2024-06-13 14-45-21](https://github.com/djphazer/O_C-Phazerville/assets/109086194/5b0be757-9e41-42b6-8f5f-b7590a91e740)

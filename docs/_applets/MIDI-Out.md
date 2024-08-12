@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # MIDI Out
 
 ![Screenshot 2024-06-13 15-12-34](https://github.com/djphazer/O_C-Phazerville/assets/109086194/b3974f38-4879-4f2c-88f2-07f772fe99fd)

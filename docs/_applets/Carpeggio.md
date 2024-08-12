@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # Carpeggio
 
 ![Screenshot 2024-06-13 14-31-57](https://github.com/djphazer/O_C-Phazerville/assets/109086194/291b577c-c139-4e04-81db-a900f47de58b)

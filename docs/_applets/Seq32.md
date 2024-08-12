@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # Seq32
 
 ![Screenshot 2024-06-13 15-33-26](https://github.com/djphazer/O_C-Phazerville/assets/109086194/3801854c-017b-4c87-87c3-613b872401cd)

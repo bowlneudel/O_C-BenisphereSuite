@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # TL Neuron
 
 ![Screenshot 2024-06-13 15-45-50](https://github.com/djphazer/O_C-Phazerville/assets/109086194/015773fd-7d0d-4646-95d3-5ee0a960b381)

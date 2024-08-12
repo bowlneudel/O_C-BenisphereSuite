@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # Palimpsest Accent Sequencer
 
 ![Screenshot 2024-06-13 15-16-10](https://github.com/djphazer/O_C-Phazerville/assets/109086194/8aca80c8-8dbb-4af7-9626-55a7551c8842)

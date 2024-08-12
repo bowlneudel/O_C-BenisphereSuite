@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # Switch
 
 ![Screenshot 2024-06-13 15-43-19](https://github.com/djphazer/O_C-Phazerville/assets/109086194/d2f17800-b343-4bbb-b6ab-44d38d48dce1)

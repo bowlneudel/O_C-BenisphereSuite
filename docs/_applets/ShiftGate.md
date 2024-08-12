@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # ShiftGate
 
 ![Screenshot 2024-06-13 15-36-00](https://github.com/djphazer/O_C-Phazerville/assets/109086194/ccca291c-2e3e-404b-a130-b2d2bdddc3b5)

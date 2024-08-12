@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # Stairs
 
 ![Screenshot 2024-06-13 15-41-28](https://github.com/djphazer/O_C-Phazerville/assets/109086194/bdc69fdb-906f-48fe-bd73-89843b0b4890)

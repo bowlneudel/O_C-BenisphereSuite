@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # Calibr8
 
 ![Screenshot 2024-06-13 14-30-47](https://github.com/djphazer/O_C-Phazerville/assets/109086194/4eded94b-8db0-43fb-aaf8-7d6b7305aa81)

@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # Clock Divider
 
 ![Screenshot 2024-06-13 14-34-19](https://github.com/djphazer/O_C-Phazerville/assets/109086194/1a4bd41e-1c36-473b-8c4e-75fe55a00c0b)

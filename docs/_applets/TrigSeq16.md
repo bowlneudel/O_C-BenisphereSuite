@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # TrigSeq16
 
 ![Screenshot 2024-06-13 15-48-15](https://github.com/djphazer/O_C-Phazerville/assets/109086194/e34a515b-1855-4d6f-8021-12e0ed2ffc5a)

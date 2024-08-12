@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # TB-3PO
 
 ![Screenshot 2024-06-13 15-44-49](https://github.com/djphazer/O_C-Phazerville/assets/109086194/f066be6e-e014-4976-b750-f139fb862eb9)

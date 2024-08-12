@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # Strum
 
 ![Screenshot 2024-06-13 15-42-30](https://github.com/djphazer/O_C-Phazerville/assets/109086194/7ea4f903-3781-4eb6-a241-edd6b426f2ed)

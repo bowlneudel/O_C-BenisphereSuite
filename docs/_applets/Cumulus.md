@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # Cumulus
 
 ![Screenshot 2024-06-13 14-37-59](https://github.com/djphazer/O_C-Phazerville/assets/109086194/4edace40-72bf-4203-8d70-90ee6e83169d)

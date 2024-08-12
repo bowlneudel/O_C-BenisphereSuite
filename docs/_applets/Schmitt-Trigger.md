@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # Schmitt Trigger
 
 ![Screenshot 2024-06-13 15-23-33](https://github.com/djphazer/O_C-Phazerville/assets/109086194/1f7b5b58-7818-4b2c-9879-b5ff620ca812)

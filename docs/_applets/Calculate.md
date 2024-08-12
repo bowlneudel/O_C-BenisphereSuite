@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # Calculate
 
 ![Screenshot 2024-06-13 14-29-27](https://github.com/djphazer/O_C-Phazerville/assets/109086194/a6ee6cb2-c230-4581-a023-81fb3003fca3)

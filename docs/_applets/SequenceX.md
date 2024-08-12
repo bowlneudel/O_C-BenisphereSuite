@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # SequenceX
 
 ![Screenshot 2024-06-13 15-35-12](https://github.com/djphazer/O_C-Phazerville/assets/109086194/ee475e5b-1e4b-4e65-8da5-157fd4206858)

@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # Binary Counter
 
 ![Screenshot 2024-06-13 14-20-22](https://github.com/djphazer/O_C-Phazerville/assets/109086194/020223f3-ef53-4206-b10b-b66430f29853)

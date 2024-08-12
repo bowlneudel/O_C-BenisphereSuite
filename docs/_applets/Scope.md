@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # Scope
 
 ![Screenshot 2024-06-13 15-24-57](https://github.com/djphazer/O_C-Phazerville/assets/109086194/66b6a983-14c4-460a-9c51-505e860262f0)

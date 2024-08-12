@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # Chordinator
 
 ![Screenshot 2024-06-13 14-32-57](https://github.com/djphazer/O_C-Phazerville/assets/109086194/073a1afd-edf6-49b4-b23c-330b9bfc0620)

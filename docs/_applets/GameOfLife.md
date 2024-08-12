@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # Game of Life
 
 ![Screenshot 2024-06-13 15-03-56](https://github.com/djphazer/O_C-Phazerville/assets/109086194/0dc71c7f-689b-4a1a-ad6c-222d600afbbf)
