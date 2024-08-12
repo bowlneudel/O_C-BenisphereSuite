@@ -4,6 +4,12 @@ remote_theme: just-the-docs/just-the-docs@v0.8.2
 color_scheme: dark
 permalink: "/:name"
 
+defaults:
+  scope:
+    path: "*.md"
+  values:
+    layout: default
+
 aux_links:
   "Downloads":
     - "https://github.com/djphazer/O_C-Phazerville/releases"
