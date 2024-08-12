@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # Scenes
 
 ![Screenshot 2024-06-13 15-57-06](https://github.com/djphazer/O_C-Phazerville/assets/109086194/c651ef29-79bc-45e5-9cf1-e9b115194a3b)

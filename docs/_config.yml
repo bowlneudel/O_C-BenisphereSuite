@@ -6,7 +6,7 @@ permalink: "/:name"
 
 defaults:
   scope:
-    path: "*.md"
+    path: ""
   values:
     layout: default
 
@@ -20,10 +20,10 @@ nav_external_links:
 
 collections:
   apps:
-    permalink: "/:name"
+    permalink: "/:title"
     output: true
   applets:
-    permalink: "/:name"
+    permalink: "/:title"
     output: true
 
 just_the_docs:
@@ -37,9 +37,9 @@ just_the_docs:
 
 footer_content: "This documentation is part of the <a href=\"https://github.com/djphazer/O_C-Phazerville\">Phazerville Suite O_C firmware project</a>, published with Github Pages"
 
-# Footer "Edit this page on GitHub" link text
 gh_edit_link: true
 gh_edit_link_text: "Edit this page on GitHub"
 gh_edit_repository: "https://github.com/djphazer/O_C-Phazerville" # the github URL for your repo
 gh_edit_branch: "wiki-docs" # the branch that your docs is served from
-
+gh_edit_source: docs
+gh_edit_view_mode: "tree"

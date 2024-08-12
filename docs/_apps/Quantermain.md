@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # Quantermain
 
 *Quantermain* is a 4-channel quantiser which expand the one from *Mutable Instruments [Braids]*(https://github.com/pichenettes/eurorack/blob/master/braids/quantizer.h) with interactive **scale-edit** functionalities. 48 editable preset scales are included, plus 4 fully user-definable scales (with additional finetune/microtonal edit options).

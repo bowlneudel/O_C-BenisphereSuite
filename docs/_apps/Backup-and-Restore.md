@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # Backup / Restore
 
 Backup/Restore is a utility that allows you to transfer complete sets of app and/or calibration data to and from your module. Possible uses include:

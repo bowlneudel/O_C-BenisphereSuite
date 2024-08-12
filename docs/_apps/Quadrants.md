@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # Quadrants
 
 ![Quadrants Screenshot](img/quadrants.png)

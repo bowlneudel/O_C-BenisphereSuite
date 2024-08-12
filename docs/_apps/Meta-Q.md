@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # Meta-Q
 
 _Meta-Q_ is a quantiser that is basically similar to [Quantermain](Quantermain), except it has only two channels.

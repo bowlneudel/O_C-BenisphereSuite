@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # Scale Editor
 
 *Scale Editor* is a standalone application for editing and managing user-defined microtonal scales, and importing scales from the internal scale library, or via system exclusive. A web-based Scala-to-Hemisphere Suite converter [~~is available~~](http://www.beigemaze.com/scala), which can generate system exclusive files from Scala documents. [Video demo](https://www.youtube.com/watch?v=UKX79rkSdIQ)
