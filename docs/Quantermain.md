@@ -1,3 +1,5 @@
+# Quantermain
+
 *Quantermain* is a 4-channel quantiser which expand the one from *Mutable Instruments [Braids]*(https://github.com/pichenettes/eurorack/blob/master/braids/quantizer.h) with interactive **scale-edit** functionalities. 48 editable preset scales are included, plus 4 fully user-definable scales (with additional finetune/microtonal edit options).
 
 The output accuracy should be excellent (is fairly excellent) due to the use of a precision Texas Instruments 16-bit DAC; the input side uses the Teensy internal ADCs, with 12 bits of effective resolution, which should be more than enough for almost all purposes. The trigger-to-quantised-output latency is also very decent: < 100 microseconds. 

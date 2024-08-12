@@ -1,3 +1,5 @@
+# MultiScale
+
 ![Screenshot 2024-06-13 15-14-50](https://github.com/djphazer/O_C-Phazerville/assets/109086194/bcdb67e0-b545-4386-b35d-8270a87b00a7)
 
 Similar to [Scale Duet Quantizer](Scale-Duet-Quantizer), **MultiScale** provides 4 separate editable scale masks, with CV control to switch between them. Unlike ScaleDuet, this applet outputs a trigger on B/D when the active scale changes. Eventually, the functionality of the two applets will be merged.

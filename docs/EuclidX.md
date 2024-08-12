@@ -1,3 +1,5 @@
+# EuclidX
+
 ![Screenshot 2024-06-13 15-03-25](https://github.com/djphazer/O_C-Phazerville/assets/109086194/19d27f22-6885-49f9-8c92-e6fb40d91279)
 
 A deluxe Euclidean pattern generator, two channels, up to 32 steps each. Using UI code from qiemem; named after adegani's version of the applet with the flexible CV Input routing. The extra zero-padding parameter makes it worthy of the *X* ;-)

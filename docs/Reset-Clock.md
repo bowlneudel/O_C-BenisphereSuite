@@ -1,3 +1,5 @@
+# Reset Clock
+
 ![Screenshot 2024-06-13 15-20-41](https://github.com/djphazer/O_C-Phazerville/assets/109086194/283433ed-813c-47ce-a7fe-95620982682f)
 
 **ResetClk** is a tool to assist with sequencers that can only advance forward (like the DFAM). It keeps track of the current step position and emulates a "reset" by quickly sending trigger pulses to loop back to the desired step. The first CV input modulates the position offset, and the applet keeps the actual sequencer position synchronized.

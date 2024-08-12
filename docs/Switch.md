@@ -1,6 +1,8 @@
+# Switch
+
 ![Screenshot 2024-06-13 15-43-19](https://github.com/djphazer/O_C-Phazerville/assets/109086194/d2f17800-b343-4bbb-b6ab-44d38d48dce1)
 
-https://youtu.be/juu65pJyXlY
+[Video demo](https://youtu.be/juu65pJyXlY)
 
 **Switch** is a two-channel switch with two switching methods: sequential and gated. 
 

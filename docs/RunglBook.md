@@ -1,3 +1,5 @@
+# RunglBook
+
 ![Screenshot 2024-06-13 15-21-32](https://github.com/djphazer/O_C-Phazerville/assets/109086194/b883d29b-b156-4cf7-84e5-e5e350cc0723)
 
 **RunglBook** is a chaotic shift-register modulation based on Rob Hordijk's rungler circuit.

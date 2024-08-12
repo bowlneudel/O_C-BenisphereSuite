@@ -1,3 +1,5 @@
+# ProbMeloD
+
 ![Screenshot 2024-06-13 15-19-37](https://github.com/djphazer/O_C-Phazerville/assets/109086194/8deab434-e06f-4b83-8ca6-730358004a5a)
 
 **ProbMeloD** is a stochastic melody generator inspired by the [Melodicer](https://www.modulargrid.net/e/vermona-melodicer) and [Stochastic Inspiration Generator](https://www.modulargrid.net/e/stochastic-instruments-stochastic-inspiration-generator). It allows you to assign probability to each note in a chromatic scale, as well as set the range of octaves to pick notes from. It can be used by itself or with [ProbDiv](ProbDiv), which it will automatically link to.

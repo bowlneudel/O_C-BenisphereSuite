@@ -1,3 +1,5 @@
+# General Settings
+
 ## Page 1: General Settings
 
 The first full-screen page in the [config menu](Hemisphere-Config) (after the floating [presets menu](Hemisphere-Presets)) is for General Settings

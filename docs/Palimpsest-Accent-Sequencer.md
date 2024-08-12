@@ -1,3 +1,5 @@
+# Palimpsest Accent Sequencer
+
 ![Screenshot 2024-06-13 15-16-10](https://github.com/djphazer/O_C-Phazerville/assets/109086194/8aca80c8-8dbb-4af7-9626-55a7551c8842)
 
 _Palimpsest_ is an accent sequencer that composes a pattern by way of a repeated sequence of trigger impressions. A/C is the accent output, and B/D is a trigger output sent when the level of the composed step is around 3V

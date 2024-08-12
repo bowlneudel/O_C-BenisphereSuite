@@ -1,3 +1,5 @@
+# VectorMod
+
 ![Screenshot 2024-06-13 15-52-20](https://github.com/djphazer/O_C-Phazerville/assets/109086194/507d8a1c-8acc-4d71-9a38-0f155cf3e623)
 
 VectorMod is a dual triggered one-shot or cycling modulation source based on Vector Oscillator waveforms. There is a variety of built-in waveforms from which to choose, or you can create your own with the [Waveform Editor](https://github.com/Chysn/O_C-HemisphereSuite/wiki/Waveform-Editor).

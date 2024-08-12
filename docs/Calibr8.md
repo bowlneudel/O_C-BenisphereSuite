@@ -1,3 +1,5 @@
+# Calibr8
+
 ![Screenshot 2024-06-13 14-30-47](https://github.com/djphazer/O_C-Phazerville/assets/109086194/4eded94b-8db0-43fb-aaf8-7d6b7305aa81)
 
 **Calibr8** is a 2 channel pitch calibration tool to compensate for imperfect v/Oct tracking in your oscillators. For a 4 channel version with many more features (flexible quantization, sample and hold, auto-calibration), use the full [Calibr8or](Calibr8or) app.

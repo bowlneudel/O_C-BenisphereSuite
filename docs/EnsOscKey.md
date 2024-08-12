@@ -1,8 +1,13 @@
+# EnsOscKey
+
+(disabled in v1.8, pending bugfixes)
+
 ![Screenshot 2024-06-13 15-00-36](https://github.com/djphazer/O_C-Phazerville/assets/109086194/f0c00813-1747-4e0c-bc3b-9442e5430760)
 
 **EnsOscKey** was designed for use with the 4ms Ensemble Oscillator. The goal is to change the Ensemble Oscillator's **Scale** value to the appropriate chord shape, given the root, scale, and current note. Check out a [video demonstration](https://youtu.be/lqLH0176VFw?si=NIXoEPxWpawai7iP)
 
 The applet is essentially a repurposed DualQuant, another applet from Hemispheres. Some functionality and behavior is retained.
+
 ### I/O
 
 |        |      1/3      |      2/4      |

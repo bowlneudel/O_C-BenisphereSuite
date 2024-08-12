@@ -1,3 +1,5 @@
+# Quantizer Setup
+
 ## Page 2: Quantizer Setup
 
 _(Updated in v1.8)_

@@ -1,3 +1,5 @@
+# Hemisphere Config
+
 Long-press DOWN button to enter the Hemisphere Configuration menu. Short-press UP or DOWN button to exit.
 
 As of v1.7.1, the config menu is split into several pages. Rotate LEFT encoder to jump to different pages. Use RIGHT encoder to move the cursor and push to edit.

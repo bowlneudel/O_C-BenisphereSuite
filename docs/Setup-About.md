@@ -1,3 +1,7 @@
+# Setup / About
+
+_(TODO: screenshots)_
+
 Press the LEFT encoder to enter the Calibration routine
 
 Press the RIGHT encoder to reset calibration / settings to defaults - press RIGHT again to confirm (LEFT to cancel)
@@ -19,8 +23,6 @@ If you want to use non-default calibration, you will need to scroll through the 
 
 Press the RIGHT encoder to accept the listed encoder reversal settings.
 
-***
-
 ## Calibration routine
 
 To change pages:
@@ -33,16 +35,16 @@ To edit the current page parameter:
 
 Pages:
 * (1) Center Display horizontal pixel offset
-* (2-11) DAC A -3v through 5v
-* (12-21) DAC B -3v through 5v 
-* (22-31) DAC C -3v through 5v
-* (32-41) DAC D -3v through 5v
+* (2-11) DAC A -3v through 6v
+* (12-21) DAC B -3v through 6v 
+* (22-31) DAC C -3v through 6v
+* (32-41) DAC D -3v through 6v
 * (42) ADC CV1 
     * _All ADC values should be around 0v (-1v < > +1v)_
 * (43) ADC CV2
 * (44) ADC CV3
 * (45) ADC CV4
-* (46-47) CV Scaling 1v and 3v
+* (46-47) CV Scaling 1v and 3v (long-press DOWN button to set)
 * (48) Screen blank time
 * (49) Save and adjust encoder direction
     * Press UP and DOWN buttons to select encoder reversal for L, R, both (LR), or neither (normal)

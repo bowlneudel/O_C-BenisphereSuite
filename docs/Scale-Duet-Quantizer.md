@@ -1,3 +1,5 @@
+# Scale Duet
+
 ![Screenshot 2024-06-13 15-22-17](https://github.com/djphazer/O_C-Phazerville/assets/109086194/bdf33873-4522-41ce-bfd2-5d5f75481d3c)
 
 **Scale Duet** is a single-channel quantizer that allows you to switch between two user-defined scales. The scales are edited with an on-screen keyboard.

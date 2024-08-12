@@ -1,3 +1,5 @@
+# Acid Curds
+
 _Acid Curds_ is a basic chord sequencer.
 
 The app provides **four 8-step chord progressions** (in total), and CV-control over various parameters, including chord type, progression length, direction, voicing, inversion, etc. The four chord progressions can be **chained** in various ways, providing progressions from **1 to up to 32 chords**. The chords/sequence data is stored along with the other settings (whenever settings are saved).

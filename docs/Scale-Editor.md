@@ -1,4 +1,6 @@
-*Scale Editor* is a standalone application for editing and managing user-defined microtonal scales, and importing scales from the internal scale library, or via system exclusive. A web-based Scala-to-Hemisphere Suite converter [is available](http://www.beigemaze.com/scala), which can generate system exclusive files from Scala documents. [Video demo](https://www.youtube.com/watch?v=UKX79rkSdIQ)
+# Scale Editor
+
+*Scale Editor* is a standalone application for editing and managing user-defined microtonal scales, and importing scales from the internal scale library, or via system exclusive. A web-based Scala-to-Hemisphere Suite converter [~~is available~~](http://www.beigemaze.com/scala), which can generate system exclusive files from Scala documents. [Video demo](https://www.youtube.com/watch?v=UKX79rkSdIQ)
 
 ### I/O
 
@@ -56,6 +58,6 @@ With the help of a web-based tool (http://www.beigemaze.com/scala), you can brin
 
 For your convenience, sysex files for about 3000 scales from the Scala Scale Archive are available here, along with the original Scala files and instructions:
 
-[http://beigemaze.com/downloads/HS_Scala_Archive.zip](http://beigemaze.com/downloads/HS_Scala_Archive.zip)
+[http://beigemaze.com/downloads/HS_Scala_Archive.zip](http://beigemaze.com/downloads/HS_Scala_Archive.zip) (TODO: broken!)
 
 These scales are distributed with the kind permission of Manuel Op de Coul

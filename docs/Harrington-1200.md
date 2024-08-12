@@ -1,3 +1,5 @@
+# Harrington 1200
+
 This is a relatively straight-forward implementation of neo-Riemannian transformations for generating triad (three note chord) progressions (see the [_Credits, thanks, acknowledgements, and sources of inspiration_](#credits,-thanks,-acknowledgements,-and-sources-of-inspiration) section for more details on neo-Riemannian music theory).
 
 ### Controls

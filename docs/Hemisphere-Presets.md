@@ -1,3 +1,5 @@
+# Hemisphere Presets
+
 ## Floating menu: Presets
 
 The first three options in the [config menu](Hemisphere-Config) are **Load**, **Save**, and **(auto)**
@@ -24,10 +26,10 @@ Sending MIDI Program Change messages to Channel 1 will load the corresponding pr
 
 ### Auto-save
 
-New in v1.6.999
+(New in v1.6.999)
 
 If enabled, settings are automatically stored in the last loaded Preset when the screensaver is invoked, or when loading the main App menu via Right Encoder Long-press. (You can set the screensaver timeout as low as 1 minute in Calibration)
 
 ![Screenshot 2024-06-13 14-11-00](https://github.com/djphazer/O_C-Phazerville/assets/109086194/a80339d8-373c-41e2-bcd6-7f4782c05262)
 
-As of v1.6.999, when storing a Preset, settings are immediately written to EEPROM - no need to manually do an [EEPROM Save](EEPROM-Save), unless you need to save changes to global patterns, etc. Combined with Auto-save, this can result in frequent EEPROM writes... (only 100,000 write cycles are guaranteed, so use at your own risk!)
+When storing a Preset, settings are immediately written to EEPROM - no need to manually do an [EEPROM Save](EEPROM-Save), unless you need to save changes to global patterns, etc. Combined with Auto-save, this can result in frequent EEPROM writes... (only 100,000 write cycles are guaranteed, so use at your own risk!)

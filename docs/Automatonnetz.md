@@ -1,3 +1,5 @@
+# Automatonnetz
+
 The *Automatonnetz*, coded up by Patrick Dowling, combines the neo-Riemannian triad chord transformations of *[[Harrington 1200]]*, also running in the Ornament & Crime module, inspired by Noise Engineering Tonnetz Sequent module, combined with the *Exfilnator* vector sequencer idea expressed by fcd72 (Frank) of d:Machinery.
 
 Neo-Riemannian transformations are applied to sequences determined by the "navigation" of a 5x5 grid of cells.

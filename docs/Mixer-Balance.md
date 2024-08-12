@@ -1,3 +1,5 @@
+# Mixer:Balance
+
 ![Screenshot 2024-06-13 15-13-38](https://github.com/djphazer/O_C-Phazerville/assets/109086194/d22fd6ef-0bff-4398-ac00-e75c26a79de7)
 
 **Mixer:Balance** is a two-input CV mixer with a balance control and two complementary outputs.

@@ -1,3 +1,5 @@
+# Seq32
+
 ![Screenshot 2024-06-13 15-33-26](https://github.com/djphazer/O_C-Phazerville/assets/109086194/3801854c-017b-4c87-87c3-613b872401cd)
 
 The **Seq32** applet reinterprets the 8 pattern storage slots from the original **Sequins** app as 32-step note sequences. (This will corrupt your Sequins patterns, if you have any!)

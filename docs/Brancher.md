@@ -1,3 +1,5 @@
+# Brancher
+
 ![Screenshot 2024-06-13 14-22-47](https://github.com/djphazer/O_C-Phazerville/assets/109086194/2d8ccf00-5b5a-4458-bf21-f141d0709aa5)
 
 **Brancher** is a Bernoulli Gate, inspired by Mutable Instruments Branches. It sends incoming gate or clock to one of two outputs, based on a selected probability.

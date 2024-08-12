@@ -1,3 +1,5 @@
+# Boots 'n Cats
+
 ![Screenshot 2024-06-13 14-21-41](https://github.com/djphazer/O_C-Phazerville/assets/109086194/a73e26c6-7d16-4031-8db8-c55c17d4f201)
 
 *Boots 'n Cats* (BootsNCat) is a simple bass/snare drum synthesizer with stereo audio outputs.

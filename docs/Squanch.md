@@ -1,3 +1,5 @@
+# Squanch
+
 ![Screenshot 2024-06-13 15-40-36](https://github.com/djphazer/O_C-Phazerville/assets/109086194/1a6bca7f-bf52-48b7-8b78-eca85b53700c)
 
 **Squanch** is a pitch-shifting quantizer with a single input and two pitch-shifted outputs, useful for producing harmonic intervals. It can be used as a voltage adder.

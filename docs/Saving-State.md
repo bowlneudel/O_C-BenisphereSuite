@@ -1,3 +1,5 @@
+# Saving State
+
 Your App / applet state will not be remembered between power cycles unless you:
 
 * (A) Manually save to EEPROM _(Long-press RIGHT encoder to escape to main menu, long-press RIGHT again to save)_

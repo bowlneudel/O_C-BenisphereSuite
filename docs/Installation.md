@@ -1,3 +1,5 @@
+# Installation
+
 **Phazerville Suite** is free, open-source software (firmware) for the Ornament + Crime module. The licenses under which the software is released permit anyone to freely install and use the firmware on copies of the module, to modify it, and to provide copies to others. Third-party module manufacturers who re-use portions of the O+C software in their modules or devices should ensure that they meet the obligations imposed by the licenses under which the O+C source code is released - details are [here](https://ornament-and-cri.me/licensing/).
 
 ## Firmware upload methods

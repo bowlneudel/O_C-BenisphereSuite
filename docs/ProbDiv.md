@@ -1,3 +1,5 @@
+# ProbDiv
+
 ![Screenshot 2024-06-13 15-18-59](https://github.com/djphazer/O_C-Phazerville/assets/109086194/40d4e48a-fd31-47c3-8ffa-f5a900c72f99)
 
 **ProbDiv** is a stochastic rhythm generator where you can assign probability to different clock division settings. It takes inspiration from the rhythm section of the [Stochastic Inspiration Generator](https://www.modulargrid.net/e/stochastic-instruments-stochastic-inspiration-generator), except it uses clock divisions instead of note divisions. You can also capture a loop based on the probability settings with anywhere between 1 and 32 steps. It can be used by itself or with [ProbMeloD](ProbMeloD), which it will automatically link to.

@@ -1,3 +1,5 @@
+# Carpeggio
+
 ![Screenshot 2024-06-13 14-31-57](https://github.com/djphazer/O_C-Phazerville/assets/109086194/291b577c-c139-4e04-81db-a900f47de58b)
 
 **Carpeggio** is an arpeggiator/sequencer that uses coordinates on a 4x4 Cartesian plane to select notes. Notes can be assigned to the plane from among 55 chord patterns. Carpeggio can also be clocked and reset, to function as a more traditional arpeggiator. Additionally, any of the 16 notes may be edited on the fly, allowing Carpeggio to function as a Cartesian or traditional 16-step sequencer.

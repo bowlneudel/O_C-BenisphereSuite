@@ -1,3 +1,5 @@
+# References
+
 _References_ is a simple utility app which outputs fixed reference voltages. These are handy when calibrating other modules, such as VCOs.
 
 Note that unlike all the other apps, the settings for _references_ are *not* saved and will revert tot he defaults eat time the module is powered on. This is to save EEPROM storage space - saved settings were not regarded as critical for this app.

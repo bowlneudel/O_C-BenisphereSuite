@@ -1,12 +1,14 @@
+# Captain MIDI
+
 Captain MIDI is a highly-configurable CV-to-MIDI and MIDI-to-CV interface. It supports four outputs for MIDI-to-CV and four inputs for CV-to-MIDI. It features multi-channel operation, polyphonic note distribution (up to four notes), transposition, and note-range for layers and/or splits. It keeps a log of the last 100 MIDI messages. Up to four complete Setups can be saved in memory. Setups can be copied from the panel, or saved and retrieved via MIDI system exclusive dump.
 
 ## Videos
-* https://youtu.be/PN6EEVkcqJ8
-* https://youtu.be/l1i4FIAcubw
-* https://youtu.be/pzHHOJ3jrCk (Uhost)
+* [https://youtu.be/PN6EEVkcqJ8](https://youtu.be/PN6EEVkcqJ8)
+* [https://youtu.be/l1i4FIAcubw](https://youtu.be/l1i4FIAcubw)
+* [https://youtu.be/pzHHOJ3jrCk](https://youtu.be/pzHHOJ3jrCk) (Uhost)
 
 ## References
-Blog post on Captain MIDI with SuperCollider: https://madskjeldgaard.dk/posts/hemisphere/
+[Blog post on Captain MIDI with SuperCollider](https://madskjeldgaard.dk/posts/hemisphere/)
 
 ## Connection
 The back of the Ornament and Crime module has a micro USB port. This is what you use to make a MIDI connection to a USB host, usually a Windows, macOS, or Linux computer. Hemisphere Suite uses a class-compliant MIDI interface, which should be recognized as "Hemisphere" by your operating system and DAW/MIDI software.

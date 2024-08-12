@@ -1,3 +1,5 @@
+# Meta-Q
+
 _Meta-Q_ is a quantiser that is basically similar to [Quantermain](Quantermain), except it has only two channels.
 
 It has fewer internal CV sources (currently, only LFSR. See _[[CopierMaschine](CopierMaschine)_/_[Quantermain](Quantermain)_ for details), but comes with four ‘scale slots’ per channel — a package of scale, mask, root and transpose values —, which themselves can be **sequenced** to provide a lot of additional, structured variation to the input CV sequences (or the LFSR internal CV source).

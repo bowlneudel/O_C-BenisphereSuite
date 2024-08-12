@@ -1,3 +1,5 @@
+# Slew
+
 ![Screenshot 2024-06-13 15-38-53](https://github.com/djphazer/O_C-Phazerville/assets/109086194/547fe806-1acb-4628-9b65-b408316e7c39)
 
 **Slew** is a simple slew (or lag) processor. Two independent channels share the same settings. Channel 1's output is linear, and Channel 2's output is exponential.

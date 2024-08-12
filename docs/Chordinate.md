@@ -1,3 +1,5 @@
+# Chordinator
+
 ![Screenshot 2024-06-13 14-32-57](https://github.com/djphazer/O_C-Phazerville/assets/109086194/073a1afd-edf6-49b4-b23c-330b9bfc0620)
 
 **Chordinate** is a quantizer with a scale mask: outputting a basis pitch (i.e. the root note, notwithstanding any transposition) and a scale degree offset. The scale mask allows only user-determined intervals relative to the root note to be a valid output on CV 2/4.

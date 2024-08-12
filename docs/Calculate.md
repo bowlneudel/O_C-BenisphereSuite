@@ -1,3 +1,5 @@
+# Calculate
+
 ![Screenshot 2024-06-13 14-29-27](https://github.com/djphazer/O_C-Phazerville/assets/109086194/a6ee6cb2-c230-4581-a023-81fb3003fca3)
 
 **Calculate** can perform two separate arithmetical operations on two CV inputs: each outputting either the minimum voltage, the maximum, the sum, the difference, or the average. It can also function as a basic Sample & Hold or a Random CV noise source.
