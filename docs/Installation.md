@@ -21,8 +21,8 @@ There are a few ways of getting the firmware onto your module:
 ## Method A
 uploading the HEX file
 
-### step 1): install the Teensy Loader program
-- the Teensy Loader is available at https://www.pjrc.com/teensy/loader.html.
+### step 1): install the [Teensy Loader](https://www.pjrc.com/teensy/loader.html) program
+- the Teensy Loader is available from [the PJRC website](https://www.pjrc.com/teensy/loader.html)
 
 ### step 2): download the binary HEX file
 - download the latest released version of the firmware image file (.hex) from [the Releases page](https://github.com/djphazer/O_C-Phazerville/releases)
@@ -42,11 +42,12 @@ Compiling the firmware with Arduino IDE + Teensyduino
 
 ### step 1): get the IDE + teensyduino add-on
 - if you don’t have it already, you need to install the [Arduino IDE](https://www.arduino.cc/en/software) as well as the [Teensyduino](https://www.pjrc.com/teensy/td_download.html) add-on.
+- unlike past firmwares, the latest versions of each should work just fine.
 
 ### step 2): clone or download the firmware source code repository to your computer
 - clone from `https://github.com/djphazer/O_C-Phazerville`
 - use the `phazerville` branch (which is the default) - this is the latest “production” released code
-- "dev" and other branches contain bleeding-edge code which may or may not contain bugs
+- `dev/*` and other branches contain bleeding-edge code which may or may not contain bugs
 
 ### step 3): compile
 - Once the libraries and source code for the firmware are in place, you should be able to compile it. Open the file called `src.ino`. Now make sure you:
