@@ -4,6 +4,11 @@ remote_theme: just-the-docs/just-the-docs@v0.8.2
 color_scheme: dark
 permalink: "/:name"
 
+titles_from_headings:
+  enabled:     true
+  strip_title: false
+  collections: true
+
 defaults:
   scope:
     path: ""
