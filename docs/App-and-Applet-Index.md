@@ -82,7 +82,7 @@ If you're coming from any of the other Hemisphere forks, note that many of the a
 * [MIDI Out](MIDI-Out) - from CV to USB
 * [MixerBal](Mixer-Balance) - basic CV mixer
 * [MultiScale](MultiScale) - like ScaleDuet, but with 4 scale masks
-* [Palimpsest](Palimpsest-Accent-Sequencer) - accent sequencer
+* [Palimpsest](Palimpsest) - accent sequencer
 * [Pigeons](Pigeons) - dual Fibonacci-style melody generator
 * [PolyDiv](PolyDiv) - four concurrent clock dividers with assignable outputs
 * [ProbDiv](ProbDiv) - stochastic trigger generator
@@ -90,7 +90,7 @@ If you're coming from any of the other Hemisphere forks, note that many of the a
 * [ResetClk](Reset-Clock) - rapidly advance a sequencer to the desired step (from [pkyme](https://github.com/pkyme/O_C-HemisphereSuite/tree/reset-additions))
 * [RndWalk](Random-Walk) - clocked random walk CV generator (from [adegani](https://github.com/adegani/O_C-HemisphereSuite))
 * [RunglBook](RunglBook) - chaotic shift-register modulation
-* [ScaleDuet](Scale-Duet-Quantizer) - 2 quantizers with independent scale masks
+* [ScaleDuet](ScaleDuet) - 2 quantizers with independent scale masks
 * [Schmitt](Schmitt-Trigger) - Dual comparator with low and high threshold
 * [Scope](Scope) - tiny CV scope / voltmeter / BPM counter
   - expanded with X-Y view
@@ -110,8 +110,8 @@ If you're coming from any of the other Hemisphere forks, note that many of the a
 * [TB-3PO](TB-3PO) - a brilliant 303-style sequencer
 * [TL Neuron](Threshold-Logic-Neuron) - clever logic gate
 * [Trending](Trending) - rising / falling / moving / steady / state change / value change
-* [TrigSeq](Trigger-Sequencer) - two 8-step trigger sequences
-* [TrigSeq16](Trigger-Sequencer-16) - one 16-step trigger sequence
+* [TrigSeq](TrigSeq) - two 8-step trigger sequences
+* [TrigSeq16](TrigSeq16) - one 16-step trigger sequence
 * [Tuner](Tuner) - oscillator frequency detector
 * [VectorEG](VectorEG) - Dual envelopes from a library of bipolar and unipolar shapes (customizable with the [Waveform Editor](https://github.com/Chysn/O_C-HemisphereSuite/wiki/Waveform-Editor))
 * [VectorLFO](VectorLFO) - Dual LFOs from a library of bipolar and unipolar shapes
@@ -125,7 +125,7 @@ If you're coming from any of the other Hemisphere forks, note that many of the a
 
 | Function                 | Hemisphere Applets                                                                                                                                                      | Full Screen Apps                                                                         |
 | ------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-|**Accent Sequencer**       | [Palimpsest](Palimpsest-Accent-Sequencer)                                                                                                                                                        |                                                                                          |
+|**Accent Sequencer**       | [Palimpsest](Palimpsest)                                                                                                                                                        |                                                                                          |
 | **Analog Logic**            | [Calculate](Calculate)                                                                                                                                                         |                                                                                          |
 | **Clock Modulator**          | [ClockDivider](ClockDivider), [ClockSkip](Clock-Skipper), [DivSeq](DivSeq), [Metronome](Metronome), [PolyDiv](PolyDiv), [ProbDiv](ProbDiv), [ResetClk](Reset-Clock), [Shuffle](Shuffle)                                         |                                                                                          |
 | **CV Recorder**              | [ASR](ASR), [CVRec](CV-Recorder)                                                                                                                                                 |                                                                                          |
@@ -141,10 +141,10 @@ If you're coming from any of the other Hemisphere forks, note that many of the a
 | **Modulation Source**        | [GameOfLife](GameOfLife), [Stairs](Stairs), [VectorMod](VectorMod), [VectorMorph](VectorMorph)                                                                                                                          | [Low-rents](Low-rents), [Pong](Pong)                                                                                   |
 | **Performance Utility**      | [Button2](Button2)                                                                                                                                                           |  [Scenes](Scenes)                                                                                        |
 | **Pitch Sequencer**          | [Carpeggio](Carpeggio), [DualTM](DualTM), [Enigma Jr.](Enigma-Jr), [Pigeons](Pigeons), [ProbMeloD](ProbMeloD), [Seq32](Seq32), [SecPlay7](SeqPlay7), [SequenceX](SequenceX), [Shredder](Shredder), [Strum](Strum), [SwitchSeq](Switch-Seq), [TB-3PO](TB-3PO) | [Enigma](Enigma), [The Darkest Timeline](The-Darkest-Timeline), [Automatonnetz](Automatonnetz), [Sequins](Sequins), [Acid Curds](Acid-Curds), [Passencore](Passencore) | 
-| **Quantizer**               | [Calibr8](Calibr8), [Chordinate](Chordinate), [DualQuant](Dual-Quantizer), [MultiScale](MultiScale), [ScaleDuet](Scale-Duet-Quantizer), [Squanch](Squanch)                                                                      | [Calibr8or](Calibr8or), [Harrington 1200](Harrington-1200), [Quantermain](Quantermain), [Meta-Q](Meta-q)                                  |
+| **Quantizer**               | [Calibr8](Calibr8), [Chordinate](Chordinate), [DualQuant](Dual-Quantizer), [MultiScale](MultiScale), [ScaleDuet](ScaleDuet), [Squanch](Squanch)                                                                      | [Calibr8or](Calibr8or), [Harrington 1200](Harrington-1200), [Quantermain](Quantermain), [Meta-Q](Meta-Q)                                  |
 | **Random / Chaos**           | [Brancher](Brancher), [LowerRenz](LowerRenz), [ProbDiv](ProbDiv), [ProbMeloD](ProbMeloD), [RndWalk](Random-Walk), [Shredder](Shredder)                                                        | [Low-rents](Low-rents)                                                                              |
 | **Shift Register**           | [ASR](ASR), [DualTM](DualTM), [Enigma Jr.](Enigma-Jr), [RunglBook](RunglBook), [ShiftGate](ShiftGate)                                                                                               | [Enigma](Enigma), [CopierMaschine](Copiermaschine)                                                               |
 | **Switch**                   | [Switch](Switch), [SwitchSeq](Switch-Seq)                                                                                                                                         | [Scenes](Scenes)                                                                                    |
-| **Trigger / Gate Sequencer** | [DivSeq](DivSeq), [DrumMap](DrumMap), [EuclidX](EuclidX), [PolyDiv](PolyDiv), [ProbDiv](ProbDiv), [Seq32](Seq32), [ShiftGate](ShiftGate), [TrigSeq](Trigger-Sequencer), [TrigSeq16](Trigger-Sequencer-16)                                 |                                                                                  |
+| **Trigger / Gate Sequencer** | [DivSeq](DivSeq), [DrumMap](DrumMap), [EuclidX](EuclidX), [PolyDiv](PolyDiv), [ProbDiv](ProbDiv), [Seq32](Seq32), [ShiftGate](ShiftGate), [TrigSeq](TrigSeq), [TrigSeq16](TrigSeq16)                                 |                                                                                  |
 | **VCA**                      | [GatedVCA](Gated-VCA)                                                                                                                                                          |                                                                                          |
 | **Voltage Utility**          | [AttenOff](AttenOff), [Calculate](Calculate), [Calibr8](Calibr8), [Scope](Scope), [Slew](Slew), [Stairs](Stairs), [Switch](Switch), [Tuner](Tuner), [Trending](Trending), [Voltage](Voltage)                         | [Calibr8or](Calibr8or), [References](References)                
