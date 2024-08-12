@@ -1,3 +1,8 @@
+---
+layout: default
+parent: Hemisphere Config
+nav_order: 2
+---
 # General Settings
 
 ## Page 1: General Settings

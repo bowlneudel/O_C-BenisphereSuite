@@ -1,6 +1,6 @@
 ---
 title: App & Applet Index
-nav_order: 6
+nav_order: 7
 ---
 
 # App and Applet Index

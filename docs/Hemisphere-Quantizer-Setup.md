@@ -1,3 +1,8 @@
+---
+layout: default
+parent: Hemisphere Config
+nav_order: 3
+---
 # Quantizer Setup
 
 ## Page 2: Quantizer Setup

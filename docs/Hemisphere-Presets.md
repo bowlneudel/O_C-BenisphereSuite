@@ -1,3 +1,8 @@
+---
+layout: default
+parent: Hemisphere Config
+nav_order: 1
+---
 # Hemisphere Presets
 
 ## Floating menu: Presets

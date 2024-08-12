@@ -1,3 +1,8 @@
+---
+layout: default
+parent: Hemisphere Config
+nav_order: 4
+---
 # Input Mapping
 
 ## Page 3: Input Mapping
