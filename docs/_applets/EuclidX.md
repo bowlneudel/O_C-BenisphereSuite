@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # EuclidX
 
 ![Screenshot 2024-06-13 15-03-25](https://github.com/djphazer/O_C-Phazerville/assets/109086194/19d27f22-6885-49f9-8c92-e6fb40d91279)

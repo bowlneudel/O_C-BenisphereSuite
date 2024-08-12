@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # LowerRenz
 
 ![Screenshot 2024-06-13 15-07-49](https://github.com/djphazer/O_C-Phazerville/assets/109086194/eb87fafc-5c79-4f52-9f03-a6c7baa09c10)

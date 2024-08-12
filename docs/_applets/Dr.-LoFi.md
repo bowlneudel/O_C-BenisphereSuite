@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # Dr. LoFi
 
 ![Screenshot 2024-06-13 14-42-25](https://github.com/djphazer/O_C-Phazerville/assets/109086194/bb9699a5-1411-4107-9e2c-4c6e0a2df9c8)

@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # Shuffle
 
 ![Screenshot 2024-06-13 15-38-15](https://github.com/djphazer/O_C-Phazerville/assets/109086194/43bdec61-eab5-4d57-a44f-0b32a89f23e7)

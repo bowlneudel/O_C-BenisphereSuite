@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # SeqPlay7
 
 **SeqPlay7** allows you to make playlists of your [Seq32](Seq32) sequences.

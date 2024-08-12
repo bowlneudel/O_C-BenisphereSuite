@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # Metronome
 
 ![Screenshot 2024-06-13 15-09-08](https://github.com/djphazer/O_C-Phazerville/assets/109086194/edc51d8c-2093-44b5-bdff-03344b200703)

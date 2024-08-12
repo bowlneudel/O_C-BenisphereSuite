@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # Burst
 
 ![Screenshot 2024-06-13 14-27-59](https://github.com/djphazer/O_C-Phazerville/assets/109086194/429431f8-649b-44f8-8fdf-4920367fd0cf)

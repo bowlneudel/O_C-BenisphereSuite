@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # Bug Crack
 
 ![Screenshot 2024-06-13 14-24-10](https://github.com/djphazer/O_C-Phazerville/assets/109086194/3a8c3cfd-ecf0-4fa4-9cea-74413443f407)

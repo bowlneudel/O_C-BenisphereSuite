@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # Ebb & LFO
 
 ![Screenshot 2024-06-13 14-46-32](https://github.com/djphazer/O_C-Phazerville/assets/109086194/608edfcd-3f89-4fc4-82f1-d46b90b65c19)

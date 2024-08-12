@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # MultiScale
 
 ![Screenshot 2024-06-13 15-14-50](https://github.com/djphazer/O_C-Phazerville/assets/109086194/bcdb67e0-b545-4386-b35d-8270a87b00a7)

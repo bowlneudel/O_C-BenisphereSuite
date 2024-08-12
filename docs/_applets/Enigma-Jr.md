@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # Enigma, Jr.
 
 ![Screenshot 2024-06-13 14-47-58](https://github.com/djphazer/O_C-Phazerville/assets/109086194/3a64ad53-73ff-4fc0-9d10-4e4f345ffaa3)

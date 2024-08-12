@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # DualQuant
 
 ![Screenshot 2024-06-13 14-43-49](https://github.com/djphazer/O_C-Phazerville/assets/109086194/6d3888c5-e40c-4ce0-9a4e-1d7d25f904a4)

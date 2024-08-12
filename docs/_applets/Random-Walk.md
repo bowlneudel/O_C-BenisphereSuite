@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # Random Walk
 
 ![Screenshot 2024-06-13 15-21-00](https://github.com/djphazer/O_C-Phazerville/assets/109086194/6c3dd101-3c91-4180-9f33-6130dc4763dd)

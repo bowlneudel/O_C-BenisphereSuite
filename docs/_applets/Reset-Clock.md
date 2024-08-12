@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # Reset Clock
 
 ![Screenshot 2024-06-13 15-20-41](https://github.com/djphazer/O_C-Phazerville/assets/109086194/283433ed-813c-47ce-a7fe-95620982682f)

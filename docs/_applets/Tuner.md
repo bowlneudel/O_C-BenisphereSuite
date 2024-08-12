@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # Tuner
 
 ![Screenshot 2024-06-13 15-48-34](https://github.com/djphazer/O_C-Phazerville/assets/109086194/663af09c-d67f-461d-a056-7eba66c3a6c0)

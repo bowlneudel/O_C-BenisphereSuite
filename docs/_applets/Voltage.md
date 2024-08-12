@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # Voltage
 
 ![Screenshot 2024-06-13 15-54-04](https://github.com/djphazer/O_C-Phazerville/assets/109086194/1ac30678-a0f4-495f-a95c-e479a9fcdd88)

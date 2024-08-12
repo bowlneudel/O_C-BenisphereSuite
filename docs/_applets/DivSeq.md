@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # DivSeq
 
 ![Screenshot 2024-06-13 14-39-30](https://github.com/djphazer/O_C-Phazerville/assets/109086194/ea877c33-d9d6-4653-94d5-0ac3fe2ddb1c)

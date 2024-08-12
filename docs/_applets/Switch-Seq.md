@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # SwitchSeq
 
 ![Screenshot 2024-06-13 15-44-08](https://github.com/djphazer/O_C-Phazerville/assets/109086194/3d4d16b0-e5dd-4e19-93da-a0e34b8129ea)

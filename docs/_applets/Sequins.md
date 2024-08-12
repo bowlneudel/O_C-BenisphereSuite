@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # Sequins
 
 _Sequins_ is a basic, **dual-channel sequencer**.

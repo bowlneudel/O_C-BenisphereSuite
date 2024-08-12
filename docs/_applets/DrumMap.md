@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # DrumMap
 
 ![Screenshot 2024-06-13 14-43-19](https://github.com/djphazer/O_C-Phazerville/assets/109086194/46903df9-8ab5-47d4-a785-e1c95e66f65a)

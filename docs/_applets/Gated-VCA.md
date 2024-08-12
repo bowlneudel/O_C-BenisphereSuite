@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # Gated VCA
 
 ![Screenshot 2024-06-13 15-05-45](https://github.com/djphazer/O_C-Phazerville/assets/109086194/72906be7-478b-449f-8edf-cea1327e662c)

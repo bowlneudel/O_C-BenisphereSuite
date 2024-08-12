@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # ADSR EG
 
 ![Screenshot 2024-06-13 14-15-52](https://github.com/djphazer/O_C-Phazerville/assets/109086194/edde22d8-9ab1-4413-bd44-32c10943f41b)

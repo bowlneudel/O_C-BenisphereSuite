@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # PolyDiv
 
 ![Screenshot 2024-06-13 15-18-07](https://github.com/djphazer/O_C-Phazerville/assets/109086194/121479a0-62cd-41a7-ad41-293f4cf21fb6)

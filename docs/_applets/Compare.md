@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # Compare
 
 ![Screenshot 2024-06-13 14-36-44](https://github.com/djphazer/O_C-Phazerville/assets/109086194/9dc7614a-dd13-4555-ba3a-911625a03b17)

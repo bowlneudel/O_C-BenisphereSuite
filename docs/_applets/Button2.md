@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # Button2
 
 ![Screenshot 2024-06-13 14-28-46](https://github.com/djphazer/O_C-Phazerville/assets/109086194/d31c6ca2-ed59-4808-b9b0-0d8578081582)

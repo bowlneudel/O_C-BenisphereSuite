@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # Trending
 
 ![Screenshot 2024-06-13 15-46-34](https://github.com/djphazer/O_C-Phazerville/assets/109086194/b7dd6304-b608-40fc-97ff-4ee642cc1b21)
