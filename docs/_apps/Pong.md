@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # Pong
 
 Like twenty years ago, I owned a Kurzweil K2000. It had what we call today--but didn't call back then--an Easter Egg. It was a Pong game that you could play from the panel, and it generated MIDI notes when the ball bounced off a wall.

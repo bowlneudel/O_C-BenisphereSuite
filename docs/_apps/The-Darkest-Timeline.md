@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # The Darkest Timeline
 
 The Darkest Timeline is a CV/MIDI sequencer application for Ornament and Crime. It is included in the Hemisphere Suite firmware from version 1.4.

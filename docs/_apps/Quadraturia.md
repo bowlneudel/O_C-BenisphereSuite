@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # Quadraturia
 
 _Quadraturia_ is a quadrature wavetable LFO[^1] with **voltage control** over three of the four LFO parameters (as well as CV control of frequency/rate of the LFO) and **“predictive” [tap-tempo](#Tap-tempo)** capability from the *Tap LFO mode* in the Mutable *Peaks* module. 

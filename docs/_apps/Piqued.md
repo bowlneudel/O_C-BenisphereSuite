@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # Piqued
 
 _Piqued_ is a port of the envelope generator function from the open-source [Mutable Instruments Peaks](http://mutable-instruments.net/modules/peaks) module, providing four independently-triggerable envelopes on outputs A to D, with independently mappable voltage-control via CV1 to CV4 inputs over envelope duration parameters for each segment of each envelope.

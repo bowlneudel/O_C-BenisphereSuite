@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # Enigma
 
 Enigma is a Shift Register (a.k.a. "Turing Machine") Workstation, designed to enable (nearly) repeatable full compositions by curating a Turing Machine library and chaining Turing Machines into songs. Enigma is in Hemisphere Suite starting with v1.5.

@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # Low-rents
 
 Low-rents is a port of the [Lorenz attractor](https://en.wikipedia.org/wiki/Lorenz_system) modulation generator from the "Easter egg" in the Mutable Instruments [Streams](http://mutable-instruments.net/modules/streams) module, to which [Rössler attractors](https://en.wikipedia.org/wiki/Rössler_attractor) have been added. 

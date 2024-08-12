@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # CopierMaschine
 
 Works much the same as the original o_C / quantising **ASR** firmware. Except, the mode now incorporates some of the new/improved quantiser features, including a larger selection of **(editable) preset scales** as well as advanced user-scale-edit options (for details, see [Quantermain](Quantermain). 

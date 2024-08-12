@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # Setup / About
 
 _(TODO: screenshots)_

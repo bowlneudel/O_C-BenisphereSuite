@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # Captain MIDI
 
 Captain MIDI is a highly-configurable CV-to-MIDI and MIDI-to-CV interface. It supports four outputs for MIDI-to-CV and four inputs for CV-to-MIDI. It features multi-channel operation, polyphonic note distribution (up to four notes), transposition, and note-range for layers and/or splits. It keeps a log of the last 100 MIDI messages. Up to four complete Setups can be saved in memory. Setups can be copied from the panel, or saved and retrieved via MIDI system exclusive dump.

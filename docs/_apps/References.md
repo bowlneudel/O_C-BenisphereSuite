@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # References
 
 _References_ is a simple utility app which outputs fixed reference voltages. These are handy when calibrating other modules, such as VCOs.

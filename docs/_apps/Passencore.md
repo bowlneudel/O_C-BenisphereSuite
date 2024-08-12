@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # Passencore
 
 [Originally published on lines by Sixolet](https://llllllll.co/t/passencore-chord-ornament-music-theory-crime/45925)

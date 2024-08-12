@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # Acid Curds
 
 _Acid Curds_ is a basic chord sequencer.
