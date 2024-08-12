@@ -18,9 +18,10 @@ nav_external_links:
 
 collections:
   apps:
-    permalink: "/:path"
+    permalink: "/:path/"
     output: true
   applets:
+    permalink: "/:path/"
     output: true
 
 just_the_docs:
