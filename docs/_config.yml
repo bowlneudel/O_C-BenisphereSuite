@@ -1,13 +1,9 @@
 title: Phazerville Suite for O_C
 description: An open-source firmware project for the Ornament & Crime Eurorack module
-show_downloads: true
 remote_theme: just-the-docs/just-the-docs@v0.8.2
 color_scheme: dark
-plugins:
-  - jekyll-relative-links
-relative_links:
-  enabled: true
-  collections: true
+permalink: "/:name"
+
 aux_links:
   "Downloads":
     - "https://github.com/djphazer/O_C-Phazerville/releases"
@@ -18,10 +14,10 @@ nav_external_links:
 
 collections:
   apps:
-    permalink: "/:path/"
+    permalink: "/:name"
     output: true
   applets:
-    permalink: "/:path/"
+    permalink: "/:name"
     output: true
 
 just_the_docs:
