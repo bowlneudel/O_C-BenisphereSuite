@@ -1,3 +1,5 @@
+# Hemisphere Gestures
+
 Operating Hemispheres makes use of button combinations to perform various actions. See below for a complete list.
 
 Please note that certain applet (or parameter editing) contexts may override the default behaviour of the UP and DOWN buttons &/or the LEFT and RIGHT encoders.

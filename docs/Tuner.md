@@ -1,11 +1,13 @@
+# Tuner
+
 ![Screenshot 2024-06-13 15-48-34](https://github.com/djphazer/O_C-Phazerville/assets/109086194/663af09c-d67f-461d-a056-7eba66c3a6c0)
 
 **Tuner** is a chromatic tuner with adjustable A4 setting.
 
-**_Important:_** Tuner can only measure frequencies on the physical TR4 input on Teensy 3.2-based hardware. It will remind you which side it needs to be on. ;)
+**_Important:_** Tuner can only measure frequencies on the physical TR4 input on Teensy 3.2-based hardware, and TR1 on Teensy 4.0-based hardware. It will remind you which side it needs to be on. ;)
 <br>_(pictured above running in a FLIP_180 build, upside-down orientation)_
 
-The underlying FreqMeasure driver is currently unimplemented on Teensy 4.x...
+As of PSv1.8, Tuner support has been added for Teensy 4.x. On Teensy 4.0, it uses TR1 rather than TR4.
 
 ### I/O
 

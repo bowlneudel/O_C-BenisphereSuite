@@ -1,3 +1,5 @@
+# TB-3PO
+
 ![Screenshot 2024-06-13 15-44-49](https://github.com/djphazer/O_C-Phazerville/assets/109086194/f066be6e-e014-4976-b750-f139fb862eb9)
 
 **TB-3PO** is a TB-303 style, pitch CV and gate pattern generator robot, capable of fixed-time, exponential slides on the pitch CV for that secret TB sauce. It will do mono-pitched style 303 lines on one end, or full-range, Turing Machine style stuff on the other, all designed and tuned for musicality and calls/responses in live wiggling.
@@ -19,9 +21,8 @@
 * Edits unlocked seed value
 * Note/pitch Density (-7 to +7)
   - AuxButton enables automation of encoder wiggling
-* Quantizer Scale
+* Quantizer select
   - AuxButton for popup editor
-* Root note + octave
 * Pattern Length
 
 ## Seed
@@ -82,4 +83,4 @@ Like on the TB-303, each step can have Gate, Accent, Glide, +octave or -octave s
   - UP and DOWN arrows indicate if the current step is transposed up or down by one octave, respectively
 
 ## Credits
-Authored by Logarhythm1, with modifications by djphazer
+Authored by Logarhythm1, with extensive modifications by djphazer

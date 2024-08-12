@@ -1,3 +1,5 @@
+# DivSeq
+
 ![Screenshot 2024-06-13 14-39-30](https://github.com/djphazer/O_C-Phazerville/assets/109086194/ea877c33-d9d6-4653-94d5-0ac3fe2ddb1c)
 
 **DivSeq** is a dual sequential clock divider with a single input clock. Each of the two channels is composed of a sequence of up to 5 clock dividers. Under normal operation, a step "n" triggers 1 clock pulse, skips n-1 pulses, and then steps to the next clock divider.

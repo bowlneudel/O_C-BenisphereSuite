@@ -1,3 +1,5 @@
+# Low-rents
+
 Low-rents is a port of the [Lorenz attractor](https://en.wikipedia.org/wiki/Lorenz_system) modulation generator from the "Easter egg" in the Mutable Instruments [Streams](http://mutable-instruments.net/modules/streams) module, to which [Rössler attractors](https://en.wikipedia.org/wiki/Rössler_attractor) have been added. 
 
 Two independent function generators are provided (referred to here as Generator 1 and Generator 2), with each generator calculating *both* the Lorenz and Rössler functions simultaneously, using the same phase accumulator, but with the rate/speed of each generator independently settable. Both the Lorenz and the Rössler functions output three values (_x_, _y_ & _z_), and various combinations of these can be mapped to the four output channels. The chaotic strange attractors work best as slow modulation functions.

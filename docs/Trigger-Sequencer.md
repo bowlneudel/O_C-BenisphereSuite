@@ -1,6 +1,8 @@
+# TrigSeq
+
 ![Screenshot 2024-06-13 15-47-37](https://github.com/djphazer/O_C-Phazerville/assets/109086194/86711d36-e192-477e-9283-fd19ee236271)
 
-https://youtu.be/qPRspJApd1Y
+[Video demo](https://youtu.be/qPRspJApd1Y)
 
 **TrigSeq** is a dual eight-step trigger sequencer with shared Clock and Reset.
 

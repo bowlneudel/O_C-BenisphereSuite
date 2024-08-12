@@ -1,3 +1,5 @@
+# Strum
+
 ![Screenshot 2024-06-13 15-42-30](https://github.com/djphazer/O_C-Phazerville/assets/109086194/7ea4f903-3781-4eb6-a241-edd6b426f2ed)
 
 Strum is an arpeggiator. It generates fast sequences of up to six pitches from a selected scale, along with trigger pulses. This is ideal for achieving chord tones with voices with round-robin polyphony, like Rings, but also nice for slower arp sequences - spacing goes up to 500ms.

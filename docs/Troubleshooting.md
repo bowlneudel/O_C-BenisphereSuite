@@ -1,3 +1,5 @@
+# Troubleshooting
+
 If applets like Stairs, Carpeggio or Shredder appear unresponsive, you might need to [calibrate your ADC](https://www.youtube.com/shorts/AIadpDclP7M) to eliminate an offset on the inputs. This can be done without a fancy multimeter - go to the **[Setup / About](Setup-About)** app and just skip all the other Calibration steps. Simply unplug all CV/Trigger inputs and outputs, enter the Calibration routine and ensure that all ADC values are around 0v (-1v < > +1v).
 
 

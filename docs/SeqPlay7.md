@@ -1,3 +1,5 @@
+# SeqPlay7
+
 **SeqPlay7** allows you to make playlists of your [Seq32](Seq32) sequences.
 
 At each of the 7 steps, you can specify which sequence to play (#1 - #8), how many times to repeat the sequence before moving to the next step, and finally which quantizer engine to use.

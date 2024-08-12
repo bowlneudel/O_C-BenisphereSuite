@@ -1,6 +1,8 @@
+# VectorMorph
+
 ![Screenshot 2024-06-13 15-53-40](https://github.com/djphazer/O_C-Phazerville/assets/109086194/386a8e5d-a1e4-4d7b-8be0-71c20f30259c)
 
-https://youtu.be/WrENiAQHhq0
+[Video demo](https://youtu.be/WrENiAQHhq0)
 
 **VectMorph** is a morph controller inspired by the Doepfer A-144, and based on Vector Oscillator waveforms. There is a variety of built-in waveforms from which to choose, or you can create your own with the [Waveform Editor](https://github.com/Chysn/O_C-HemisphereSuite/wiki/Waveform-Editor).
 

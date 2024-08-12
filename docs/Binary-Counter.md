@@ -1,3 +1,5 @@
+# Binary Counter
+
 ![Screenshot 2024-06-13 14-20-22](https://github.com/djphazer/O_C-Phazerville/assets/109086194/020223f3-ef53-4206-b10b-b66430f29853)
 
 **Binary Counter** is weird. It takes four logic inputs (high or low) and provides a binary-summed output and a count output.

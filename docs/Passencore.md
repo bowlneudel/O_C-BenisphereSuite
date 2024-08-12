@@ -1,3 +1,5 @@
+# Passencore
+
 [Originally published on lines by Sixolet](https://llllllll.co/t/passencore-chord-ornament-music-theory-crime/45925)
 
 Turn an LFOs into a chord progression? Harmonize a bass line that doesn’t just play roots, with an eye to functional harmony and keeping voices within a range? Just want something in the lines `library` category for a platform not yet represented?

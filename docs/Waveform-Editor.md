@@ -1,3 +1,5 @@
+# Waveform Editor
+
 Waveform Editor is an application for creating, editing, and saving Vector Oscillator waveforms.
 
 ## What is a Vector Oscillator Waveform?

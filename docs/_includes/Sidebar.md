@@ -76,7 +76,7 @@
  * [DualQuant](Dual-Quantizer)
  * [DualTM](DualTM)
  * [Ebb & LFO](Ebb-&-LFO)
- * [EnigmaJr](Enigma-Jr.)
+ * [Enigma Jr.](Enigma-Jr)
  * [EnvFollow](Envelope-Follower)
  * [EuclidX](EuclidX)
  * [GameOfLife](GameOfLife)

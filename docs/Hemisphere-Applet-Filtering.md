@@ -1,3 +1,5 @@
+# Applet Filtering
+
 ## Page 4: Applet Filtering
 
 The fourth and final full-screen page in the [config menu](Hemisphere-Config) is for Applet Filtering.

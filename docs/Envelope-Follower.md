@@ -1,3 +1,5 @@
+# Envelope Follower
+
 ![Screenshot 2024-06-13 15-01-51](https://github.com/djphazer/O_C-Phazerville/assets/109086194/a53439ba-416c-4444-a27f-3affd00273a3)
 
 **EnvFollow** is a dual envelope follower / ducker, with adjustable gain and response speed

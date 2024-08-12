@@ -1,3 +1,5 @@
+# App and Applet Index
+
 Jump to the lists of [Full Screen Apps](App-and-Applet-Index#full-screen-apps) or [Hemisphere Applets](App-and-Applet-Index#hemisphere-applets), also organized [by function](App-and-Applet-Index#apps-and-applets-by-function)
 
 ## Full Screen Apps
@@ -64,7 +66,7 @@ If you're coming from any of the other Hemisphere forks, note that many of the a
 * [DualQuant](Dual-Quantizer) - Basic 2-channel quantizer with sample and hold
 * [DualTM](DualTM) - Highly configurable pair of Turing Machine shift registers (replacement for ShiftReg/TM)
 * [Ebb & LFO](Ebb-&-LFO) - clone of Mutable Instruments Tides; oscillator / LFO with CV-controllable waveshape, slope, V/Oct, folding
-* [EnigmaJr](Enigma-Jr.) - compact player of curated shift registers
+* [Enigma Jr.](Enigma-Jr) - compact player of curated shift registers
 * [EnvFollow](Envelope-Follower) - follows or ducks based on incoming audio
   - added Speed control
 * [EuclidX](EuclidX) - Euclidean pattern generator (replacement for [AnnularFusion](https://github.com/Chysn/O_C-HemisphereSuite/wiki/Annular-Fusion-Euclidean-Drummer))
@@ -138,10 +140,10 @@ If you're coming from any of the other Hemisphere forks, note that many of the a
 | **Mixer**                    | [MixerBal](Mixer-Balance)                                                                                                                                                          |                                                                                          |
 | **Modulation Source**        | [GameOfLife](GameOfLife), [Stairs](Stairs), [VectorMod](VectorMod), [VectorMorph](VectorMorph)                                                                                                                          | [Low-rents](Low-rents), [Pong](Pong)                                                                                   |
 | **Performance Utility**      | [Button2](Button2)                                                                                                                                                           |  [Scenes](Scenes)                                                                                        |
-| **Pitch Sequencer**          | [Carpeggio](Carpeggio), [DualTM](DualTM), [EnigmaJr](Enigma-Jr.), [Pigeons](Pigeons), [ProbMeloD](ProbMeloD), [Seq32](Seq32), [SecPlay7](SeqPlay7), [SequenceX](SequenceX), [Shredder](Shredder), [Strum](Strum), [SwitchSeq](Switch-Seq), [TB-3PO](TB-3PO) | [Enigma](Enigma), [The Darkest Timeline](The-Darkest-Timeline), [Automatonnetz](Automatonnetz), [Sequins](Sequins), [Acid Curds](Acid-Curds), [Passencore](Passencore) | 
+| **Pitch Sequencer**          | [Carpeggio](Carpeggio), [DualTM](DualTM), [Enigma Jr.](Enigma-Jr), [Pigeons](Pigeons), [ProbMeloD](ProbMeloD), [Seq32](Seq32), [SecPlay7](SeqPlay7), [SequenceX](SequenceX), [Shredder](Shredder), [Strum](Strum), [SwitchSeq](Switch-Seq), [TB-3PO](TB-3PO) | [Enigma](Enigma), [The Darkest Timeline](The-Darkest-Timeline), [Automatonnetz](Automatonnetz), [Sequins](Sequins), [Acid Curds](Acid-Curds), [Passencore](Passencore) | 
 | **Quantizer**               | [Calibr8](Calibr8), [Chordinate](Chordinate), [DualQuant](Dual-Quantizer), [MultiScale](MultiScale), [ScaleDuet](Scale-Duet-Quantizer), [Squanch](Squanch)                                                                      | [Calibr8or](Calibr8or), [Harrington 1200](Harrington-1200), [Quantermain](Quantermain), [Meta-Q](Meta-q)                                  |
 | **Random / Chaos**           | [Brancher](Brancher), [LowerRenz](LowerRenz), [ProbDiv](ProbDiv), [ProbMeloD](ProbMeloD), [RndWalk](Random-Walk), [Shredder](Shredder)                                                        | [Low-rents](Low-rents)                                                                              |
-| **Shift Register**           | [ASR](ASR), [DualTM](DualTM), [EnigmaJr](Enigma-Jr.), [RunglBook](RunglBook), [ShiftGate](ShiftGate)                                                                                               | [Enigma](Enigma), [CopierMaschine](Copiermaschine)                                                               |
+| **Shift Register**           | [ASR](ASR), [DualTM](DualTM), [Enigma Jr.](Enigma-Jr), [RunglBook](RunglBook), [ShiftGate](ShiftGate)                                                                                               | [Enigma](Enigma), [CopierMaschine](Copiermaschine)                                                               |
 | **Switch**                   | [Switch](Switch), [SwitchSeq](Switch-Seq)                                                                                                                                         | [Scenes](Scenes)                                                                                    |
 | **Trigger / Gate Sequencer** | [DivSeq](DivSeq), [DrumMap](DrumMap), [EuclidX](EuclidX), [PolyDiv](PolyDiv), [ProbDiv](ProbDiv), [Seq32](Seq32), [ShiftGate](ShiftGate), [TrigSeq](Trigger-Sequencer), [TrigSeq16](Trigger-Sequencer-16)                                 |                                                                                  |
 | **VCA**                      | [GatedVCA](Gated-VCA)                                                                                                                                                          |                                                                                          |

@@ -1,8 +1,10 @@
+# MIDI Out
+
 ![Screenshot 2024-06-13 15-12-34](https://github.com/djphazer/O_C-Phazerville/assets/109086194/b3974f38-4879-4f2c-88f2-07f772fe99fd)
 
-https://youtu.be/cVnJ3RqdbJU
+[Video demo](https://youtu.be/cVnJ3RqdbJU)
 
-MIDI Out is a monophonic CV-to-MIDI interface that uses the USB port on the back of the Ornament and Crime module. The MIDI interface will likely appear in your computer as "Teensy MIDI".
+The **MIDI Out** applet is a monophonic CV-to-MIDI interface that uses the USB port on the back of the Ornament and Crime module. The MIDI interface should appear in your computer as "Teensy MIDI" or "PewPewMIDI" (as of v1.8).
 
 ## I/O
 

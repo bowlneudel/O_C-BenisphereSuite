@@ -1,6 +1,8 @@
+# SequenceX
+
 ![Screenshot 2024-06-13 15-35-12](https://github.com/djphazer/O_C-Phazerville/assets/109086194/ee475e5b-1e4b-4e65-8da5-157fd4206858)
 
-https://youtu.be/zsqAbNRgHJI
+[Video demo](https://youtu.be/zsqAbNRgHJI)
 
 **SequenceX** is an 8-step semitone-quantized sequencer, adapted from the original Sequence5 applet. It now features bipolar output values and CV-triggered randomization.
 

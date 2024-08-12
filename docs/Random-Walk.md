@@ -1,3 +1,5 @@
+# Random Walk
+
 ![Screenshot 2024-06-13 15-21-00](https://github.com/djphazer/O_C-Phazerville/assets/109086194/6c3dd101-3c91-4180-9f33-6130dc4763dd)
 
 **RndWalk** is a dual-channel stepped random bipolar CV generator. Range sets the total "distance" available to explore, and Step sets the maximum travel of each random step. The output voltage range may be scaled to full, 1 octave, 1 semitone, or 0.5 semitones.

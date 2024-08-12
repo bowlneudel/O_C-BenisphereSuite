@@ -1,3 +1,5 @@
+# DualTM
+
 ![Screenshot 2024-06-13 14-45-21](https://github.com/djphazer/O_C-Phazerville/assets/109086194/5b0be757-9e41-42b6-8f5f-b7590a91e740)
 
 Adapted from the original [**ShiftReg**](https://github.com/Chysn/O_C-HemisphereSuite/wiki/Shift-Register-(formerly-Turing)) applet, this pair of 32-bit shift registers is designed to be the ultimate source of generative sequences. Digital inputs 1 & 2 are still _Clock_ & _p-gate_, respectively. The CV inputs and outputs are assignable.
