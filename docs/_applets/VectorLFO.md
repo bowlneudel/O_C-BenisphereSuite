@@ -5,7 +5,7 @@ layout: default
 
 ![Screenshot 2024-06-13 15-51-26](https://github.com/djphazer/O_C-Phazerville/assets/109086194/8def472b-f8ad-49aa-8f8b-0ffb61a42096)
 
-**Vector LFO** is a dual low-frequency oscillator based on Vector Oscillator waveforms. There is a variety of built-in waveforms from which to choose, or you can create your own with the [Waveform Editor](https://github.com/Chysn/O_C-HemisphereSuite/wiki/Waveform-Editor).
+**Vector LFO** is a dual low-frequency oscillator based on Vector Oscillator waveforms. There is a variety of built-in waveforms from which to choose, or you can create your own with the [Waveform Editor](Waveform-Editor).
 
 ### I/O
 

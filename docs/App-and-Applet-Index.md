@@ -100,7 +100,7 @@ If you're coming from any of the other Hemisphere forks, note that many of the a
 * [Scope](Scope) - tiny CV scope / voltmeter / BPM counter
   - expanded with X-Y view
 * [Seq32](Seq32) - compact 32-step sequencer using Sequins pattern storage
-* [SecPlay7](SeqPlay7) - Make a playlist of Seq32 sequences, with quantizer override
+* [SeqPlay7](SeqPlay7) - Make a playlist of Seq32 sequences, with quantizer override
 * [SequenceX](SequenceX) - up to 8 steps of CV, quantized to semitones
 * [ShiftGate](ShiftGate) - dual shift register-based gate/trigger sequencer
 * [Shredder](Shredder) - clone of Mimetic Digitalis
@@ -118,7 +118,7 @@ If you're coming from any of the other Hemisphere forks, note that many of the a
 * [TrigSeq](TrigSeq) - two 8-step trigger sequences
 * [TrigSeq16](TrigSeq16) - one 16-step trigger sequence
 * [Tuner](Tuner) - oscillator frequency detector
-* [VectorEG](VectorEG) - Dual envelopes from a library of bipolar and unipolar shapes (customizable with the [Waveform Editor](https://github.com/Chysn/O_C-HemisphereSuite/wiki/Waveform-Editor))
+* [VectorEG](VectorEG) - Dual envelopes from a library of bipolar and unipolar shapes (customizable with the [Waveform Editor](Waveform-Editor))
 * [VectorLFO](VectorLFO) - Dual LFOs from a library of bipolar and unipolar shapes
 * [VectorMod](VectorMod) - Dual One-shots from a library of bipolar and unipolar shapes
 * [VectorMorph](VectorMorph) - Dual (or linked) phase scrubbing along a library of bipolar and unipolar shapes
@@ -145,7 +145,7 @@ If you're coming from any of the other Hemisphere forks, note that many of the a
 | **Mixer**                    | [MixerBal](Mixer-Balance)                                                                                                                                                          |                                                                                          |
 | **Modulation Source**        | [GameOfLife](GameOfLife), [Stairs](Stairs), [VectorMod](VectorMod), [VectorMorph](VectorMorph)                                                                                                                          | [Low-rents](Low-rents), [Pong](Pong)                                                                                   |
 | **Performance Utility**      | [Button2](Button2)                                                                                                                                                           |  [Scenes](Scenes)                                                                                        |
-| **Pitch Sequencer**          | [Carpeggio](Carpeggio), [DualTM](DualTM), [Enigma Jr.](Enigma-Jr), [Pigeons](Pigeons), [ProbMeloD](ProbMeloD), [Seq32](Seq32), [SecPlay7](SeqPlay7), [SequenceX](SequenceX), [Shredder](Shredder), [Strum](Strum), [SwitchSeq](Switch-Seq), [TB-3PO](TB-3PO) | [Enigma](Enigma), [The Darkest Timeline](The-Darkest-Timeline), [Automatonnetz](Automatonnetz), [Sequins](Sequins), [Acid Curds](Acid-Curds), [Passencore](Passencore) | 
+| **Pitch Sequencer**          | [Carpeggio](Carpeggio), [DualTM](DualTM), [Enigma Jr.](Enigma-Jr), [Pigeons](Pigeons), [ProbMeloD](ProbMeloD), [Seq32](Seq32), [SeqPlay7](SeqPlay7), [SequenceX](SequenceX), [Shredder](Shredder), [Strum](Strum), [SwitchSeq](Switch-Seq), [TB-3PO](TB-3PO) | [Enigma](Enigma), [The Darkest Timeline](The-Darkest-Timeline), [Automatonnetz](Automatonnetz), [Sequins](Sequins), [Acid Curds](Acid-Curds), [Passencore](Passencore) | 
 | **Quantizer**               | [Calibr8](Calibr8), [Chordinate](Chordinate), [DualQuant](Dual-Quantizer), [MultiScale](MultiScale), [ScaleDuet](ScaleDuet), [Squanch](Squanch)                                                                      | [Calibr8or](Calibr8or), [Harrington 1200](Harrington-1200), [Quantermain](Quantermain), [Meta-Q](Meta-Q)                                  |
 | **Random / Chaos**           | [Brancher](Brancher), [LowerRenz](LowerRenz), [ProbDiv](ProbDiv), [ProbMeloD](ProbMeloD), [RndWalk](Random-Walk), [Shredder](Shredder)                                                        | [Low-rents](Low-rents)                                                                              |
 | **Shift Register**           | [ASR](ASR), [DualTM](DualTM), [Enigma Jr.](Enigma-Jr), [RunglBook](RunglBook), [ShiftGate](ShiftGate)                                                                                               | [Enigma](Enigma), [CopierMaschine](Copiermaschine)                                                               |

@@ -5,7 +5,7 @@ layout: default
 
 ![Screenshot 2024-06-13 15-50-29](https://github.com/djphazer/O_C-Phazerville/assets/109086194/01083c00-7c85-415a-9985-1e885b516b88)
 
-VectorEG is a dual AR envelope generator based on Vector Oscillator waveforms. There is a variety of built-in waveforms from which to choose, or you can create your own with the [Waveform Editor](https://github.com/Chysn/O_C-HemisphereSuite/wiki/Waveform-Editor).
+VectorEG is a dual AR envelope generator based on Vector Oscillator waveforms. There is a variety of built-in waveforms from which to choose, or you can create your own with the [Waveform Editor](Waveform-Editor).
 
 ### I/O
 

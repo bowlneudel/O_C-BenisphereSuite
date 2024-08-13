@@ -7,7 +7,7 @@ layout: default
 
 While Enigma imposes a track-song workflow, **Enigma, Jr.** allows you to organize your Turing Machines via CV. It allows playback and temporary manipulation of registers in your Enigma Register Library.
 
-In many respects, Enigma, Jr. is similar to ShiftReg. But instead of generating a random sixteen-bit register, Enigma, Jr. uses a Register from the Enigma Register Library. Enigma may be used to shape and curate this Library (see https://github.com/Chysn/O_C-HemisphereSuite/wiki/Enigma).
+In many respects, Enigma, Jr. is similar to ShiftReg. But instead of generating a random sixteen-bit register, Enigma, Jr. uses a Register from the Enigma Register Library. [**Enigma**](Enigma) may be used to shape and curate this Library.
 
 ### I/O
 
