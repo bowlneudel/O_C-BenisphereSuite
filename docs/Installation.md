@@ -31,9 +31,9 @@ uploading the HEX file
 - open the HEX file in the Teensy Loader application
 - make sure a USB cable is connected to the Teensy, and that the O+C module is powered up
 - press the program push switch on the Teensy board (on the back of the O+C module) **OR if you are updating from Phazerville v1.8 or later, you can reflash _without_ accessing the back of the module:**
-		1. Navigate to the Setup / About App
-		2. Turn the LEFT encoder — the display should read "Reflash"
-		3. Press the LEFT encoder to enter Flash Upgrade Mode, and proceed with the remaining instructions
+		- Navigate to the Setup / About App
+		- Turn the LEFT encoder — the display should read "Reflash"
+		- Press the LEFT encoder to enter Flash Upgrade Mode, and proceed with the remaining instructions
 - click the Program icon, or choose Program from the Operation menu in Teensy Loader
 - (you should briefly see a progress bar as the firmware is uploaded)
 - click the reboot icon or choose Operation > Reboot
