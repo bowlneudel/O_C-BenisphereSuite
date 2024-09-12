@@ -14,17 +14,20 @@ Using the [Input mapping screen](Hemisphere-Input-Mapping), you can configure ap
 
 **NOTE: Some full screen apps (those other than the original stock apps) will respect the current input mapping saved within Hemisphere. Within full screen apps, the name displayed for a given input corresponds to its _software_ destination (i.e. its position within the Input Mapping Config)**
 
-<img src="_images/Default_Map.png" alt="Default Input Mapping">
+<img src="/images/Default_Map.png" alt="Default Input Mapping">
 
 The input mapping above reflects the traditional default behaviour of O_C: Left and Right Hemispheres with independent digital and CV inputs, corresponding to their physical jack locations on most 8hp hardware.
 
-<img src="_images/Alt_Map.png" alt="Alternative Input Mapping">
+<img src="/images/Alt_Map.png" alt="Alternative Input Mapping">
 
-In the example above, the input mapping reflects an alternative behaviour: both Left and Right Hemispheres map TR2 to their 1st virtual digital input (which in many cases will be used for clock). The 2nd virtual digital input is disabled for the Left Hemisphere, and for the Right Hemisphere it is the 1st output of the Left Hemisphere (Output A). In this case, both Hemispheres share control voltage inputs CV1 and CV2.
+In the example above, the input mapping reflects an alternative behaviour:
+- Both Left and Right Hemispheres map TR2 to their 1st virtual digital input (which in many cases will be used for clock)
+- The 2nd virtual digital input is disabled for the Left Hemisphere, whereas the Right Hemisphere is using the 1st output of the Left Hemisphere (Output A)
+- Both Hemispheres share control voltage inputs CV1 and CV2.
 
 You may map physical Digital inputs to virtual CV inputs and vice versa.
 
-<img src="_images/Help_Screen.png" alt="Help Screen">
+<img src="/images/Help_Screen.png" alt="Help Screen">
 
 Within Hemisphere, each applet's help screen will dynamically label the physical input and output jacks currently mapped to each parameter. Trigger inputs may also be remapped via the [Clock Setup screen](Clock-Setup)
 
