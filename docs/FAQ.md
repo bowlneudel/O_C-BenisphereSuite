@@ -6,7 +6,7 @@
 4. [Calibration](#calibration)
 5. [Encoder direction](#encoders)
 
-## Q: How do the physical input and output jacks relate to the apps / applets? <a id='io'>
+## Q1: How do the physical input and output jacks relate to the apps / applets? <a id='io'>
 
 A: Within Hemisphere, any of the physical input jacks (trigger/gate and CV) may be flexibly [mapped](Hemisphere-Input-Mapping) to any of 4 virtual (software) inputs of each applet. The output jacks of each applet are hardcoded to A/B (Left Hemisphere) & C/D (Right Hemisphere), and these outputs may also be routed to the virtual inputs.
 
@@ -31,8 +31,9 @@ You may map physical Digital inputs to virtual CV inputs and vice versa.
 
 Within Hemisphere, each applet's help screen will dynamically label the physical input and output jacks currently mapped to each parameter. Trigger inputs may also be remapped via the [Clock Setup screen](Clock-Setup)
 
+<hr>
 
-## Q: How does clock sync work? <a id='clock'>
+## Q2: How does clock sync work? <a id='clock'>
 
 A: See the [Clock Setup screen](Clock-Setup)
 
@@ -51,3 +52,33 @@ After BPM detection, triggers are passed to applets according to their correspon
 To disable external clock sync, set `Sync` to 0
 
 **NOTE: when clock pulses are recieved at both TR1 and MIDI, the result is simply mixed, potentially resulting in an unstable BPM detection**
+
+<hr>
+
+## Q3: What is the deal with the quantizer engines? <a id='quantizers'>
+
+
+A: Instead of single, individual quantizers built into each applet, applets now share access to pool of 8 quantizer engines (Q1 - Q8) which can be configured in either a pop-up window, or in the [configuration menu](Hemispher-Quantizer-Setup). Each quantizer engine includes a root note, scale, octave adjustment, and note mask.
+
+To switch between quantizer engines in an applet, select the quantizer parameter for editing and adjust with the LEFT or RIGHT encoder, depending on hemisphere context. Some applets allow CV modulation of quantizer engine, with semitone modulation resolution. While selecting, a black pop-up window will be visible.
+
+To edit the active quantizer engine in an applet, select the quantizer parameter for editing and press the Aux Button: UP or DOWN depending on hemisphere context. This will open an inverted (white) pop-up window. Use the LEFT encoder to select the Quantizer parameter to edit, and adjust with the RIGHT encoder. The first parameter of the note mask is a rotation value. Press UP to raise the octave, or press DOWN to lower it.
+
+Or, see the [configuration menu](Hemispher-Quantizer-Setup) to edit all 8 engines.
+
+<hr>
+
+## Q4: How do I calibrate the hardware? <a id='calibration'>
+
+A: See the app [Setup/About](Setup-About)
+
+<hr>
+
+## Q5: My encoders are going the wrong way! How do I change them? <a id='encoders'>
+
+A: If your encoders don't rotate the way you expect, you can flip the behaviour of one, the other, or both as part of the [Setup / About](Setup-About) calibration routine.
+
+After selecting "Calibrate" in Setup / About (short press of LEFT encoder), press either the UP and DOWN buttons to choose your encoder reversal: L, R, both (LR), or neither (normal) — press the RIGHT encoder to accept.
+
+If you want to use non-default calibration, you will need to scroll through the entire calibration routine to save the encoder reversal setting (rotate LEFT encoder to the last page, press RIGHT encoder to save).
+
