@@ -99,7 +99,7 @@ If you're coming from any of the other Hemisphere forks, note that many of the a
 * [Schmitt](Schmitt-Trigger) - Dual comparator with low and high threshold
 * [Scope](Scope) - tiny CV scope / voltmeter / BPM counter
   - expanded with X-Y view
-* [Seq32](Seq32) - compact 32-step sequencer using Sequins pattern storage
+* [Seq32](Seq32) - compact 32-step sequencer using Sequins pattern storage — record, play, and CV switch between 8 sequences!
 * [SeqPlay7](SeqPlay7) - Make a playlist of Seq32 sequences, with quantizer override
 * [SequenceX](SequenceX) - up to 8 steps of CV, quantized to semitones
 * [ShiftGate](ShiftGate) - dual shift register-based gate/trigger sequencer

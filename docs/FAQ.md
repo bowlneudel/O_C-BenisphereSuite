@@ -5,6 +5,7 @@
 3. [Quantizer engines](#quantizers)
 4. [Calibration](#calibration)
 5. [Encoder direction](#encoders)
+6. [How can I reflash the firmware without unscrewing the module from my rack?](#ezflash)
 
 ## Q1: How do the physical input and output jacks relate to the apps / applets? <a id='io'>
 
@@ -82,3 +83,20 @@ After selecting "Calibrate" in Setup / About (short press of LEFT encoder), pres
 
 If you want to use non-default calibration, you will need to scroll through the entire calibration routine to save the encoder reversal setting (rotate LEFT encoder to the last page, press RIGHT encoder to save).
 
+<hr>
+
+## Q6: Do I have to take the module out of my rack every time I want to update the firmware? <a id='ezflash'>
+
+A: Not if you are updating from Phazerville v1.8.1 or later! If so, you can reflash without accessing the button at the back of the module (so long as you have a USB connection)
+
+To do so:
+
+1. Navigate to the Setup / About App
+2. Turn the LEFT encoder — the display should read “Reflash”
+3. Press the LEFT encoder to enter Flash Upgrade Mode, and proceed with the remaining instructions
+4. Open the [Teensy Loader](https://www.pjrc.com/teensy/loader.html) application on your computer
+5. Drag and drop the desired .hex file onto the Teensy Loader application
+6. Within the Teensy Loader click the Program icon, or choose Program from the Operation menu
+5. You should briefly see a progress bar as the firmware is uploaded
+6. Within the Teensy Loader, click the reboot icon or choose Operation > Reboot
+7. The module should restart with your new firmware, without ever having to touch a screwdriver
