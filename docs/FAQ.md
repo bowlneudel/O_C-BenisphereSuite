@@ -79,6 +79,8 @@ A: See the app [Setup/About](Setup-About)
 
 A: If your encoders don't rotate the way you expect, you can flip the behaviour of one, the other, or both as part of the [Setup / About](Setup-About) calibration routine.
 
+<img src="images/Encoder_direction.png" alt="Edit encoder direction">
+
 After selecting "Calibrate" in Setup / About (short press of LEFT encoder), press either the UP and DOWN buttons to choose your encoder reversal: L, R, both (LR), or neither (normal) — press the RIGHT encoder to accept.
 
 If you want to use non-default calibration, you will need to scroll through the entire calibration routine to save the encoder reversal setting (rotate LEFT encoder to the last page, press RIGHT encoder to save).
@@ -93,6 +95,9 @@ To do so:
 
 1. Navigate to the Setup / About App
 2. Turn the LEFT encoder — the display should read “Reflash”
+
+<img src="images/EZ_Reflash.png" alt="Ready to enter Reflash mode">
+
 3. Press the LEFT encoder to enter Flash Upgrade Mode, and proceed with the remaining instructions
 4. Open the [Teensy Loader](https://www.pjrc.com/teensy/loader.html) application on your computer
 5. Drag and drop the desired .hex file onto the Teensy Loader application
