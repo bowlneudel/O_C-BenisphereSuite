@@ -15,21 +15,22 @@ _**Important:**_ In addition to storing applet settings in a Preset, a manual [E
 
 |        |         1/3        |        2/4          |
 | ------ | :----------------: | :-----------------: |
-| TRIG   |        Clock       |       Reset         |
-| CV INs |   Sequence Select  |     Transpose       |
+| TRIG   |        Clock       |       Reset (Rest in Rec. Mode)        |
+| CV INs |   Transpose (Pitch in Rec. Mode)  |     Seq Select (Accent in Rec. Mode)       |
 | OUTs   |        Pitch       |    Gate/Trigger     |
 
 ### UI Parameters
 * Pattern select #1-8
 * Length, per pattern
-* Record mode
-* Quantizer scale settings (popup editor)
 * Transpose
+* Quantizer scale settings (popup editor)
+* Gate length
+* Record mode
 * Edit notes
 
 ### AuxButton Actions
 With certain parameters highlighted for editing, the select button will execute a secondary action:
-* Pattern# - Clear pattern
+* Pattern # - Clear pattern
 * Length - Randomize current pattern completely
 * Transpose - Randomize pitches of current pattern, using transpose as the range
 
@@ -39,6 +40,4 @@ With certain parameters highlighted for editing, the select button will execute 
 Use the encoder to move the cursor to a step, and push to toggle editing the note value. While editing, use the AuxButton to toggle Mute. Double-click to toggle Accent, indicated by a solid square.
 
 ### Record mode
-When the small record icon is engaged, the cursor is locked and a crude CV recording mechanism is active. When a clock is received, the sequencer advances, CV1 is captured as pitch, and CV2 is measured as Mute/Unmute/Accent (threshold at 0.5v for Unmute, and 2v for Accent).
-
-It works, but it's a little clumsy because recording pitch/gate with the inputs conflicts with normal operation. This might get reworked in the future.
+When the small record icon is engaged, you can enter step pitches from CV1 — a clock received at TR1 will write the current step value and advance to the next step. TR2 mutes the current step and advances. If CV2 is greater than 2v, the step will be recorded with an accent. While recording mode is engaged, you can rotate the encoder to change the recording cursor location. Pressing the encoder disengages record mode.
