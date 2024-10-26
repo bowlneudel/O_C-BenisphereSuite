@@ -9,6 +9,8 @@ Strum is an arpeggiator. It generates fast sequences of up to six pitches from a
 
 Incoming triggers intuitively run through the sequence either forward or backward. If retriggered in the middle of the sequence, it will immediately jump to the next step, allowing unique grooves to emerge from tempo-synced pulses.
 
+New in 1.8.2: Step Mode - Press the AuxButton while the chord is highlighted for editing to toggle Step Mode. In this mode, each clock tick advances to the next interval, rather than strumming through the entire chord.
+
 ### I/O
 
 |        | 1/3 | 2/4 |
@@ -19,7 +21,7 @@ Incoming triggers intuitively run through the sequence either forward or backwar
 
 ### UI Parameters
 * Quantizer select - AuxButton to edit
-* Spacing - AuxButton to switch CV2 modulation destination
+* Spacing - AuxButton to switch CV2 modulation destination (spacing or quantizers)
 * Length
 * Edit Intervals 1-6
 
