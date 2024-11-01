@@ -67,10 +67,12 @@ enum QUADRANTS_SETTINGS {
     QUADRANTS_CLOCK_DATA2,
     QUADRANTS_CLOCK_DATA3,
     QUADRANTS_CLOCK_DATA4,
-    QUADRANTS_TRIGMAP1,
+    QUADRANTS_TRIGMAP1, // 3 x 5-bit values
     QUADRANTS_TRIGMAP2,
-    QUADRANTS_CVMAP1,
+    QUADRANTS_TRIGMAP3,
+    QUADRANTS_CVMAP1, // 3 x 5-bit values
     QUADRANTS_CVMAP2,
+    QUADRANTS_CVMAP3,
     QUADRANTS_GLOBALS1, // for globals like trig_length
     QUADRANTS_GLOBALS2,
     QUADRANTS_SETTING_LAST
@@ -114,24 +116,38 @@ public:
     // returns true if changed
     bool StoreInputMap() {
       // TODO: cvmap
-      uint32_t trigmap = 0;
+      uint64_t trigmap = 0;
+      uint64_t cvmap = 0;
       for (size_t i = 0; i < 8; ++i) {
-        trigmap |= (uint32_t(HS::trigger_mapping[i] + 1) & 0x0F) << (i*4);
+        trigmap |= (uint64_t(HS::trigger_mapping[i] + 1) & 0x1F) << (i*5 + i/3);
+        cvmap |= (uint64_t(HS::cvmapping[i] + 1) & 0x1F) << (i*5 + i/3);
       }
 
-      bool changed = (trigmap != ( uint32_t(values_[QUADRANTS_TRIGMAP1])
-                                | (uint32_t(values_[QUADRANTS_TRIGMAP2]) << 16) ));
+      bool changed = (
+          trigmap != ( uint64_t(values_[QUADRANTS_TRIGMAP1])
+                    | (uint64_t(values_[QUADRANTS_TRIGMAP2]) << 16)
+                    | (uint64_t(values_[QUADRANTS_TRIGMAP3]) << 32) )
+          ) || (
+          cvmap   != ( uint64_t(values_[QUADRANTS_CVMAP1])
+                    | (uint64_t(values_[QUADRANTS_CVMAP2]) << 16)
+                    | (uint64_t(values_[QUADRANTS_CVMAP3]) << 32) )
+          );
       values_[QUADRANTS_TRIGMAP1] = trigmap & 0xFFFF;
       values_[QUADRANTS_TRIGMAP2] = (trigmap >> 16) & 0xFFFF;
+      values_[QUADRANTS_TRIGMAP3] = (trigmap >> 32) & 0xFFFF;
+      values_[QUADRANTS_CVMAP1] = cvmap & 0xFFFF;
+      values_[QUADRANTS_CVMAP2] = (cvmap >> 16) & 0xFFFF;
+      values_[QUADRANTS_CVMAP3] = (cvmap >> 32) & 0xFFFF;
       return changed;
     }
     void LoadInputMap() {
-      // TODO: cvmap
-      for (size_t i = 0; i < 4; ++i) {
-        int val1 = (uint32_t(values_[QUADRANTS_TRIGMAP1]) >> (i*4)) & 0x0F;
-        int val2 = (uint32_t(values_[QUADRANTS_TRIGMAP2]) >> (i*4)) & 0x0F;
-        if (val1 != 0) HS::trigger_mapping[i] = constrain(val1 - 1, 0, TRIGMAP_MAX);
-        if (val2 != 0) HS::trigger_mapping[i+4] = constrain(val2 - 1, 0, TRIGMAP_MAX);
+      int val;
+      for (size_t i = 0; i < 8; ++i) {
+        val = (uint32_t(values_[QUADRANTS_TRIGMAP1 + i/3]) >> (i%3 * 5)) & 0x1F;
+        if (val != 0) HS::trigger_mapping[i] = constrain(val - 1, 0, TRIGMAP_MAX);
+
+        val = (uint32_t(values_[QUADRANTS_CVMAP1 + i/3]) >> (i%3 * 5)) & 0x1F;
+        if (val != 0) HS::cvmapping[i] = constrain(val - 1, 0, CVMAP_MAX);
       }
     }
 
@@ -225,9 +241,6 @@ void QuadrantBeatSync();
 class QuadAppletManager : public HSApplication {
 public:
     void Start() {
-        select_mode = -1; // Not selecting
-
-        //zoom_slot = -1;
 
         for (int i = 0; i < 4; ++i) {
             quant_scale[i] = OC::Scales::SCALE_SEMI;
@@ -345,10 +358,6 @@ public:
     void ChangeApplet(HEM_SIDE h, int dir) {
         int index = HS::get_next_applet_index(next_applet_index[h], dir);
         next_applet_index[h] = index;
-    }
-
-    bool SelectModeEnabled() {
-        return select_mode > -1;
     }
 
     template <typename T1, typename T2, typename T3>
@@ -488,11 +497,13 @@ public:
                 if (slot > 1) gfxInvert(1 + h*64, 1, 54, 10);
             }
 
-            if (select_mode % 2 == LEFT_HEMISPHERE) graphics.drawFrame(0, 0, 64, 64);
-            if (select_mode % 2 == RIGHT_HEMISPHERE) graphics.drawFrame(64, 0, 64, 64);
-
             // vertical separator
             graphics.drawLine(63, 0, 63, 63, 2);
+          }
+
+          if (select_mode) {
+            // screen border while X or Y is held, so they feel powerful (because they are)
+            graphics.drawFrame(0, 0, 128, 64);
           }
 
           // Clock indicator icons in header
@@ -528,23 +539,23 @@ public:
           return;
         }
 
-        if (select_mode == slot) {
-          select_mode = -1; // Pushing a button for the selected side turns off select mode
-        } else {
-          active_applet[slot]->OnButtonPress();
-        }
+        active_applet[slot]->OnButtonPress();
     }
 
     const HEM_SIDE ButtonToSlot(const UI::Event &event) {
         switch (event.control) {
         default:
         case OC::CONTROL_BUTTON_A:
+          return LEFT_HEMISPHERE;
+          break;
         case OC::CONTROL_BUTTON_X:
-          return view_slot[0] ? LEFT2_HEMISPHERE : LEFT_HEMISPHERE;
+          return LEFT2_HEMISPHERE;
           break;
         case OC::CONTROL_BUTTON_B:
+          return RIGHT_HEMISPHERE;
+          break;
         case OC::CONTROL_BUTTON_Y:
-          return view_slot[1] ? RIGHT2_HEMISPHERE : RIGHT_HEMISPHERE;
+          return RIGHT2_HEMISPHERE;
           break;
         }
     }
@@ -556,13 +567,11 @@ public:
         // dual press A+B for Clock Setup
         if (event.mask == (OC::CONTROL_BUTTON_A | OC::CONTROL_BUTTON_B)) {
             view_state = CLOCK_SETUP;
-            select_mode = -1;
             return true;
         }
         // dual press X+Y for Audio Setup
         if (event.mask == (OC::CONTROL_BUTTON_X | OC::CONTROL_BUTTON_Y)) {
             view_state = AUDIO_SETUP;
-            select_mode = -1;
             return true;
         }
         // dual press A+X for Load Preset
@@ -586,16 +595,14 @@ public:
           return true;
         }
 
-        // cancel fullscreen or anything else
-        if (view_state != APPLETS) {
+        // cancel other view layers
+        if (view_state != APPLETS && view_state != APPLET_FULLSCREEN) {
           view_state = APPLETS;
-          select_mode = -1;
           return true;
         }
 
-        // TODO: I kinda still want AuxButton to work in fullscreen...
         // A/B/X/Y buttons becomes aux button while editing a param
-        if (active_applet[slot]->EditMode()) {
+        if (SlotIsVisible(slot) && active_applet[slot]->EditMode()) {
           active_applet[slot]->AuxButton();
           return true;
         }
@@ -625,7 +632,9 @@ public:
             ClockSetup_instance.OnLeftEncoderMove(event.value);
           else
             ClockSetup_instance.OnEncoderMove(event.value);
-        } else if (select_mode == slot) {
+        } else if (event.mask & (OC::CONTROL_BUTTON_X | OC::CONTROL_BUTTON_Y)) {
+            // hold down X or Y to change applet with encoder
+            if (view_state == APPLET_FULLSCREEN) slot = zoom_slot;
             ChangeApplet(slot, event.value);
         } else {
             active_applet[slot]->OnEncoderMove(event.value);
@@ -644,12 +653,10 @@ public:
       } else {
         SetConfigPageFromCursor();
       }
-      select_mode = -1;
     }
     void ShowPresetSelector() {
       config_cursor = LOAD_PRESET;
       preset_cursor = preset_id + 1;
-      select_mode = -1;
     }
 
     // this toggles the view on a given side
@@ -658,11 +665,16 @@ public:
       //h %= 2;
 
       view_slot[h] = 1 - view_slot[h];
-      if (zoom_slot % 2 == h) // switch full screen slot if necessary
-        zoom_slot = HEM_SIDE(view_slot[h]*2 + h);
-      select_mode = -1;
+      // also switch fullscreen to corresponding side/slot
+      zoom_slot = HEM_SIDE(view_slot[h]*2 + h);
     }
 
+    bool SlotIsVisible(HEM_SIDE h) {
+      if (view_state == APPLET_FULLSCREEN)
+        return zoom_slot == h;
+
+      return (view_slot[h % 2] == h / 2);
+    }
     // this brings a specific applet into view on the appropriate side
     void SwitchToSlot(HEM_SIDE h) {
       if (view_slot[h % 2] != h / 2) {
@@ -674,10 +686,15 @@ public:
     void SetFullScreen(HEM_SIDE hemisphere) {
       zoom_slot = hemisphere;
       view_state = APPLET_FULLSCREEN;
-      select_mode = -1;
+    }
+    void ToggleFullScreen() {
+      view_state = (view_state == APPLET_FULLSCREEN) ? APPLETS : APPLET_FULLSCREEN;
     }
 
     void HandleButtonEvent(const UI::Event &event) {
+        // tracks whether X or Y are being held down
+        select_mode = (event.mask & (OC::CONTROL_BUTTON_X | OC::CONTROL_BUTTON_Y));
+
         switch (event.type) {
         case UI::EVENT_BUTTON_DOWN:
 
@@ -687,8 +704,10 @@ public:
               HS::NudgeOctave(HS::qview, 1);
             else if (event.control == OC::CONTROL_BUTTON_DOWN)
               HS::NudgeOctave(HS::qview, -1);
-            else
+            else {
               HS::q_edit = false;
+              select_mode = false;
+            }
 
             OC::ui.SetButtonIgnoreMask();
             break;
@@ -696,11 +715,13 @@ public:
 
           switch (event.control) {
             case OC::CONTROL_BUTTON_Z:
-              // TODO: check modifiers
-              if (event.mask & OC::CONTROL_BUTTON_X) {
-                break;
-              }
-              if (event.mask & OC::CONTROL_BUTTON_Y) {
+              // X or Y + Z == go fullscreen
+              if (select_mode) {
+                bool h = (event.mask & OC::CONTROL_BUTTON_Y); // left or right
+                zoom_slot = HEM_SIDE(view_slot[h]*2 + h);
+                ToggleFullScreen();
+                select_mode = false;
+                OC::ui.SetButtonIgnoreMask();
                 break;
               }
 
@@ -723,8 +744,10 @@ public:
             case OC::CONTROL_BUTTON_B:
             case OC::CONTROL_BUTTON_X:
             case OC::CONTROL_BUTTON_Y:
-              if (CheckButtonCombos(event))
+              if (CheckButtonCombos(event)) {
+                select_mode = false;
                 OC::ui.SetButtonIgnoreMask(); // ignore release and long-press
+              }
               break;
 
             default:
@@ -734,36 +757,28 @@ public:
           break;
 
         case UI::EVENT_BUTTON_PRESS:
-          // A and B switch to full screen on release
-          if (event.control == OC::CONTROL_BUTTON_A || event.control == OC::CONTROL_BUTTON_B) {
-            if (view_state == APPLETS) { 
+          switch (event.control) {
+            // A/B/X/Y switch to corresponding applet on release
+            case OC::CONTROL_BUTTON_A:
+            case OC::CONTROL_BUTTON_B:
+            case OC::CONTROL_BUTTON_X:
+            case OC::CONTROL_BUTTON_Y:
+            {
               HEM_SIDE slot = ButtonToSlot(event);
-              SetFullScreen(slot);
-            }
-          }
+              if (view_state == APPLET_FULLSCREEN && slot == zoom_slot)
+                view_state = APPLETS;
 
-          // X and Y swap views between North/South
-          if (event.control == OC::CONTROL_BUTTON_X) {
-            SwapViewSlot(0);
+              SwitchToSlot(slot);
+              break;
+            }
+
+            // ignore all other button release events
+            default: break;
           }
-          if (event.control == OC::CONTROL_BUTTON_Y) {
-            SwapViewSlot(1);
-          }
-          // ignore all other button release events
           break;
 
         case UI::EVENT_BUTTON_LONG_PRESS:
           if (event.control == OC::CONTROL_BUTTON_B) ToggleConfigMenu();
-
-          if (event.control == OC::CONTROL_BUTTON_X) {
-            // applet select left side
-            select_mode = HEM_SIDE(view_slot[0]*2 + 0);
-          }
-          if (event.control == OC::CONTROL_BUTTON_Y) {
-            // applet select right side
-            select_mode = HEM_SIDE(view_slot[1]*2 + 1);
-          }
-          //if (event.control == OC::CONTROL_BUTTON_L) ToggleClockRun();
           break;
 
         default: break;
@@ -783,7 +798,7 @@ private:
     bool view_slot[2] = {0, 0}; // Two applets on each side, only one visible at a time
     int config_cursor = 0;
 
-    int select_mode = -1;
+    bool select_mode = 0;
     HEM_SIDE zoom_slot; // Which of the hemispheres (if any) is in fullscreen/help mode
 
     // State machine
@@ -908,7 +923,6 @@ private:
             preset_cursor = 0; // deactivate preset selection
             config_page = HIDE_CONFIG;
             view_state = APPLETS;
-            select_mode = -1;
             isEditing = false;
             return;
         }
@@ -1138,10 +1152,12 @@ SETTINGS_DECLARE(QuadrantsPreset, QUADRANTS_SETTING_LAST) {
     {0, 0, 65535, "Clock data 2", NULL, settings::STORAGE_TYPE_U16},
     {0, 0, 65535, "Clock data 3", NULL, settings::STORAGE_TYPE_U16},
     {0, 0, 65535, "Clock data 4", NULL, settings::STORAGE_TYPE_U16},
-    {0, 0, 65535, "Trig Map 1234", NULL, settings::STORAGE_TYPE_U16},
-    {0, 0, 65535, "Trig Map 5678", NULL, settings::STORAGE_TYPE_U16},
+    {0, 0, 65535, "Trig Map 123", NULL, settings::STORAGE_TYPE_U16},
+    {0, 0, 65535, "Trig Map 456", NULL, settings::STORAGE_TYPE_U16},
+    {0, 0, 65535, "Trig Map 78",  NULL, settings::STORAGE_TYPE_U16},
     {0, 0, 65535, "CV Input Map1", NULL, settings::STORAGE_TYPE_U16},
     {0, 0, 65535, "CV Input Map2", NULL, settings::STORAGE_TYPE_U16},
+    {0, 0, 65535, "CV Input Map3", NULL, settings::STORAGE_TYPE_U16},
     {0, 0, 65535, "Globals1", NULL, settings::STORAGE_TYPE_U16},
     {0, 0, 65535, "Globals2", NULL, settings::STORAGE_TYPE_U16}
 };

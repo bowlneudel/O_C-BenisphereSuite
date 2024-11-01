@@ -25,11 +25,8 @@
 #include "HSApplication.h"
 #include "OC_strings.h"
 
-extern "C" void _reboot_Teensyduino_();
-
 class Settings : public HSApplication {
 public:
-  bool reflash = false;
   bool calibration_mode = false;
   bool calibration_complete = true;
   OC::DigitalInputDisplay digital_input_displays[4];
@@ -198,7 +195,7 @@ public:
         #endif
         gfxPrint(0, 25, OC::Strings::VERSION);
         gfxPrint(0, 35, "github.com/djphazer");
-        gfxPrint(0, 55, reflash ? "[Reflash]" : "[CALIBRATE]   [RESET]");
+        gfxPrint(0, 55, "[CALIBRATE]   [RESET]");
     }
 
     /////////////////////////////////////////////////////////////////
@@ -209,15 +206,7 @@ public:
       using namespace OC;
 
       if (!calibration_mode) {
-        if (event.control == OC::CONTROL_ENCODER_L) {
-          reflash = (event.value > 0);
-        }
-        if (event.control == OC::CONTROL_BUTTON_L && event.type == UI::EVENT_BUTTON_PRESS) {
-          if (reflash)
-            Reflash();
-          else
-            Calibration();
-        }
+        if (event.control == OC::CONTROL_BUTTON_L && event.type == UI::EVENT_BUTTON_PRESS) Calibration();
         if (event.control == OC::CONTROL_BUTTON_R && event.type == UI::EVENT_BUTTON_PRESS) FactoryReset();
         return;
       }
@@ -251,8 +240,10 @@ public:
         case CONTROL_BUTTON_UP:
         case CONTROL_BUTTON_DOWN:
           if (UI::EVENT_BUTTON_LONG_PRESS == event.type) {
+            const CalibrationStep *step = calibration_state.current_step;
+
             // long-press DOWN to measure ADC points
-            switch (calibration_state.current_step->step) {
+            switch (step->step) {
               case ADC_PITCH_C2:
                 calibration_state.adc_1v = OC::ADC::value(ADC_CHANNEL_1);
                 break;
@@ -260,6 +251,20 @@ public:
                 calibration_state.adc_3v = OC::ADC::value(ADC_CHANNEL_1);
                 break;
               default: break;
+            }
+
+            // long-press DOWN to auto-scale DAC values on current channel
+            int volts = step->index + DAC::kOctaveZero;
+            if (step->calibration_type == CALIBRATE_OCTAVE && volts > 0) {
+              int ch = step_to_channel(step->step);
+              uint16_t first = OC::calibration_data.dac.calibrated_octaves[ch][0];
+              uint16_t second = OC::calibration_data.dac.calibrated_octaves[ch][volts];
+              int interval = (second - first) / volts;
+
+              for (int i = 1; i < OCTAVES; ++i) {
+                first += interval;
+                OC::calibration_data.dac.calibrated_octaves[ch][i] = first;
+              }
             }
             break;
           }
@@ -312,20 +317,6 @@ public:
 
         calibration_complete = false;
         calibration_mode = true;
-    }
-    void Reflash() {
-      uint32_t start = millis();
-      while(millis() < start + SETTINGS_SAVE_TIMEOUT_MS) {
-        GRAPHICS_BEGIN_FRAME(true);
-        graphics.setPrintPos(5, 10);
-        graphics.print("Flash Upgrade Mode");
-        graphics.setPrintPos(5, 19);
-        graphics.print("(use Teensy Loader)");
-        GRAPHICS_END_FRAME();
-      }
-
-      // special teensy_reboot command
-      _reboot_Teensyduino_();
     }
 
     void FactoryReset() {

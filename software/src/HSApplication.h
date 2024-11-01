@@ -107,7 +107,8 @@ public:
             }
 
             // trigger/gate indicators
-            if (HS::frame.gate_high[ch]) gfxIcon(4 + w*ch, 0, CLOCK_ICON);
+            const bool trig = (ch < 4) ? HS::frame.gate_high[ch] : false;
+            if (trig) gfxIcon(4 + w*ch, 0, CLOCK_ICON);
 
             // input
             int height = ProportionCV(HS::frame.inputs[ch], 32);
@@ -159,8 +160,7 @@ public:
         if (!t) return false;
         return (t <= offset)
           ? frame.gate_high[t - 1]
-          : frame.outputs[t - 1 - offset] > GATE_THRESHOLD;
-        //return frame.gate_high[ch];
+          : (frame.outputs[t - 1 - offset] > GATE_THRESHOLD);
     }
 
     void GateOut(int ch, bool high) {

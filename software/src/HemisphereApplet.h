@@ -215,7 +215,7 @@ public:
         const int t = trigger_mapping[ch + io_offset];
         const int offset = OC::DIGITAL_INPUT_LAST + ADC_CHANNEL_LAST;
         if (!t) return false;
-        return (t <= offset) ? frame.gate_high[t - 1] : frame.outputs[t - 1 - offset] > GATE_THRESHOLD;
+        return (t <= offset) ? frame.gate_high[t - 1] : (frame.outputs[t - 1 - offset] > GATE_THRESHOLD);
     }
     void Out(int ch, int value, int octave = 0) {
         frame.Out( (DAC_CHANNEL)(ch + io_offset), value + (octave * (12 << 7)));
@@ -399,7 +399,7 @@ public:
     void gfxSkyline() {
         ForEachChannel(ch)
         {
-            int height = ProportionCV(ViewIn(ch), 32);
+            int height = ProportionCV(In(ch), 32);
             gfxFrame(23 + (10 * ch), BottomAlign(height), 6, 63);
 
             height = ProportionCV(ViewOut(ch), 32);
