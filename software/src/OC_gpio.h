@@ -31,8 +31,14 @@
   #define TR3 2
   #define TR4 3
   
+#ifdef BUCHLA_hOC
+  #define but_top 4
+  #define but_bot 5
+#else
   #define but_top 5
   #define but_bot 4
+#endif
+
 #endif
 
 #define OLED_DC 6

@@ -25,8 +25,11 @@
 #include "HSApplication.h"
 #include "OC_strings.h"
 
+extern "C" void _reboot_Teensyduino_();
+
 class Settings : public HSApplication {
 public:
+  bool reflash = false;
   bool calibration_mode = false;
   bool calibration_complete = true;
   OC::DigitalInputDisplay digital_input_displays[4];
@@ -195,7 +198,7 @@ public:
         #endif
         gfxPrint(0, 25, OC::Strings::VERSION);
         gfxPrint(0, 35, "github.com/djphazer");
-        gfxPrint(0, 55, "[CALIBRATE]   [RESET]");
+        gfxPrint(0, 55, reflash ? "[Reflash]" : "[CALIBRATE]   [RESET]");
     }
 
     /////////////////////////////////////////////////////////////////
@@ -206,7 +209,15 @@ public:
       using namespace OC;
 
       if (!calibration_mode) {
-        if (event.control == OC::CONTROL_BUTTON_L && event.type == UI::EVENT_BUTTON_PRESS) Calibration();
+        if (event.control == OC::CONTROL_ENCODER_L) {
+          reflash = (event.value > 0);
+        }
+        if (event.control == OC::CONTROL_BUTTON_L && event.type == UI::EVENT_BUTTON_PRESS) {
+          if (reflash)
+            Reflash();
+          else
+            Calibration();
+        }
         if (event.control == OC::CONTROL_BUTTON_R && event.type == UI::EVENT_BUTTON_PRESS) FactoryReset();
         return;
       }
@@ -301,6 +312,20 @@ public:
 
         calibration_complete = false;
         calibration_mode = true;
+    }
+    void Reflash() {
+      uint32_t start = millis();
+      while(millis() < start + SETTINGS_SAVE_TIMEOUT_MS) {
+        GRAPHICS_BEGIN_FRAME(true);
+        graphics.setPrintPos(5, 10);
+        graphics.print("Flash Upgrade Mode");
+        graphics.setPrintPos(5, 19);
+        graphics.print("(use Teensy Loader)");
+        GRAPHICS_END_FRAME();
+      }
+
+      // special teensy_reboot command
+      _reboot_Teensyduino_();
     }
 
     void FactoryReset() {

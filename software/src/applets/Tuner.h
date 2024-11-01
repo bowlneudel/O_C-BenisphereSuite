@@ -21,17 +21,28 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-// Tuner can only work in the right hemisphere because the frequecy input is on
-// CV4. However, when the screen is flipped, Tuner can only work in the right
-// hemisphere. So there are various checks for the FLIP_180 compile-time option
-// in this code.
+// On Teensy 3.2 units, Tuner can only work in the right hemisphere because the
+// frequency input is on TR4. However, when the screen is flipped, Tuner can
+// only work in the left hemisphere.
+// So there are various checks for the FLIP_180 compile-time option in this code.
+
+// Teensy 4.x can use any of the trigger inputs for FreqMeasure, but 4.0 on old
+// hardware only works with TR1 or TR2...
 
 #include "../src/drivers/FreqMeasure/OC_FreqMeasure.h"
 
-#if defined(__IMXRT1062__)
+#if defined(ARDUINO_TEENSY41)
 #define TUNER_ENABLED 1
 // TR2 on left, TR4 on right
 #define TUNER_PIN (hemisphere == 0 ? 1 : 22)
+
+#elif defined(ARDUINO_TEENSY40)
+# ifdef FLIP_180
+#define TUNER_ENABLED (hemisphere == 1)
+# else
+#define TUNER_ENABLED (hemisphere == 0)
+# endif
+
 #elif defined(FLIP_180)
 #define TUNER_ENABLED (hemisphere == 0)
 #else
@@ -50,7 +61,7 @@ public:
     void Start() {
         A4_Hz = 440;
         if (TUNER_ENABLED) {
-#if defined(__IMXRT1062__)
+#if defined(ARDUINO_TEENSY41)
             freq_measure.begin(TUNER_PIN);
 #else
             freq_measure.begin();
@@ -112,7 +123,7 @@ protected:
       help[HELP_OUT2]     = "";
       if (TUNER_ENABLED) {
         //                    "-------" <-- Label size guide
-#ifdef FLIP_180
+#if (defined(FLIP_180) && !defined(ARDUINO_TEENSY40)) || (defined(ARDUINO_TEENSY40) && !defined(FLIP_180))
         help[HELP_DIGITAL1] = "Input";
         help[HELP_DIGITAL2] = "";
 #else
@@ -125,11 +136,7 @@ protected:
         help[HELP_DIGITAL1] = "";
         help[HELP_DIGITAL2] = "";
         help[HELP_EXTRA1] = "Tuner must run in the";
-#ifdef FLIP_180
-        help[HELP_EXTRA2] = "left hemisphere";
-#else
-        help[HELP_EXTRA2] = "right hemisphere";
-#endif
+        help[HELP_EXTRA2] = "other hemisphere";
         //                  "---------------------" <-- Extra text size guide
       }
     }
@@ -201,7 +208,7 @@ private:
         gfxCursor(25, 23, 36);
     }
     
-#ifdef FLIP_180
+#if (defined(FLIP_180) && !defined(ARDUINO_TEENSY40)) || (defined(ARDUINO_TEENSY40) && !defined(FLIP_180))
     void DrawWarning() {
         gfxPrint(1, 15, "Tuner goes");
         gfxPrint(1, 25, "in left");
