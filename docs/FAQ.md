@@ -2,10 +2,11 @@
 
 1. [Input & output mapping](#io)
 2. [Clock sync](#clock)
-3. [Quantizer engines](#quantizers)
-4. [Calibration](#calibration)
-5. [Encoder direction](#encoders)
-6. [How can I reflash the firmware without unscrewing the module from my rack?](#ezflash)
+3. [Internal clock](#int-clock)
+4. [Quantizer engines](#quantizers)
+5. [Calibration](#calibration)
+6. [Encoder direction](#encoders)
+7. [How can I reflash the firmware without unscrewing the module from my rack?](#ezflash)
 
 ## Q1: How do the physical input and output jacks relate to the apps / applets? <a id='io'>
 
@@ -31,7 +32,7 @@ Within Hemisphere, each applet's help screen will dynamically label the physical
 
 <hr>
 
-## Q2: How does clock sync work? <a id='clock'>
+## Q2: How does external clock sync work? <a id='clock'>
 
 A: See the [Clock Setup screen](Clock-Setup)
 
@@ -53,7 +54,15 @@ To disable external clock sync, set `Sync` to 0
 
 <hr>
 
-## Q3: What is the deal with the quantizer engines? <a id='quantizers'>
+## Q3 How do I trigger applets from the internal clock? <a id='int-clock'>
+
+A: See the [Clock Setup screen](Clock-Setup)
+
+You can forward internal clock pulses (or multiples / divisions thereof) to any trigger destination. Dual press UP+DOWN buttons to access the clock menu, and adjust the div/mult for each trigger destination. By default, each destination is blank (x0) and will ignore the internal clock.
+
+<hr>
+
+## Q4: What is the deal with the quantizer engines? <a id='quantizers'>
 
 A: Instead of single, individual quantizers built into each applet, applets now share access to pool of 8 quantizer engines (Q1 - Q8) which can be configured in either a pop-up window, or in the [configuration menu](Hemisphere-Quantizer-Setup). Each quantizer engine includes a root note, scale, octave adjustment, and note mask.
 
@@ -65,13 +74,13 @@ Or, see the [configuration menu](Hemisphere-Quantizer-Setup) to edit all 8 engin
 
 <hr>
 
-## Q4: How do I calibrate the hardware? <a id='calibration'>
+## Q5: How do I calibrate the hardware? <a id='calibration'>
 
 A: See the app [Setup/About](Setup-About)
 
 <hr>
 
-## Q5: My encoders are going the wrong way! How do I change them? <a id='encoders'>
+## Q6: My encoders are going the wrong way! How do I change them? <a id='encoders'>
 
 A: If your encoders don't rotate the way you expect, you can flip the behaviour of one, the other, or both as part of the [Setup / About](Setup-About) calibration routine.
 
@@ -83,7 +92,7 @@ If you want to use non-default calibration, you will need to scroll through the 
 
 <hr>
 
-## Q6: Do I have to take the module out of my rack every time I want to update the firmware? <a id='ezflash'>
+## Q7: Do I have to take the module out of my rack every time I want to update the firmware? <a id='ezflash'>
 
 A: Not if you are updating from Phazerville v1.8.1 or later! If so, you can reflash without accessing the button at the back of the module (so long as you have a USB connection)
 
